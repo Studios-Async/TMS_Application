@@ -10,7 +10,7 @@ Future main() async {
   runApp(const MyApp());
 }
 
-///Root of the TMS application. Launched when app is freshly loaded
+///Root of the TMS application. Launched when app is loaded
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
