@@ -9,6 +9,7 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
+  //starting page index
   int selectedIndex = 0;
 
   @override
@@ -19,7 +20,7 @@ class _NavBarState extends State<NavBar> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
           child: GNav(
-            haptic: true,
+            haptic: true, //haptic feedback on change
             gap: 6,
             iconSize: 25,
             backgroundColor: Colors.black,
@@ -28,6 +29,8 @@ class _NavBarState extends State<NavBar> {
             tabBackgroundColor: Colors.deepPurple,
             padding: const EdgeInsets.all(20),
             onTabChange: navigatePages,
+
+            //Buttons
             tabs: const [
               GButton(
                 icon: Icons.home,
@@ -48,6 +51,7 @@ class _NavBarState extends State<NavBar> {
     );
   }
 
+//Change pages function - UNIMPLEMENTED
   navigatePages(int index) {
     selectedIndex = index;
   }
