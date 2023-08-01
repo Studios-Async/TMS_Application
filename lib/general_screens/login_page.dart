@@ -25,7 +25,6 @@ class _LoginPageState extends State<LoginPage> {
                   //child: Image.asset("assets/icons/white-board.png"),
                   child: Image.asset("assets/icons/mortarboard.png"),
                 ),
-
                 SizedBox(
                   height: 10,
                 ),
