@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:tms/general_screens/login_page.dart';
+import 'package:tms/general_screens/welldone_page.dart';
 
 Future main() async {
   //add both to connect to Firebase for authentication services
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, //dont show banner in corner
-      home: LoginPage(),
+      home: WellDonePage(),
     );
   }
 }
