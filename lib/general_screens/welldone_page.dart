@@ -16,6 +16,7 @@ class _WellDonePageState extends State<WellDonePage> {
         child: SafeArea(
           child: Column(
             children: [
+              // Green Tick
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: SizedBox(
@@ -45,6 +46,7 @@ class _WellDonePageState extends State<WellDonePage> {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
                 child: Row(
+                  //Divider + Tutor name
                   children: [
                     Expanded(
                       child: Divider(
@@ -54,7 +56,7 @@ class _WellDonePageState extends State<WellDonePage> {
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10.0),
                       child: Text(
-                        'Tutor',
+                        'Tutor', //Replace with Tutor name
                         style: TextStyle(fontSize: 25),
                       ),
                     ),
