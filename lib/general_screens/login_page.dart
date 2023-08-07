@@ -90,20 +90,15 @@ class _LoginPageState extends State<LoginPage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: Container(
-                      child: newbutton(
-                          voidcallback: null,
-                          buttonheight: 20,
-                          buttonwidth: 40,
-                          text: 'please')
-                      //child: Center(
-                      //    child: Text(
-                      //  "Sign In",
-                      //  style: TextStyle(
-                      //      color: Colors.white,
-                      //      fontSize: 20,
-                      //      fontWeight: FontWeight.bold),
-                      //)),
-                      ),
+                    child: Center(
+                        child: Text(
+                      "Sign In",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    )),
+                  ),
                 ),
               ],
             ),
