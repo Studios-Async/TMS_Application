@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class WellDonePage extends StatefulWidget {
-  const WellDonePage({super.key});
+  const WellDonePage({Key? key}) : super(key: key);
 
   @override
-  State<WellDonePage> createState() => _WellDonePageState();
+  _WellDonePageState createState() => _WellDonePageState();
 }
 
 class _WellDonePageState extends State<WellDonePage> {
@@ -48,7 +48,7 @@ class _WellDonePageState extends State<WellDonePage> {
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
                   child: Row(
-                    //Divider + Tutor name
+                    // Divider + Tutor name
                     children: [
                       Expanded(
                         child: Divider(
@@ -58,7 +58,7 @@ class _WellDonePageState extends State<WellDonePage> {
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 10.0),
                         child: Text(
-                          'Tutor', //Replace with Tutor name
+                          'Tutor', // Replace with Tutor name
                           style: TextStyle(fontSize: 25),
                         ),
                       ),
@@ -83,8 +83,7 @@ class _WellDonePageState extends State<WellDonePage> {
                     ),
                     const SizedBox(width: 10),
                     RatingButton(
-                      icon: Icons.sentiment_very_satisfied,
-                      color: Colors.green, // Custom color for the face
+                      imageAsset: "assets/images/happyface.png",
                       isSelected: selectedRating == 1,
                       onTap: () {
                         setState(() {
@@ -93,8 +92,7 @@ class _WellDonePageState extends State<WellDonePage> {
                       },
                     ),
                     RatingButton(
-                      icon: Icons.sentiment_neutral,
-                      color: Colors.yellow, // Custom color for the face
+                      imageAsset: "assets/images/neutralface.png",
                       isSelected: selectedRating == 2,
                       onTap: () {
                         setState(() {
@@ -103,8 +101,7 @@ class _WellDonePageState extends State<WellDonePage> {
                       },
                     ),
                     RatingButton(
-                      icon: Icons.sentiment_very_dissatisfied,
-                      color: Colors.red, // Custom color for the face
+                      imageAsset: "assets/images/sadface.png",
                       isSelected: selectedRating == 3,
                       onTap: () {
                         setState(() {
@@ -151,14 +148,12 @@ class _WellDonePageState extends State<WellDonePage> {
 }
 
 class RatingButton extends StatelessWidget {
-  final IconData icon;
-  final Color color;
+  final String imageAsset;
   final bool isSelected;
   final VoidCallback onTap;
 
   const RatingButton({
-    required this.icon,
-    required this.color,
+    required this.imageAsset,
     required this.isSelected,
     required this.onTap,
   });
@@ -168,23 +163,34 @@ class RatingButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
+        width: 60,
+        height: 60,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           border: Border.all(
-            color: isSelected ? Colors.blue : Colors.black,
-            width: isSelected ? 3 : 1,
+            color: isSelected ? Colors.blue : Colors.transparent,
+            width: isSelected ? 1: 1,
           ),
         ),
-        padding: const EdgeInsets.all(12), // Larger padding for larger icons
-        child: Icon(
-          icon,
-          size: 50, // Larger icon size
-          color: color,
+        child: ClipOval(
+          child: Container(
+            color: isSelected ? Colors.blue : Colors.transparent,
+            child: Image.asset(
+              imageAsset,
+              width: 80,
+              height: 80,
+              color: isSelected ? Colors.white : null,
+            ),
+          ),
         ),
       ),
     );
   }
 }
+
+
+
+
 
 void main() {
   runApp(MaterialApp(
