@@ -10,9 +10,18 @@ class Notifications extends StatefulWidget {
 class _NotificationsState extends State<Notifications> {
   @override
   Widget build(BuildContext context) {
-    return const AlertDialog(
-      content: Column(
-        children: [Expanded(child: SizedBox())],
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+        title: const Text('Notifications'),
+      ),
+      body: const Center(
+        child: Text('Notifications content goes here'),
       ),
     );
   }

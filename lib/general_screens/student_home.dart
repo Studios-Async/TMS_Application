@@ -12,7 +12,7 @@ class StudentHome extends StatefulWidget {
 class _StudentHomeState extends State<StudentHome> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: Column(children: [
           Row(
@@ -24,7 +24,6 @@ class _StudentHomeState extends State<StudentHome> {
               ),
             ],
           ),
-          StudentCalendar()
         ]),
       ),
     );
