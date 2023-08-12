@@ -16,10 +16,13 @@ class _StudentCalendarState extends State<StudentCalendar> {
   @override
   Widget build(BuildContext context) {
     return TableCalendar(
+      rowHeight: 50,
+      headerStyle: HeaderStyle(formatButtonVisible: false, titleCentered: true),
       calendarFormat: _calendarFormat,
       focusedDay: _focusedDay,
       firstDay: DateTime.utc(2000, 1, 1),
       lastDay: DateTime.utc(2030, 12, 31),
+      startingDayOfWeek: StartingDayOfWeek.monday,
       selectedDayPredicate: (day) {
         return isSameDay(_selectedDay, day);
       },
