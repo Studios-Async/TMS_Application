@@ -9,31 +9,8 @@ class StudentCalendar extends StatefulWidget {
 }
 
 class _StudentCalendarState extends State<StudentCalendar> {
-  CalendarFormat _calendarFormat = CalendarFormat.month;
-  DateTime _focusedDay = DateTime.now();
-  DateTime _selectedDay = DateTime.now();
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Student Calendar'),
-      ),
-      body: TableCalendar(
-        calendarFormat: _calendarFormat,
-        focusedDay: _focusedDay,
-        firstDay: DateTime.utc(2000, 1, 1),
-        lastDay: DateTime.utc(2030, 12, 31),
-        selectedDayPredicate: (day) {
-          return isSameDay(_selectedDay, day);
-        },
-        onDaySelected: (selectedDay, focusedDay) {
-          setState(() {
-            _selectedDay = selectedDay;
-            _focusedDay = focusedDay;
-          });
-        },
-      ),
-    );
+    return Scaffold();
   }
 }
