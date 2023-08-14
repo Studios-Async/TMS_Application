@@ -17,7 +17,8 @@ class _StudentCalendarState extends State<StudentCalendar> {
   Widget build(BuildContext context) {
     return TableCalendar(
       rowHeight: 50,
-      headerStyle: HeaderStyle(formatButtonVisible: false, titleCentered: true),
+      headerStyle:
+          const HeaderStyle(formatButtonVisible: false, titleCentered: true),
       calendarFormat: _calendarFormat,
       focusedDay: _focusedDay,
       firstDay: DateTime.utc(2000, 1, 1),

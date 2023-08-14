@@ -119,8 +119,8 @@ class _WellDonePageState extends State<WellDonePage> {
                     border: Border.all(color: Colors.grey),
                     borderRadius: BorderRadius.circular(18),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10),
+                  child: const Padding(
+                    padding: EdgeInsets.all(10),
                     child: TextField(
                       maxLines: 3,
                       decoration: InputDecoration(
@@ -135,7 +135,7 @@ class _WellDonePageState extends State<WellDonePage> {
                   onPressed: () {
                     // Add submit button functionality here
                   },
-                  child: Text("Submit"),
+                  child: const Text("Submit"),
                 ),
                 const SizedBox(height: 50), // Extra spacing at the bottom
               ],
@@ -169,7 +169,7 @@ class RatingButton extends StatelessWidget {
           shape: BoxShape.circle,
           border: Border.all(
             color: isSelected ? Colors.blue : Colors.transparent,
-            width: isSelected ? 1: 1,
+            width: isSelected ? 1 : 1,
           ),
         ),
         child: ClipOval(
@@ -188,12 +188,8 @@ class RatingButton extends StatelessWidget {
   }
 }
 
-
-
-
-
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: WellDonePage(),
   ));
 }

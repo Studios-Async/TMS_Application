@@ -15,8 +15,8 @@ class _NotifButtonState extends State<NotifButton> {
       icon: const Icon(Icons.notifications),
       iconSize: 30,
       onPressed: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Notifications()));
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const Notifications()));
       },
     );
   }
