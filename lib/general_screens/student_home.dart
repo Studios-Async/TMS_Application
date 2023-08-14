@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/notification_button.dart';
+import 'package:tms/Utilities/sidemenu.dart';
 import 'package:tms/Utilities/student_calendar.dart';
 
 class StudentHome extends StatefulWidget {
@@ -17,13 +18,7 @@ class _StudentHomeState extends State<StudentHome> {
         child: Column(
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  child: NotifButton(),
-                ),
-              ],
+              children: [SideMenu(), Spacer(), NotifButton()],
             ),
             StudentCalendar(),
           ],
