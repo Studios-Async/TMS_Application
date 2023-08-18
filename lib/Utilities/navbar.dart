@@ -14,19 +14,19 @@ class _NavBarState extends State<NavBar> {
   //starting page index
   int selectedIndex = 0;
 
-  //Change pages function - UNIMPLEMENTED
+  //Change pages function
   navigatePages(int index) {
     setState(() {
       selectedIndex = index;
     });
   }
 
-  final List<Widget> _pages = [StudentHome(), WellDonePage(), Placeholder()];
+  final List<Widget> pages = [StudentHome(), WellDonePage(), Placeholder()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages(selectedIndex),
+      body: pages[selectedIndex],
       bottomNavigationBar: Container(
         color: Colors.black,
         child: Padding(
