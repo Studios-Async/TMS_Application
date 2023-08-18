@@ -14,17 +14,18 @@ class StudentHome extends StatefulWidget {
 class _StudentHomeState extends State<StudentHome> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        body: SafeArea(
-          child: Column(
-            children: [
-              Row(
-                children: [SideMenu(), Spacer(), NotifButton()],
-              ),
-              StudentCalendar(),
-            ],
-          ),
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            Row(
+              children: [SideMenu(), Spacer(), NotifButton()],
+            ),
+            StudentCalendar(),
+          ],
         ),
-        bottomNavigationBar: NavBar());
+      ),
+      // bottomNavigationBar: NavBar()
+    );
   }
 }
