@@ -13,37 +13,39 @@ class NavBar extends StatefulWidget {
 
 class _NavBarState extends State<NavBar> {
   int selectedIndex = 0;
-  late PageController _pageController;
+  late ScrollController _scrollController;
+  List<Widget> pages = [StudentHome(), LoginPage(), WellDonePage()];
 
   @override
   void initState() {
     super.initState();
-    _pageController = PageController(initialPage: selectedIndex);
+    _scrollController = ScrollController();
   }
 
   navigatePages(int index) {
     setState(() {
       selectedIndex = index;
-      _pageController.animateToPage(
-        selectedIndex,
-        duration: const Duration(milliseconds: 500),
+      _scrollController.animateTo(
+        index * MediaQuery.of(context).size.width,
+        duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
     });
   }
 
-  final List<Widget> pages = [StudentHome(), LoginPage(), WellDonePage()];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView(
-        controller: _pageController,
-        children: pages,
-        onPageChanged: (index) {
-          setState(() {
-            selectedIndex = index;
-          });
+      body: ListView.builder(
+        controller: _scrollController,
+        scrollDirection: Axis.horizontal,
+        physics: BouncingScrollPhysics(),
+        itemCount: pages.length,
+        itemBuilder: (context, index) {
+          return SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: pages[index],
+          );
         },
       ),
       bottomNavigationBar: Container(
