@@ -12,21 +12,27 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  int selectedIndex = 0;
-  late ScrollController _scrollController;
-  List<Widget> pages = [StudentHome(), LoginPage(), WellDonePage()];
+  int selectedIndex = 0; // Current selected index for the page
+  late ScrollController _scrollController; // Controller for scrolling
+  List<Widget> pages = [
+    StudentHome(),
+    LoginPage(),
+    WellDonePage()
+  ]; // List of pages
 
   @override
   void initState() {
     super.initState();
-    _scrollController = ScrollController();
+    _scrollController = ScrollController(); // Initialize the scroll controller
   }
 
+  // Function to navigate between pages when a navbar button is pressed
   navigatePages(int index) {
     setState(() {
-      selectedIndex = index;
+      selectedIndex = index; // Update the selected index
       _scrollController.animateTo(
-        index * MediaQuery.of(context).size.width,
+        index *
+            MediaQuery.of(context).size.width, // Scroll to the selected page
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
@@ -39,12 +45,15 @@ class _NavBarState extends State<NavBar> {
       body: ListView.builder(
         controller: _scrollController,
         scrollDirection: Axis.horizontal,
-        physics: BouncingScrollPhysics(),
+        physics:
+            BouncingScrollPhysics(), // Bouncing scroll physics for the effect
         itemCount: pages.length,
         itemBuilder: (context, index) {
           return SizedBox(
-            width: MediaQuery.of(context).size.width,
-            child: pages[index],
+            width: MediaQuery.of(context)
+                .size
+                .width, // Set width to full screen width
+            child: pages[index], // Display the selected page
           );
         },
       ),
@@ -61,7 +70,8 @@ class _NavBarState extends State<NavBar> {
             activeColor: Colors.white,
             tabBackgroundColor: Colors.deepPurple,
             padding: const EdgeInsets.all(20),
-            onTabChange: navigatePages,
+            onTabChange:
+                navigatePages, // Call navigatePages when a navbar button is pressed
             tabs: const [
               GButton(
                 icon: Icons.home,

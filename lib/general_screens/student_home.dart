@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tms/Utilities/notification_button.dart';
 import 'package:tms/Utilities/sidemenu.dart';
 import 'package:tms/Utilities/student_calendar.dart';
-import 'package:tms/Utilities/navbar.dart'; // Import the NavBar class
 
 class StudentHome extends StatefulWidget {
   const StudentHome({Key? key}) : super(key: key);
@@ -18,14 +17,13 @@ class _StudentHomeState extends State<StudentHome> {
       body: SafeArea(
         child: Column(
           children: [
-            Row(
+            const Row(
               children: [SideMenu(), Spacer(), NotifButton()],
             ),
             StudentCalendar(),
           ],
         ),
       ),
-      // bottomNavigationBar: NavBar()
     );
   }
 }

@@ -9,16 +9,17 @@ class StudentCalendar extends StatefulWidget {
 }
 
 class _StudentCalendarState extends State<StudentCalendar> {
-  final CalendarFormat _calendarFormat = CalendarFormat.month;
-  DateTime _focusedDay = DateTime.now();
-  DateTime _selectedDay = DateTime.now();
+  final CalendarFormat _calendarFormat =
+      CalendarFormat.month; // Default calendar format
+  DateTime _focusedDay = DateTime.now(); // The day focused on in the calendar
+  DateTime _selectedDay = DateTime.now(); // The currently selected day
   TextStyle weekstyle =
       const TextStyle(fontSize: 20, fontWeight: FontWeight.w500);
 
   @override
   Widget build(BuildContext context) {
     return TableCalendar(
-      rowHeight: 55,
+      rowHeight: 55, // Height of each calendar row
       headerStyle: const HeaderStyle(
         formatButtonVisible: false,
         titleCentered: true,
@@ -29,21 +30,23 @@ class _StudentCalendarState extends State<StudentCalendar> {
         leftChevronMargin: EdgeInsets.only(left: 60),
         rightChevronMargin: EdgeInsets.only(right: 60),
       ),
-      daysOfWeekHeight: 50,
-      daysOfWeekStyle:
-          DaysOfWeekStyle(weekdayStyle: weekstyle, weekendStyle: weekstyle),
-      calendarFormat: _calendarFormat,
-      focusedDay: _focusedDay,
-      firstDay: DateTime.utc(2000, 1, 1),
-      lastDay: DateTime.utc(2030, 12, 31),
-      startingDayOfWeek: StartingDayOfWeek.monday,
+      daysOfWeekHeight: 50, // Height of the days of the week header
+      daysOfWeekStyle: DaysOfWeekStyle(
+          weekdayStyle: weekstyle,
+          weekendStyle: weekstyle), // Styling for days of the week
+      calendarFormat: _calendarFormat, // Set the calendar format
+      focusedDay: _focusedDay, // Set the focused day
+      firstDay: DateTime.utc(2000, 1, 1), // The first selectable day
+      lastDay: DateTime.utc(2030, 12, 31), // The last selectable day
+      startingDayOfWeek: StartingDayOfWeek.monday, // Start the week on Monday
       selectedDayPredicate: (day) {
-        return isSameDay(_selectedDay, day);
+        return isSameDay(
+            _selectedDay, day); // Predicate to check if a day is selected
       },
       onDaySelected: (selectedDay, focusedDay) {
         setState(() {
-          _selectedDay = selectedDay;
-          _focusedDay = focusedDay;
+          _selectedDay = selectedDay; // Update the selected day
+          _focusedDay = focusedDay; // Update the focused day
         });
       },
     );
