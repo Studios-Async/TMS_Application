@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tms/buttontemplate.dart';
 import 'package:tms/data.dart';
 
 class LoginPage extends StatefulWidget {
@@ -88,10 +89,6 @@ class _LoginPageState extends State<LoginPage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: Container(
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                        color: Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(18)),
                     child: Center(
                         child: Text(
                       "Sign In",
