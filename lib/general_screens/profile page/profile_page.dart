@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,12 +14,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ProfilePage(),
+      home: const ProfilePage(),
     );
   }
 }
 
 class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +34,7 @@ class ProfilePage extends StatelessWidget {
               height: 150,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.grey, // Placeholder color
+                color: Colors.grey, 
               ),
               child: const Center(
                 child: Text(
@@ -89,17 +93,17 @@ class ProfileButton extends StatelessWidget {
   final String label;
   final VoidCallback? onPressed;
 
-  const ProfileButton({required this.label, this.onPressed});
+  const ProfileButton({super.key, required this.label, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width * 0.8,
-      height: 100, // Adjust the height as needed
+      height: 100, 
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          textStyle: const TextStyle(fontSize: 24), // Adjust font size as needed
+          textStyle: const TextStyle(fontSize: 24), 
         ),
         child: Text(label),
       ),
