@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tms/general_screens/login_page.dart';
+import 'package:tms/general_screens/profile%20page/profile_page.dart';
 import 'package:tms/general_screens/student_home.dart';
 import 'package:tms/general_screens/welldone_page.dart';
 
@@ -17,7 +18,7 @@ class _NavBarState extends State<NavBar> {
   List<Widget> pages = [
     StudentHome(),
     LoginPage(),
-    WellDonePage()
+    ProfilePage()
   ]; // List of pages
 
   @override
