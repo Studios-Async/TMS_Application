@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class newbutton extends StatelessWidget {
+class NewButton extends StatelessWidget {
   String? text;
   IconData? icon;
   bool?
@@ -8,7 +8,7 @@ class newbutton extends StatelessWidget {
   double buttonheight;
   double buttonwidth;
   final voidcallback;
-  newbutton(
+  NewButton(
       {super.key,
       required this.voidcallback,
       required this.buttonheight,
@@ -19,21 +19,28 @@ class newbutton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButton(
-      shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(15))),
-      onPressed: voidcallback,
-      backgroundColor: Colors.deepPurple,
-      child: Center(
-          child: usingIcon == false
-              ? Text(
-                  text!,
-                  style: const TextStyle(color: Colors.white),
-                )
-              : Icon(
-                  icon,
-                  color: Colors.white,
-                )),
-    );
+    return Container(
+        width: buttonwidth,
+        height: buttonheight,
+        child: FloatingActionButton(
+          shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(15))),
+          onPressed: () {
+            voidcallback;
+          },
+          backgroundColor: Colors.deepPurple,
+          child: Center(
+              child: usingIcon ==
+                      false //if the button doesnt need an icon, there will be a text child
+                  ? Text(
+                      text!,
+                      style: const TextStyle(color: Colors.white),
+                    )
+                  : Icon(
+                      //if the button us using an icon, there will be an icon child
+                      icon,
+                      color: Colors.white,
+                    )),
+        ));
   }
 }
