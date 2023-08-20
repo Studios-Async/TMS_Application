@@ -1,33 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:tms/general_screens/profile%20page/subjects_study_page.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Tutor App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: ProfilePage(),
+    );
+  }
+}
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profile'),
-      ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(height: 20),
             Container(
               width: 120,
-              height: 120,
+              height: 150,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.grey, 
+                color: Colors.grey, // Placeholder color
               ),
-
-
-
               child: const Center(
                 child: Text(
                   'Profile Pic',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -36,20 +44,39 @@ class ProfilePage extends StatelessWidget {
               'Student Name',
               style: TextStyle(fontSize: 24),
             ),
-            const SizedBox(height: 10),
-            const Text(
-              'Tutor Role',
-              style: TextStyle(fontSize: 18),
-            ),
-            const SizedBox(height: 20),
-            ProfileButton(
-              label: 'Subjects You Study',
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SubjectsStudyPage()),
-                );
-              },
+            const SizedBox(height: 40),
+            Column(
+              children: [
+                ProfileButton(
+                  label: 'Subjects You Study',
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Placeholder()),
+                    );
+                  },
+                ),
+                const SizedBox(height: 40),
+                ProfileButton(
+                  label: 'This Month\'s Learning',
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Placeholder()),
+                    );
+                  },
+                ),
+                const SizedBox(height: 40),
+                ProfileButton(
+                  label: 'Current Balance',
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Placeholder()),
+                    );
+                  },
+                ),
+              ],
             ),
           ],
         ),
@@ -60,22 +87,23 @@ class ProfilePage extends StatelessWidget {
 
 class ProfileButton extends StatelessWidget {
   final String label;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
-  const ProfileButton({super.key, required this.label, required this.onPressed});
+  const ProfileButton({required this.label, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity, 
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+      width: MediaQuery.of(context).size.width * 0.8,
+      height: 100, // Adjust the height as needed
       child: ElevatedButton(
-        onPressed: onPressed, 
-        child: Text(
-          label,
-          style: const TextStyle(fontSize: 18),
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+          textStyle: const TextStyle(fontSize: 24), // Adjust font size as needed
         ),
+        child: Text(label),
       ),
     );
   }
 }
+
