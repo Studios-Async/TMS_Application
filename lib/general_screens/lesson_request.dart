@@ -16,14 +16,14 @@ class _LessonPageState extends State<LessonPage> {
             child: Container(
                 padding: const EdgeInsets.only(top: 25, bottom: 40),
                 child: Column(children: [
-                  Text('Make Lesson Request',
+                  const Text('Make Lesson Request',
                       style: TextStyle(
                           color: Colors.deepPurple,
                           fontWeight: FontWeight.bold,
                           fontSize: 30)),
                   Row(
                     children: [
-                      Column(
+                      const Column(
                         children: [
                           Padding(
                             padding: EdgeInsets.all(25),
@@ -48,7 +48,7 @@ class _LessonPageState extends State<LessonPage> {
                       Column(
                         //mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Padding(
+                          const Padding(
                             padding: EdgeInsets.only(
                                 top: 10, left: 25, right: 25, bottom: 10),
                             child: Text('Date',
@@ -58,7 +58,7 @@ class _LessonPageState extends State<LessonPage> {
                                     fontWeight: FontWeight.bold)),
                           ),
                           Padding(
-                              padding: EdgeInsets.all(5),
+                              padding: const EdgeInsets.all(5),
                               child: NewButton(
                                 voidcallback: null,
                                 buttonheight: 60,
@@ -66,7 +66,7 @@ class _LessonPageState extends State<LessonPage> {
                                 usingIcon: false,
                                 text: 'Select Time',
                               )),
-                          Padding(
+                          const Padding(
                             padding: EdgeInsets.only(
                                 top: 50, left: 25, right: 25, bottom: 10),
                             child: Text('Location',
@@ -76,7 +76,7 @@ class _LessonPageState extends State<LessonPage> {
                                     fontWeight: FontWeight.bold)),
                           ),
                           Padding(
-                              padding: EdgeInsets.all(5),
+                              padding: const EdgeInsets.all(5),
                               child: NewButton(
                                 voidcallback: null,
                                 buttonheight: 60,
@@ -84,7 +84,7 @@ class _LessonPageState extends State<LessonPage> {
                                 usingIcon: false,
                                 text: 'Lesson Link',
                               )),
-                          Padding(
+                          const Padding(
                             padding: EdgeInsets.only(
                                 top: 50, left: 25, right: 25, bottom: 10),
                             child: Text('Subject',
@@ -94,7 +94,7 @@ class _LessonPageState extends State<LessonPage> {
                                     fontWeight: FontWeight.bold)),
                           ),
                           Padding(
-                              padding: EdgeInsets.all(5),
+                              padding: const EdgeInsets.all(5),
                               child: NewButton(
                                 voidcallback: null,
                                 buttonheight: 60,
@@ -107,7 +107,7 @@ class _LessonPageState extends State<LessonPage> {
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 40),
+                    padding: const EdgeInsets.only(top: 40),
                     child: NewButton(
                         voidcallback: null,
                         buttonheight: 60,
