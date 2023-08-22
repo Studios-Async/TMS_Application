@@ -3,24 +3,24 @@ import 'package:tms/Utilities/notification_button.dart';
 import 'package:tms/Utilities/sidemenu.dart';
 import 'package:tms/Utilities/student_calendar.dart';
 
-class StudentHome extends StatefulWidget {
-  const StudentHome({Key? key}) : super(key: key);
+class TutorHome extends StatefulWidget {
+  const TutorHome({Key? key}) : super(key: key);
 
   @override
-  State<StudentHome> createState() => _StudentHomeState();
+  State<TutorHome> createState() => _TutorHomeState();
 }
 
-class _StudentHomeState extends State<StudentHome> {
+class _TutorHomeState extends State<TutorHome> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            const Row(
-              children: [SideMenu(), Spacer(), NotifButton()],
+            Row(
+              children: [SideMenu()],
             ),
-            StudentCalendar(),
+            HomePageCalendar(),
           ],
         ),
       ),
