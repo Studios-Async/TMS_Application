@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tms/general_screens/login_page.dart';
+import 'package:tms/general_screens/profile%20page/profile_page.dart';
 import 'package:tms/general_screens/student_home.dart';
 import 'package:tms/general_screens/welldone_page.dart';
 
@@ -16,8 +17,8 @@ class _NavBarState extends State<NavBar> {
   late ScrollController _scrollController; // Controller for scrolling
   List<Widget> pages = [
     StudentHome(),
-    LoginPage(),
-    WellDonePage()
+    Placeholder(),
+    ProfilePage()
   ]; // List of pages
 
   @override
@@ -58,14 +59,14 @@ class _NavBarState extends State<NavBar> {
         },
       ),
       bottomNavigationBar: Container(
-        color: Colors.black,
+        color: Colors.grey.shade800,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
           child: GNav(
             haptic: true,
             gap: 6,
             iconSize: 25,
-            backgroundColor: Colors.black,
+            backgroundColor: Colors.grey.shade800,
             color: Colors.white,
             activeColor: Colors.white,
             tabBackgroundColor: Colors.deepPurple,
