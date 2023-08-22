@@ -20,7 +20,7 @@ class _StudentHomeState extends State<StudentHome> {
             const Row(
               children: [SideMenu(), Spacer(), NotifButton()],
             ),
-            StudentCalendar(),
+            HomePageCalendar(),
           ],
         ),
       ),
