@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:tms/Utilities/navbar.dart';
 import 'package:tms/Utilities/student_calendar.dart';
 import 'package:tms/general_screens/login_page.dart';
-import 'package:tms/general_screens/student_home.dart';
-import 'package:tms/general_screens/welldone_page.dart';
+import 'package:tms/general_screens/Student/student_home.dart';
+import 'package:tms/general_screens/Student/welldone_page.dart';
 
 Future main() async {
   //add both to connect to Firebase for authentication services

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-class StudentCalendar extends StatefulWidget {
-  const StudentCalendar({Key? key}) : super(key: key);
+class HomePageCalendar extends StatefulWidget {
+  const HomePageCalendar({Key? key}) : super(key: key);
 
   @override
-  State<StudentCalendar> createState() => _StudentCalendarState();
+  State<HomePageCalendar> createState() => _HomePageCalendarState();
 }
 
-class _StudentCalendarState extends State<StudentCalendar> {
+class _HomePageCalendarState extends State<HomePageCalendar> {
   final CalendarFormat _calendarFormat =
       CalendarFormat.month; // Default calendar format
   DateTime _focusedDay = DateTime.now(); // The day focused on in the calendar

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tms/general_screens/lesson_request.dart';
+import 'package:tms/general_screens/Tutor/tutor_home.dart';
 import 'package:tms/general_screens/login_page.dart';
-import 'package:tms/general_screens/student_home.dart';
-import 'package:tms/general_screens/welldone_page.dart';
+import 'package:tms/general_screens/profile%20page/profile_page.dart';
+import 'package:tms/general_screens/Student/student_home.dart';
+import 'package:tms/general_screens/Student/welldone_page.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);
@@ -59,14 +61,14 @@ class _NavBarState extends State<NavBar> {
         },
       ),
       bottomNavigationBar: Container(
-        color: Colors.black,
+        color: Colors.grey.shade800,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
           child: GNav(
             haptic: true,
             gap: 6,
             iconSize: 25,
-            backgroundColor: Colors.black,
+            backgroundColor: Colors.grey.shade800,
             color: Colors.white,
             activeColor: Colors.white,
             tabBackgroundColor: Colors.deepPurple,
