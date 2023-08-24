@@ -13,14 +13,14 @@ class TutorHome extends StatefulWidget {
 class _TutorHomeState extends State<TutorHome> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
             Row(
-              children: [SideMenu()],
+              children: const [SideMenu()],
             ),
-            HomePageCalendar(),
+            const HomePageCalendar(),
           ],
         ),
       ),

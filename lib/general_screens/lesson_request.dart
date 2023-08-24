@@ -23,8 +23,8 @@ class _LessonPageState extends State<LessonPage> {
                           fontSize: 30)),
                   Row(
                     children: [
-                      const Column(
-                        children: [
+                      Column(
+                        children: const [
                           Padding(
                             padding: EdgeInsets.all(25),
                             child: Icon(Icons.calendar_month_outlined,
