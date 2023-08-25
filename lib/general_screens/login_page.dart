@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+<<<<<<< Updated upstream
+=======
+import 'package:tms/Utilities/buttontemplate.dart';
+>>>>>>> Stashed changes
 import 'package:tms/data.dart';
 
 class LoginPage extends StatefulWidget {
