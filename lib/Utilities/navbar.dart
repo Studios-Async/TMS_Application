@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:tms/general_screens/lesson_request.dart';
 import 'package:tms/general_screens/Tutor/tutor_home.dart';
 import 'package:tms/general_screens/login_page.dart';
 import 'package:tms/general_screens/profile%20page/profile_page.dart';
@@ -17,9 +18,9 @@ class _NavBarState extends State<NavBar> {
   int selectedIndex = 0; // Current selected index for the page
   late ScrollController _scrollController; // Controller for scrolling
   List<Widget> pages = [
-    TutorHome(),
-    Placeholder(),
-    ProfilePage()
+    StudentHome(),
+    LessonPage(),
+    WellDonePage()
   ]; // List of pages
 
   @override

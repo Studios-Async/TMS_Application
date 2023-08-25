@@ -45,11 +45,11 @@ class _WellDonePageState extends State<WellDonePage> {
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
                 ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
                   child: Row(
                     // Divider + Tutor name
-                    children: [
+                    children: const [
                       Expanded(
                         child: Divider(
                           thickness: 4,

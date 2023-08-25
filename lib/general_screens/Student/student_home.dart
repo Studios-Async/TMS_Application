@@ -17,10 +17,10 @@ class _StudentHomeState extends State<StudentHome> {
       body: SafeArea(
         child: Column(
           children: [
-            const Row(
-              children: [SideMenu(), Spacer(), NotifButton()],
+            Row(
+              children: const [SideMenu(), Spacer(), NotifButton()],
             ),
-            HomePageCalendar(),
+            const HomePageCalendar(),
           ],
         ),
       ),
