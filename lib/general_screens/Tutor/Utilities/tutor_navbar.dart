@@ -3,6 +3,8 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tms/general_screens/lesson_request.dart';
 import 'package:tms/general_screens/Tutor/tutor_home.dart';
 import 'package:tms/general_screens/Student/welldone_page.dart';
+import 'package:tms/general_screens/Tutor/tutor_lessons.dart';
+import 'package:tms/general_screens/Tutor/tutor_lessons.dart';
 
 class TutorNavBar extends StatefulWidget {
   const TutorNavBar({Key? key}) : super(key: key);
@@ -16,7 +18,7 @@ class _TutorNavBarState extends State<TutorNavBar> {
   late ScrollController _scrollController; // Controller for scrolling
   List<Widget> pages = [
     TutorHome(),
-    LessonPage(),
+    SeeRequestsPage(),
     Placeholder()
   ]; // List of pages
 
