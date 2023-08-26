@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 class TopStudent extends StatefulWidget {
   const TopStudent({super.key});
@@ -25,6 +26,7 @@ class _TopStudentState extends State<TopStudent> {
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 width: screenWidth * 0.14,
+                height: screenWidth * 0.14,
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Colors.white,
@@ -33,8 +35,8 @@ class _TopStudentState extends State<TopStudent> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Icon(
-                  Icons.attach_money,
-                  size: screenWidth * 0.14,
+                  FeatherIcons.bookOpen,
+                  size: screenWidth * 0.12,
                 ),
               ),
             ),

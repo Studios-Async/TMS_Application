@@ -25,6 +25,7 @@ class _TopTutorState extends State<TopTutor> {
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 width: screenWidth * 0.14,
+                height: screenWidth * 0.14,
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Colors.white,
@@ -32,9 +33,10 @@ class _TopTutorState extends State<TopTutor> {
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Icon(
-                  Icons.attach_money,
-                  size: screenWidth * 0.14,
+                child: Image.asset(
+                  "assets/icons/mortarboard.png",
+                  width: screenWidth * 0.12,
+                  height: screenWidth * 0.12,
                 ),
               ),
             ),

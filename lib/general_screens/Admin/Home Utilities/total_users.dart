@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 class TotalUsers extends StatefulWidget {
   const TotalUsers({super.key});
@@ -24,7 +25,8 @@ class _TotalUsersState extends State<TotalUsers> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                width: screenWidth * 0.14,
+                width: screenWidth * 0.15,
+                height: screenWidth * 0.15,
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Colors.white,
@@ -33,8 +35,8 @@ class _TotalUsersState extends State<TotalUsers> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Icon(
-                  Icons.attach_money,
-                  size: screenWidth * 0.14,
+                  FeatherIcons.users,
+                  size: screenWidth * 0.1,
                 ),
               ),
             ),
