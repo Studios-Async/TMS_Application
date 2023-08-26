@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
+import 'package:tms/general_screens/Admin/Home%20Utilities/revenue.dart';
+import 'package:tms/general_screens/Admin/Home%20Utilities/top_student.dart';
+import 'package:tms/general_screens/Admin/Home%20Utilities/top_tutor.dart';
+import 'package:tms/general_screens/Admin/Home%20Utilities/total_hours.dart';
+import 'package:tms/general_screens/Admin/Home%20Utilities/total_users.dart';
 
 class AdminHome extends StatefulWidget {
   const AdminHome({Key? key}) : super(key: key);
@@ -24,10 +29,8 @@ class _AdminHomeState extends State<AdminHome> {
                   alignment: Alignment.centerLeft,
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    border:
-                        Border.all(color: Colors.black, width: 2), // Add border
-                    borderRadius:
-                        BorderRadius.circular(10), // Add border radius
+                    border: Border.all(color: Colors.black, width: 2),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Text(
                     "Dashboard",
@@ -52,69 +55,30 @@ class _AdminHomeState extends State<AdminHome> {
                   ),
                 ),
               ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                child: NewButton(
-                  voidcallback: null,
-                  buttonheight: screenWidth * 0.4,
-                  buttonwidth: screenWidth * 0.9,
-                  usingIcon: false,
-                  text: "Test",
-                ),
-              ),
               SizedBox(
-                height: 20,
+                height: screenWidth * 0.05,
               ),
+              const Revenue(), // Button to show the REVENUE
+              SizedBox(height: screenWidth * 0.1),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: NewButton(
-                          voidcallback: null,
-                          buttonheight: screenWidth * 0.35,
-                          buttonwidth: screenWidth * 0.45,
-                          usingIcon: false,
-                          text: "Test",
-                        ),
+                      const TotalUsers(), //Button to show the TOTAL USERS
+                      SizedBox(
+                        height: screenWidth * 0.05,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: NewButton(
-                          voidcallback: null,
-                          buttonheight: screenWidth * 0.35,
-                          buttonwidth: screenWidth * 0.45,
-                          usingIcon: false,
-                          text: "Test",
-                        ),
-                      )
+                      const TopTutor(), //Button to show the TOP TUTOR
                     ],
                   ),
                   Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: NewButton(
-                          voidcallback: null,
-                          buttonheight: screenWidth * 0.35,
-                          buttonwidth: screenWidth * 0.45,
-                          usingIcon: false,
-                          text: "Test",
-                        ),
+                      const TotalUsers(), //Button to show the TOTAL USERS
+                      SizedBox(
+                        height: screenWidth * 0.05,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: NewButton(
-                          voidcallback: null,
-                          buttonheight: screenWidth * 0.35,
-                          buttonwidth: screenWidth * 0.45,
-                          usingIcon: false,
-                          text: "Test",
-                        ),
-                      )
+                      const TopStudent(), //Button to show the TOP STUDENT
                     ],
                   )
                 ],
