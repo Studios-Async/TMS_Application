@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tms/buttontemplate.dart';
 
 class Revenue extends StatefulWidget {
   const Revenue({super.key});
@@ -15,7 +16,7 @@ class _RevenueState extends State<Revenue> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Container(
-        height: screenWidth * 0.35,
+        height: screenWidth * 0.25,
         width: screenWidth * 0.95,
         color: Colors.deepPurple,
         child: Padding(
@@ -30,9 +31,80 @@ class _RevenueState extends State<Revenue> {
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
+                height: screenWidth * 0.2,
+                width: screenWidth * 0.2,
                 child: Icon(
                   Icons.attach_money,
                   size: screenWidth * 0.15,
+                ),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Revenue",
+                      style: TextStyle(
+                          fontSize: screenWidth * 0.075,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 8.0, horizontal: 20),
+                        child: Text(
+                          "£X",
+                          style: TextStyle(
+                            fontSize: screenWidth * 0.07,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      // Unimplemented - likely to change ?
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.arrow_upward,
+                            color: Colors.green,
+                            size: screenWidth * 0.05,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 2.0),
+                            child: Text(
+                              "35%",
+                              style: TextStyle(
+                                fontSize: screenWidth * 0.05,
+                                color: Colors.green,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const Spacer(),
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.white,
+                    width: 3,
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: NewButton(
+                  voidcallback: null,
+                  buttonheight: screenWidth * 0.1,
+                  buttonwidth: screenWidth * 0.1,
+                  usingIcon: true,
+                  icon: Icons.arrow_right_alt_outlined,
                 ),
               )
             ],

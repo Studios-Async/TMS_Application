@@ -24,10 +24,11 @@ class _AdminHomeState extends State<AdminHome> {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
                 child: Container(
                   alignment: Alignment.centerLeft,
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.black, width: 2),
                     borderRadius: BorderRadius.circular(10),
@@ -74,7 +75,7 @@ class _AdminHomeState extends State<AdminHome> {
                   ),
                   Column(
                     children: [
-                      const TotalUsers(), //Button to show the TOTAL USERS
+                      const TotalHours(), //Button to show the TOTAL HOURS
                       SizedBox(
                         height: screenWidth * 0.05,
                       ),
