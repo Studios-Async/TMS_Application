@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tms/buttontemplate.dart';
+import 'package:tms/Utilities/buttontemplate.dart';
 
 class LessonPage extends StatefulWidget {
   const LessonPage({super.key});

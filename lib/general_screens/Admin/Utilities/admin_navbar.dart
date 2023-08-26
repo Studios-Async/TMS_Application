@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:tms/general_screens/Admin/admin_home.dart';
 import 'package:tms/general_screens/lesson_request.dart';
 import 'package:tms/general_screens/Tutor/tutor_home.dart';
 import 'package:tms/general_screens/login_page.dart';
@@ -7,20 +8,20 @@ import 'package:tms/general_screens/profile%20page/profile_page.dart';
 import 'package:tms/general_screens/Student/student_home.dart';
 import 'package:tms/general_screens/Student/welldone_page.dart';
 
-class NavBar extends StatefulWidget {
-  const NavBar({Key? key}) : super(key: key);
+class AdminNavBar extends StatefulWidget {
+  const AdminNavBar({Key? key}) : super(key: key);
 
   @override
-  State<NavBar> createState() => _NavBarState();
+  State<AdminNavBar> createState() => _AdminNavBarState();
 }
 
-class _NavBarState extends State<NavBar> {
+class _AdminNavBarState extends State<AdminNavBar> {
   int selectedIndex = 0; // Current selected index for the page
   late ScrollController _scrollController; // Controller for scrolling
   List<Widget> pages = [
-    StudentHome(),
-    LessonPage(),
-    WellDonePage()
+    AdminHome(),
+    Placeholder(),
+    Placeholder()
   ]; // List of pages
 
   @override
@@ -82,7 +83,7 @@ class _NavBarState extends State<NavBar> {
               ),
               GButton(
                 icon: Icons.add_circle,
-                text: "Add Lesson",
+                text: "Accounts",
               ),
               GButton(
                 icon: Icons.account_circle,
