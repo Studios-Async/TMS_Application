@@ -26,19 +26,19 @@ class _LoginPageState extends State<LoginPage> {
                   child: Image.asset("assets/icons/mortarboard.png"),
                 ),
 
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 //Greeting
-                Text(
+                const Text(
                   "Hello!",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 52),
                 ),
-                Text(
+                const Text(
                   "Welcome to TMS",
                   style: TextStyle(fontSize: 32),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 55,
                 ),
                 //email textfield
@@ -49,8 +49,8 @@ class _LoginPageState extends State<LoginPage> {
                         color: Colors.grey[100],
                         border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(18)),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 20),
                       child: TextField(
                         decoration: InputDecoration(
                             border: InputBorder.none, hintText: "Email"),
@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 //password textfield
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Padding(
@@ -69,8 +69,8 @@ class _LoginPageState extends State<LoginPage> {
                         color: Colors.grey[100],
                         border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(18)),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 20),
                       child: TextField(
                         obscureText: true,
                         decoration: InputDecoration(
@@ -81,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 //sign in button
@@ -89,11 +89,11 @@ class _LoginPageState extends State<LoginPage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: Container(
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         color: Colors.deepPurple,
                         borderRadius: BorderRadius.circular(18)),
-                    child: Center(
+                    child: const Center(
                         child: Text(
                       "Sign In",
                       style: TextStyle(
