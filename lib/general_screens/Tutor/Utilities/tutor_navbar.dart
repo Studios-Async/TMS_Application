@@ -4,6 +4,7 @@ import 'package:tms/general_screens/Student/this_months_learning.dart';
 import 'package:tms/general_screens/lesson_request.dart';
 import 'package:tms/general_screens/Tutor/tutor_home.dart';
 import 'package:tms/general_screens/Student/welldone_page.dart';
+import 'package:tms/general_screens/profile%20page/profile_page.dart';
 
 class TutorNavBar extends StatefulWidget {
   const TutorNavBar({Key? key}) : super(key: key);
@@ -18,7 +19,8 @@ class _TutorNavBarState extends State<TutorNavBar> {
   List<Widget> pages = [
     const TutorHome(),
     const LessonPage(),
-    ThisMonthsLearningPage() //temporary
+    ProfilePage()
+    //ThisMonthsLearningPage() //temporary
   ]; // List of pages
 
   @override

@@ -20,7 +20,7 @@ class ThisMonthsLearningPage extends StatelessWidget {
             padding: const EdgeInsets.all(18.0),
             child: const Text(
               'This month, you have done:',
-              style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
             ),
           ),
           const RowItem(icon: Icons.access_time, text: 'Total hours: _______'),
