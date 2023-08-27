@@ -16,22 +16,27 @@ class _RevenueState extends State<Revenue> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Container(
-        height: screenWidth * 0.25,
+        height: screenWidth * 0.3, //Dimensions
         width: screenWidth * 0.95,
-        color: Colors.deepPurple,
+        decoration: BoxDecoration(
+          color: Colors.deepPurple,
+          borderRadius: BorderRadius.circular(12), // Curved corner radius.
+        ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 9.0),
           child: Row(
             children: [
               Container(
+                // Dollar Icon
                 decoration: BoxDecoration(
+                  //White Border
                   border: Border.all(
                     color: Colors.white,
                     width: 3,
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                height: screenWidth * 0.2,
+                height: screenWidth * 0.2, //Border Parameters
                 width: screenWidth * 0.2,
                 child: Icon(
                   Icons.attach_money,
@@ -91,6 +96,7 @@ class _RevenueState extends State<Revenue> {
                 ],
               ),
               const Spacer(),
+              //More details button
               Container(
                 decoration: BoxDecoration(
                   border: Border.all(

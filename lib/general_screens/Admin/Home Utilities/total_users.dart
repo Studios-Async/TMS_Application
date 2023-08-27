@@ -16,8 +16,11 @@ class _TotalUsersState extends State<TotalUsers> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 16),
       child: Container(
-        color: Colors.deepPurple,
-        height: screenWidth * 0.25,
+        decoration: BoxDecoration(
+          color: Colors.deepPurple,
+          borderRadius: BorderRadius.circular(12), // Curved corner radius.
+        ),
+        height: screenWidth * 0.25, //Box Dimensions
         width: screenWidth * 0.45,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -25,7 +28,7 @@ class _TotalUsersState extends State<TotalUsers> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                width: screenWidth * 0.15,
+                width: screenWidth * 0.15, // Border Dimensions
                 height: screenWidth * 0.15,
                 decoration: BoxDecoration(
                   border: Border.all(
@@ -34,6 +37,7 @@ class _TotalUsersState extends State<TotalUsers> {
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
+                //Icon
                 child: Icon(
                   FeatherIcons.users,
                   size: screenWidth * 0.1,
@@ -46,7 +50,7 @@ class _TotalUsersState extends State<TotalUsers> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: screenWidth * 0.23, // Adjust the width
+                  width: screenWidth * 0.23, // Adjust the size
                   child: const Text(
                     "Total Users",
                     style: TextStyle(
@@ -57,7 +61,7 @@ class _TotalUsersState extends State<TotalUsers> {
                   ),
                 ),
                 SizedBox(
-                  width: screenWidth * 0.23, // Adjust the width
+                  width: screenWidth * 0.23, // Adjust the size
                   child: const Text(
                     "2000",
                     style: TextStyle(

@@ -16,7 +16,10 @@ class _TopStudentState extends State<TopStudent> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 16),
       child: Container(
-        color: Colors.deepPurple,
+        decoration: BoxDecoration(
+          color: Colors.deepPurple,
+          borderRadius: BorderRadius.circular(12), // Curved corner radius.
+        ),
         height: screenWidth * 0.25,
         width: screenWidth * 0.45,
         child: Row(

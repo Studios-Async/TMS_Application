@@ -3,6 +3,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tms/general_screens/lesson_request.dart';
 import 'package:tms/general_screens/Student/student_home.dart';
 import 'package:tms/general_screens/Student/welldone_page.dart';
+import 'package:tms/general_screens/Student/student_profile_page.dart';
 
 class StudentNavBar extends StatefulWidget {
   const StudentNavBar({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _StudentNavBarState extends State<StudentNavBar> {
   List<Widget> pages = [
     StudentHome(),
     LessonPage(),
-    WellDonePage()
+    StudentProfilePage()
   ]; // List of pages
 
   @override
