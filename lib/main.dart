@@ -1,16 +1,6 @@
-import 'dart:math';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:tms/general_screens/Admin/Utilities/admin_navbar.dart';
-import 'package:tms/general_screens/Student/Utilities/student_navbar.dart';
-import 'package:tms/Utilities/student_calendar.dart';
-import 'package:tms/general_screens/Admin/admin_home.dart';
 import 'package:tms/general_screens/Tutor/Utilities/tutor_navbar.dart';
-import 'package:tms/general_screens/Tutor/tutor_home.dart';
-import 'package:tms/general_screens/login_page.dart';
-import 'package:tms/general_screens/Student/student_home.dart';
-import 'package:tms/general_screens/Student/welldone_page.dart';
 
 Future main() async {
   //add both to connect to Firebase for authentication services
@@ -26,7 +16,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false, //dont show banner in corner
       home: TutorNavBar(),
     );
