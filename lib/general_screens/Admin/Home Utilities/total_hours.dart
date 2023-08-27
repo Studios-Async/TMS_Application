@@ -16,32 +16,37 @@ class _TotalHoursState extends State<TotalHours> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 16),
       child: Container(
-        color: Colors.deepPurple,
-        height: screenWidth * 0.25,
+        decoration: BoxDecoration(
+          color: Colors.deepPurple,
+          borderRadius: BorderRadius.circular(12), // Curved corner radius.
+        ),
+        height: screenWidth * 0.25, // Container Dimensions
         width: screenWidth * 0.45,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            // Container for chart icon.
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 width: screenWidth * 0.14,
                 height: screenWidth * 0.14,
                 decoration: BoxDecoration(
+                  // Icon border
                   border: Border.all(
                     color: Colors.white,
-                    width: 3,
+                    width: 3, // Icon border width.
                   ),
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius:
+                      BorderRadius.circular(10), // Icon border radius.
                 ),
                 child: Icon(
-                  Icons.bar_chart,
+                  Icons.bar_chart, // Bar chart icon.
                   size: screenWidth * 0.12,
-                  weight: 2,
                 ),
               ),
             ),
-            const SizedBox(width: 8),
+            const SizedBox(width: 8), // Space between icon and text.
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -49,7 +54,7 @@ class _TotalHoursState extends State<TotalHours> {
                 SizedBox(
                   width: screenWidth * 0.23,
                   child: const Text(
-                    "Total Hours:",
+                    "Total Hours:", // Text label and details
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -60,10 +65,10 @@ class _TotalHoursState extends State<TotalHours> {
                 SizedBox(
                   width: screenWidth * 0.23,
                   child: const Text(
-                    "2.5k",
+                    "2.5k", // Total hours value.
                     style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
+                      color: Colors.white, // Text color.
+                      fontSize: 16, // Text font size.
                     ),
                   ),
                 )
