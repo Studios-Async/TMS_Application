@@ -3,8 +3,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tms/general_screens/lesson_request.dart';
 import 'package:tms/general_screens/Tutor/tutor_home.dart';
 import 'package:tms/general_screens/Student/welldone_page.dart';
-import 'package:tms/general_screens/Tutor/tutor_lessons.dart';
-import 'package:tms/general_screens/Tutor/tutor_lessons.dart';
+import 'package:tms/general_screens/Tutor/tutor_makerequest.dart';
 
 class TutorNavBar extends StatefulWidget {
   const TutorNavBar({Key? key}) : super(key: key);
