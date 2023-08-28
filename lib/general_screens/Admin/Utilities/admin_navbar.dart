@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tms/general_screens/Admin/admin_home.dart';
+import 'package:tms/general_screens/Admin/admin_profile.dart';
 import 'package:tms/general_screens/lesson_request.dart';
 import 'package:tms/general_screens/Tutor/tutor_home.dart';
 import 'package:tms/general_screens/login_page.dart';
@@ -21,7 +22,7 @@ class _AdminNavBarState extends State<AdminNavBar> {
   List<Widget> pages = [
     AdminHome(),
     Placeholder(),
-    Placeholder()
+    AdminProfilePage()
   ]; // List of pages
 
   @override
