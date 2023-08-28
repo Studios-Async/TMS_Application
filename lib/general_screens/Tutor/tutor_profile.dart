@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
 
-class AdminProfilePage extends StatefulWidget {
-  const AdminProfilePage({super.key});
+class TutorProfilePage extends StatefulWidget {
+  const TutorProfilePage({super.key});
 
   @override
-  State<AdminProfilePage> createState() => _AdminProfilePageState();
+  State<TutorProfilePage> createState() => _TutorProfilePageState();
 }
 
-class _AdminProfilePageState extends State<AdminProfilePage> {
+class _TutorProfilePageState extends State<TutorProfilePage> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -38,7 +38,7 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
               ),
              
               const Text(
-                'Student Name',
+                'Tutor Name',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
               ),
               Padding(
@@ -52,7 +52,7 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         buttonheight: screenWidth * 0.25,
                         buttonwidth: screenWidth * 0.95,
                         usingIcon: false,
-                        text: "Change Email",
+                        text: "Subjects you teach",
                       ),
                     ),
                     Padding(
@@ -62,7 +62,7 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         buttonheight: screenWidth * 0.25,
                         buttonwidth: screenWidth * 0.95,
                         usingIcon: false,
-                        text: "Change Password",
+                        text: "This Month's Teaching",
                       ),
                     ),
                     Padding(
@@ -72,7 +72,7 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         buttonheight: screenWidth * 0.25,
                         buttonwidth: screenWidth * 0.95,
                         usingIcon: false,
-                        text: "Log Out",
+                        text: "Current Earnings",
                       ),
                     ),
                   ],
