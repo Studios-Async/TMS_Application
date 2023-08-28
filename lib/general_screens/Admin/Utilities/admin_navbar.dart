@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tms/general_screens/Admin/admin_home.dart';
 import 'package:tms/general_screens/Admin/admin_profile.dart';
@@ -83,7 +84,7 @@ class _AdminNavBarState extends State<AdminNavBar> {
                 text: "Home",
               ),
               GButton(
-                icon: Icons.add_circle,
+                icon: FeatherIcons.userCheck,
                 text: "Accounts",
               ),
               GButton(

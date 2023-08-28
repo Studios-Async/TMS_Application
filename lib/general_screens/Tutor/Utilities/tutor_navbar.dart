@@ -81,8 +81,8 @@ class _TutorNavBarState extends State<TutorNavBar> {
                 text: "Home",
               ),
               GButton(
-                icon: Icons.add_circle,
-                text: "Add Lesson",
+                icon: Icons.search,
+                text: "See Requests",
               ),
               GButton(
                 icon: Icons.account_circle,
