@@ -13,11 +13,10 @@ class _TutorAccountsListState extends State<TutorAccountsList> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200, // Set the desired height for your horizontal list
+      height: 200, // List Height
       child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount:
-            4, // Replace with the actual number of items you want to display.
+        scrollDirection: Axis.horizontal, //Scroll direction
+        itemCount: 4, //UNIMPLEMENTED ONWARDS
         itemBuilder: (context, index) {
           return AccountWidget(name: (index + 1).toString());
         },
