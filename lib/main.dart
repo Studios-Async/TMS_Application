@@ -16,12 +16,11 @@ Future main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false, //dont show banner in corner
-      home: TutorProfilePage(),
+      home: AdminNavBar(),
     );
   }
 }
