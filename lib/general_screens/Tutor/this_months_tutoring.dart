@@ -56,10 +56,8 @@ class ThisMonthsTutoringPage extends StatelessWidget {
             ),
             const RowItems(
                 icon: Icons.access_time, text: 'Total hours: _______'),
-<<<<<<< Updated upstream
-=======
-                //Hidden thing here that opens and shows stats for each subject?
->>>>>>> Stashed changes
+            //Hidden thing here that opens and shows stats for each subject?
+
             SizedBox(
               height: screenWidth * 0.2,
             ),
