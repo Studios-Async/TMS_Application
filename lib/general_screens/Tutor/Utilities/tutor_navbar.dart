@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:tms/general_screens/Tutor/tutor_profile.dart';
 import 'package:tms/general_screens/Tutor/tutor_seerequests.dart';
 import 'package:tms/general_screens/lesson_request.dart';
 import 'package:tms/general_screens/Tutor/tutor_home.dart';
@@ -19,7 +20,7 @@ class _TutorNavBarState extends State<TutorNavBar> {
   List<Widget> pages = [
     TutorHome(),
     SeeRequestsPage(),
-    StudentProfilePage()
+    TutorProfilePage()
   ]; // List of pages
 
   @override
@@ -80,8 +81,8 @@ class _TutorNavBarState extends State<TutorNavBar> {
                 text: "Home",
               ),
               GButton(
-                icon: Icons.add_circle,
-                text: "Add Lesson",
+                icon: Icons.search,
+                text: "See Requests",
               ),
               GButton(
                 icon: Icons.account_circle,

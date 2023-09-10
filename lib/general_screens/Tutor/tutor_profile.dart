@@ -18,7 +18,6 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
         child: Center(
           child: Column(
             children: [
-              
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
@@ -31,12 +30,12 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                   child: const Center(
                     child: Text(
                       'Profile Pic',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
               ),
-             
               const Text(
                 'Tutor Name',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
@@ -46,7 +45,9 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: screenWidth * 0.01,
+                          vertical: screenWidth * 0.05),
                       child: NewButton(
                         voidcallback: null,
                         buttonheight: screenWidth * 0.25,
@@ -56,7 +57,9 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: screenWidth * 0.01,
+                          vertical: screenWidth * 0.05),
                       child: NewButton(
                         voidcallback: null,
                         buttonheight: screenWidth * 0.25,
@@ -66,7 +69,9 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: screenWidth * 0.01,
+                          vertical: screenWidth * 0.05),
                       child: NewButton(
                         voidcallback: null,
                         buttonheight: screenWidth * 0.25,

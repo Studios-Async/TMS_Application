@@ -46,7 +46,9 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
               Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: screenWidth * 0.01,
+                        vertical: screenWidth * 0.05),
                     child: NewButton(
                       voidcallback: null,
                       buttonheight: screenWidth * 0.25,
@@ -56,7 +58,9 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: screenWidth * 0.01,
+                        vertical: screenWidth * 0.05),
                     child: NewButton(
                       voidcallback: null,
                       buttonheight: screenWidth * 0.25,
@@ -66,7 +70,9 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: screenWidth * 0.01,
+                        vertical: screenWidth * 0.05),
                     child: NewButton(
                       voidcallback: null,
                       buttonheight: screenWidth * 0.25,

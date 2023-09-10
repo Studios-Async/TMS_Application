@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:tms/general_screens/Admin/admin_accounts.dart';
 import 'package:tms/general_screens/Admin/admin_home.dart';
 import 'package:tms/general_screens/Admin/admin_profile.dart';
 import 'package:tms/general_screens/lesson_request.dart';
@@ -21,7 +23,7 @@ class _AdminNavBarState extends State<AdminNavBar> {
   late ScrollController _scrollController; // Controller for scrolling
   List<Widget> pages = [
     AdminHome(),
-    Placeholder(),
+    AdminAccounts(),
     AdminProfilePage()
   ]; // List of pages
 
@@ -83,7 +85,7 @@ class _AdminNavBarState extends State<AdminNavBar> {
                 text: "Home",
               ),
               GButton(
-                icon: Icons.add_circle,
+                icon: FeatherIcons.userCheck,
                 text: "Accounts",
               ),
               GButton(
