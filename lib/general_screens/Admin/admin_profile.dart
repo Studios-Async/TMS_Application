@@ -54,6 +54,7 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         buttonwidth: screenWidth * 0.95,
                         usingIcon: false,
                         text: "Change Email",
+                        textsize: screenWidth * 0.06,
                       ),
                     ),
                     Padding(
@@ -66,6 +67,7 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         buttonwidth: screenWidth * 0.95,
                         usingIcon: false,
                         text: "Change Password",
+                        textsize: screenWidth * 0.06,
                       ),
                     ),
                     Padding(
@@ -78,6 +80,7 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         buttonwidth: screenWidth * 0.95,
                         usingIcon: false,
                         text: "Log Out",
+                        textsize: screenWidth * 0.06,
                       ),
                     ),
                   ],

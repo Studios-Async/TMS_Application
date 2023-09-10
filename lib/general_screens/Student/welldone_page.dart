@@ -46,7 +46,8 @@ class _WellDonePageState extends State<WellDonePage> {
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 15.0, vertical: 10),
                   child: Row(
                     // Divider + Tutor name
                     children: const [

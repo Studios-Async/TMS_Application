@@ -55,6 +55,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                       buttonwidth: screenWidth * 0.95,
                       usingIcon: false,
                       text: "Subjects you Study",
+                      textsize: screenWidth * 0.06,
                     ),
                   ),
                   Padding(
@@ -67,6 +68,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                       buttonwidth: screenWidth * 0.95,
                       usingIcon: false,
                       text: "This months learning",
+                      textsize: screenWidth * 0.06,
                     ),
                   ),
                   Padding(
@@ -79,6 +81,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                       buttonwidth: screenWidth * 0.95,
                       usingIcon: false,
                       text: "Current balance",
+                      textsize: screenWidth * 0.06,
                     ),
                   ),
                 ],

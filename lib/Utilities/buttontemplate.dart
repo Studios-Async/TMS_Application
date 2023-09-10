@@ -7,6 +7,7 @@ class NewButton extends StatelessWidget {
       usingIcon; //bool value for if button will have icon or text, set to true or false then add text/icon as argument
   double buttonheight;
   double buttonwidth;
+  double textsize;
   final voidcallback;
   NewButton(
       {super.key,
@@ -14,6 +15,7 @@ class NewButton extends StatelessWidget {
       required this.buttonheight,
       required this.buttonwidth,
       required this.usingIcon,
+      required this.textsize,
       this.icon,
       this.text});
 
@@ -34,12 +36,13 @@ class NewButton extends StatelessWidget {
                       false //if the button doesnt need an icon, there will be a text child
                   ? Text(
                       text!,
-                      style: const TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white, fontSize: textsize),
                     )
                   : Icon(
                       //if the button us using an icon, there will be an icon child
                       icon,
                       color: Colors.white,
+                      size: textsize,
                     )),
         ));
   }

@@ -65,6 +65,7 @@ class _LessonPageState extends State<LessonPage> {
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Select Time',
+                                textsize: 18,
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -83,6 +84,7 @@ class _LessonPageState extends State<LessonPage> {
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Lesson Link',
+                                textsize: 18,
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -101,6 +103,7 @@ class _LessonPageState extends State<LessonPage> {
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Select Subject',
+                                textsize: 18,
                               )),
                         ],
                       ),
@@ -109,11 +112,13 @@ class _LessonPageState extends State<LessonPage> {
                   Padding(
                     padding: const EdgeInsets.only(top: 40),
                     child: NewButton(
-                        voidcallback: null,
-                        buttonheight: 60,
-                        buttonwidth: 340,
-                        usingIcon: false,
-                        text: 'Confirm'),
+                      voidcallback: null,
+                      buttonheight: 60,
+                      buttonwidth: 340,
+                      usingIcon: false,
+                      text: 'Confirm',
+                      textsize: 18,
+                    ),
                   )
                 ]))));
   }

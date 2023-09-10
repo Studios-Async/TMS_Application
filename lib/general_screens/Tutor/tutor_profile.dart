@@ -54,6 +54,7 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                         buttonwidth: screenWidth * 0.95,
                         usingIcon: false,
                         text: "Subjects you teach",
+                        textsize: screenWidth * 0.06,
                       ),
                     ),
                     Padding(
@@ -66,6 +67,7 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                         buttonwidth: screenWidth * 0.95,
                         usingIcon: false,
                         text: "This Month's Teaching",
+                        textsize: screenWidth * 0.06,
                       ),
                     ),
                     Padding(
@@ -78,6 +80,7 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                         buttonwidth: screenWidth * 0.95,
                         usingIcon: false,
                         text: "Current Earnings",
+                        textsize: screenWidth * 0.06,
                       ),
                     ),
                   ],
