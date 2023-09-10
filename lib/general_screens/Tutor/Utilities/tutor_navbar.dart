@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:tms/general_screens/Tutor/tutor_earnings.dart';
 import 'package:tms/general_screens/Tutor/tutor_profile.dart';
 import 'package:tms/general_screens/Tutor/tutor_seerequests.dart';
 import 'package:tms/general_screens/lesson_request.dart';
@@ -20,7 +21,7 @@ class _TutorNavBarState extends State<TutorNavBar> {
   List<Widget> pages = [
     TutorHome(),
     SeeRequestsPage(),
-    TutorProfilePage()
+    TutorEarnings()
   ]; // List of pages
 
   @override
