@@ -106,11 +106,10 @@ class _RevenueState extends State<Revenue> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: NewButton(
-                  voidcallback: null,
                   buttonheight: screenWidth * 0.1,
                   buttonwidth: screenWidth * 0.1,
                   usingIcon: true,
-                  icon: Icons.arrow_right_alt_outlined,
+                  icon: Icons.arrow_right_alt_outlined, circle: false, textsize: 10, voidcallback: () {  },
                 ),
               )
             ],

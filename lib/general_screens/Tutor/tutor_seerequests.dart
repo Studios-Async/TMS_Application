@@ -74,11 +74,10 @@ class _SeeRequestsState extends State<SeeRequestsPage> {
                   bottom: 30,
                 ),
                 child: NewButton(
-                  voidcallback: Null, //link to make lesson offer page
                   buttonheight: 60,
                   buttonwidth: 340,
                   usingIcon: false,
-                  text: 'Make Lesson Offer:', textsize: 18,
+                  text: 'Make Lesson Offer:', textsize: 18, onPressed: () {  }, circle: false, voidcallback: () {  },
                 ),
               )
             ],
@@ -105,11 +104,10 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                   Row(
                     children: [
                       NewButton(
-                        voidcallback: Null, //link back to see requests page
                         buttonheight: 60,
                         buttonwidth: 50,
                         usingIcon: true,
-                        icon: Icons.arrow_back, textsize: 18,
+                        icon: Icons.arrow_back, textsize: 18, onPressed: () {  }, circle: false, voidcallback: () {  },
                       ),
                       const Text('Make Lesson Offer',
                           style: TextStyle(
@@ -156,12 +154,11 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                           Padding(
                               padding: const EdgeInsets.all(5),
                               child: NewButton(
-                                voidcallback: null,
                                 buttonheight: 60,
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Select Time',
-                                textsize: 18,
+                                textsize: 18, onPressed: () {  }, circle: false, voidcallback: () {  },
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -175,12 +172,11 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                           Padding(
                               padding: const EdgeInsets.all(5),
                               child: NewButton(
-                                voidcallback: null,
                                 buttonheight: 60,
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Enter Student Email',
-                                textsize: 18,
+                                textsize: 18, onPressed: () {  }, circle: false, voidcallback: () {  },
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -194,12 +190,11 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                           Padding(
                               padding: const EdgeInsets.all(5),
                               child: NewButton(
-                                voidcallback: null,
                                 buttonheight: 60,
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Select Subject',
-                                textsize: 18,
+                                textsize: 18, onPressed: () {  }, circle: false, voidcallback: () {  },
                               )),
                         ],
                       ),
@@ -208,12 +203,11 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                   Padding(
                     padding: const EdgeInsets.only(top: 40),
                     child: NewButton(
-                      voidcallback: null,
                       buttonheight: 60,
                       buttonwidth: 340,
                       usingIcon: false,
                       text: 'Confirm',
-                      textsize: 18,
+                      textsize: 18, onPressed: () {  }, circle: false, voidcallback: () {  },
                     ),
                   )
                 ]))));

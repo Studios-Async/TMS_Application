@@ -49,12 +49,11 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                           horizontal: screenWidth * 0.01,
                           vertical: screenWidth * 0.05),
                       child: NewButton(
-                        voidcallback: null,
                         buttonheight: screenWidth * 0.25,
                         buttonwidth: screenWidth * 0.95,
                         usingIcon: false,
                         text: "Subjects you teach",
-                        textsize: screenWidth * 0.06,
+                        textsize: screenWidth * 0.06, onPressed: () {  }, circle: false, voidcallback: () {  },
                       ),
                     ),
                     Padding(
@@ -62,12 +61,12 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                           horizontal: screenWidth * 0.01,
                           vertical: screenWidth * 0.05),
                       child: NewButton(
-                        voidcallback: null,
+                        circle: false,
                         buttonheight: screenWidth * 0.25,
                         buttonwidth: screenWidth * 0.95,
                         usingIcon: false,
                         text: "This Month's Teaching",
-                        textsize: screenWidth * 0.06,
+                        textsize: screenWidth * 0.06, onPressed: () {  }, voidcallback: () {  },
                       ),
                     ),
                     Padding(
@@ -75,12 +74,12 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                           horizontal: screenWidth * 0.01,
                           vertical: screenWidth * 0.05),
                       child: NewButton(
-                        voidcallback: null,
+                        circle: false,
                         buttonheight: screenWidth * 0.25,
                         buttonwidth: screenWidth * 0.95,
                         usingIcon: false,
                         text: "Current Earnings",
-                        textsize: screenWidth * 0.06,
+                        textsize: screenWidth * 0.06, onPressed: () {  }, voidcallback: () {  },
                       ),
                     ),
                   ],
