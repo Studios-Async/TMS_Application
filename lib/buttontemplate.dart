@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class NewButton extends StatelessWidget {
   String? text;
   IconData? icon;
@@ -7,46 +6,51 @@ class NewButton extends StatelessWidget {
   double buttonheight;
   double buttonwidth;
   final void Function() voidcallback;
-  bool circle;
   double textsize;
 
   NewButton({
     Key? key,
-    required this.voidcallback,
     required this.buttonheight,
+    required this.voidcallback,
     required this.buttonwidth,
     required this.usingIcon,
     this.icon,
     this.text,
-    required this.circle,
-    required this.textsize,
+    required this.textsize,  required Null Function() onPressed,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: buttonwidth,
       height: buttonheight,
-      child: FloatingActionButton(
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(15)),
-        ),
+      child: ElevatedButton(
         onPressed: voidcallback,
-        backgroundColor: Colors.deepPurple,
-        child: CircleAvatar(
-          backgroundColor: Colors.transparent,
-          radius: circle ? buttonheight / 2.0 : 0, // Make it circular if circle is true
-          child: Center(
-            child: usingIcon == false
-                ? Text(
-                    text!,
-                    style: const TextStyle(color: Colors.white),
-                  )
-                : Icon(
-                    icon,
-                    color: Colors.white,
-                  ),
+        style: ElevatedButton.styleFrom(
+          primary: Colors.deepPurple,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0), // Adjust the radius as needed
           ),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (usingIcon == true) // Only show the icon if usingIcon is true
+              Icon(
+                icon,
+                color: Colors.white,
+                size: textsize,
+              ),
+            if (usingIcon == true && text != null) // Add some spacing if both icon and text are present
+              SizedBox(width: 8.0),
+            if (text != null)
+              Flexible( // Use Flexible to allow text to wrap
+                child: Text(
+                  text!,
+                  style: const TextStyle(color: Colors.white),
+                ),
+              ),
+          ],
         ),
       ),
     );

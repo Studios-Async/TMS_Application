@@ -109,7 +109,7 @@ class _RevenueState extends State<Revenue> {
                   buttonheight: screenWidth * 0.1,
                   buttonwidth: screenWidth * 0.1,
                   usingIcon: true,
-                  icon: Icons.arrow_right_alt_outlined, circle: false, textsize: 10, voidcallback: () {  },
+                  icon: Icons.arrow_right_alt_outlined,  textsize: 10, voidcallback: () {  }, onPressed: () {  },
                 ),
               )
             ],
