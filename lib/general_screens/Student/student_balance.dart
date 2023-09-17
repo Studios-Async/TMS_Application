@@ -9,32 +9,28 @@ class LessonHistoryWidget extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Padding(padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15), child:     Container(
       color: Colors.deepPurple,
       child: Row(
         children: [
-          Text(
-            subject,
-            style: const TextStyle(color: Colors.white, fontSize: 30),
-          ),
           const Padding(
               padding: EdgeInsetsDirectional.symmetric(horizontal: 15)),
-          Text(cost.toString(),
+          Text(subject + '          '+  cost.toString(),
               style: const TextStyle(color: Colors.white, fontSize: 30))
         ],
       ),
-    );
+    ));
   }
 }
 
-class TutorEarnings extends StatefulWidget {
-  const TutorEarnings({super.key});
+class StudentBalance extends StatefulWidget {
+  const StudentBalance({super.key});
 
   @override
-  State<TutorEarnings> createState() => _TutorEarnings();
+  State<StudentBalance> createState() => _StudentBalance();
 }
 
-class _TutorEarnings extends State<TutorEarnings> {
+class _StudentBalance extends State<StudentBalance> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,7 +58,7 @@ class _TutorEarnings extends State<TutorEarnings> {
           Padding(
             padding: const EdgeInsets.only(bottom: 30),
             child: Container(
-              height: 70,
+              height: 300,
               child: ListView.builder(
                 scrollDirection: Axis.vertical,
                 itemCount: 3,
@@ -73,11 +69,11 @@ class _TutorEarnings extends State<TutorEarnings> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
             child: NewButton(
               voidcallback: null,
-              buttonheight: 30,
-              buttonwidth: 60,
+              buttonheight: 60,
+              buttonwidth: 100,
               usingIcon: false,
               text: 'Pay',
             ),

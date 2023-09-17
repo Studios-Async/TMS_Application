@@ -8,20 +8,18 @@ class LessonHistoryWidget extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
+
+    return Padding(padding: EdgeInsets.symmetric(horizontal: 20), child:  Container(
       color: Colors.deepPurple,
       child: Row(
         children: [
-          Text(
-            subject,
-            style: TextStyle(color: Colors.white, fontSize: 30),
-          ),
           Padding(padding: EdgeInsetsDirectional.symmetric(horizontal: 15)),
-          Text(pay.toString(),
+          Text(subject + '          ' + pay.toString(),
               style: TextStyle(color: Colors.white, fontSize: 30))
         ],
       ),
-    );
+    ));
+
   }
 }
 
