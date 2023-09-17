@@ -9,7 +9,7 @@ class LessonHistoryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Padding(padding: EdgeInsets.symmetric(horizontal: 20), child:  Container(
+    return Padding(padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15), child:  Container(
       color: Colors.deepPurple,
       child: Row(
         children: [
@@ -40,7 +40,7 @@ class _TutorEarnings extends State<TutorEarnings> {
         padding: const EdgeInsets.only(top: 25, bottom: 40),
         child: Column(children: [
           Padding(
-            padding: EdgeInsetsDirectional.symmetric(horizontal: 25),
+            padding: EdgeInsets.only(left: 25, right: 25, top: 40, bottom: 15), 
             child: Text('NAME, your earnings this month are: £---',
                 style: TextStyle(
                     color: Colors.deepPurple,
@@ -58,7 +58,7 @@ class _TutorEarnings extends State<TutorEarnings> {
           Padding(
             padding: EdgeInsets.only(bottom: 30),
             child: Container(
-              height: 70,
+              height: 300,
               child: ListView.builder(
                 scrollDirection: Axis.vertical,
                 itemCount: 1,

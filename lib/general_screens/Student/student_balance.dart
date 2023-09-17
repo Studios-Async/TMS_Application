@@ -61,7 +61,7 @@ class _StudentBalance extends State<StudentBalance> {
               height: 300,
               child: ListView.builder(
                 scrollDirection: Axis.vertical,
-                itemCount: 3,
+                itemCount: 1,
                 itemBuilder: (context, index) {
                   return const LessonHistoryWidget(subject: 'Maths', cost: 45);
                 },
