@@ -65,7 +65,7 @@ class _TutorEarnings extends State<TutorEarnings> {
               height: 70,
               child: ListView.builder(
                 scrollDirection: Axis.vertical,
-                itemCount: 1,
+                itemCount: 3,
                 itemBuilder: (context, index) {
                   return const LessonHistoryWidget(subject: 'Maths', cost: 45);
                 },
