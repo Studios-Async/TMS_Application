@@ -21,7 +21,7 @@ class _TutorNavBarState extends State<TutorNavBar> {
   List<Widget> pages = [
     TutorHome(),
     SeeRequestsPage(),
-    TutorEarnings()
+    TutorProfilePage()
   ]; // List of pages
 
   @override
