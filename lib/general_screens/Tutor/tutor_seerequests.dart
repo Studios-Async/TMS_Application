@@ -3,42 +3,49 @@ import 'package:tms/Utilities/buttontemplate.dart';
 import 'package:tms/general_screens/Tutor/tutor_home.dart';
 
 class LessonRequest extends StatelessWidget {
-  String? StudentName;
-  String? Subject;
-  DateTime? time;
+  String? studentName;
+  String? subject;
+  String? time;
 
   LessonRequest(
       {super.key,
-      required this.StudentName,
-      required this.Subject,
+      required this.studentName,
+      required this.subject,
       required this.time});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 340,
+      
       color: Colors.deepPurple,
       child: Row(
         children: [
+          Padding(padding: EdgeInsets.all(10)),
           Column(
             children: [
-              Text(StudentName!,
+              Padding(padding: EdgeInsets.all(10)),
+              Text(studentName!,
                   style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 30)),
-              Text(Subject!,
+                      fontSize: 35)),
+              Text(subject!,
                   style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 30)),
+                      fontSize: 35)),
               Text(time! as String,
                   style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 30)),
+                      fontSize: 35)),
+              Padding(padding: EdgeInsets.all(10))
             ],
           ),
+          Padding(padding: EdgeInsets.all(30)),
+          Container(height: 80, width: 100, color: Colors.deepPurple, child: NewButton(voidcallback: () {}, buttonheight: 15, buttonwidth: 30, usingIcon: false,text: 'Approve', circle: true, textsize: 4, onPressed: (){} ))
+
           //approve button here
         ],
       ),
@@ -79,7 +86,8 @@ class _SeeRequestsState extends State<SeeRequestsPage> {
                   usingIcon: false,
                   text: 'Make Lesson Offer:', textsize: 18, onPressed: () {  }, circle: false, voidcallback: () {  },
                 ),
-              )
+              ),
+            LessonRequest(studentName: 'Name', subject: 'Subject', time: '13:30')
             ],
           )),
     )));
