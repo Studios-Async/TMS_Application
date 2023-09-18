@@ -39,7 +39,7 @@ class NewButton extends StatelessWidget {
           child: usingIcon == false
               ? Text(
                   text!,
-                  style: const TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: textsize),
                 )
               : Icon(
                   icon,
