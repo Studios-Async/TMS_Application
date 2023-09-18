@@ -1,16 +1,15 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
 
-class CreateAccountPage extends StatefulWidget {
-  const CreateAccountPage({super.key});
+class NewAccPage extends StatefulWidget {
+  const NewAccPage({super.key});
 
   @override
-  State<CreateAccountPage> createState() =>  CreateAccount();
+  State<NewAccPage> createState() => _NewaccPage();
 }
 
-
-
-class CreateAccount extends State<CreateAccountPage> {
+class _NewaccPage  extends State<NewAccPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +17,7 @@ class CreateAccount extends State<CreateAccountPage> {
             child: Container(
                 padding: const EdgeInsets.only(top: 25, bottom: 40),
                 child: Column(children: [
-                  const Text('Create New Account',
+                  const Text('Make Lesson Request',
                       style: TextStyle(
                           color: Colors.deepPurple,
                           fontWeight: FontWeight.bold,
@@ -35,14 +34,14 @@ class CreateAccount extends State<CreateAccountPage> {
                           Padding(
                             padding: EdgeInsets.all(25),
                             child: Icon(
-                              Icons.perm_identity,
+                              Icons.perm_identity_sharp,
                               color: Colors.deepPurple,
                               size: 110,
                             ),
                           ),
                           Padding(
                             padding: EdgeInsets.all(25),
-                            child: Icon(Icons.email,
+                            child: Icon(Icons.mail,
                                 color: Colors.deepPurple, size: 110),
                           )
                         ],
@@ -70,7 +69,7 @@ class CreateAccount extends State<CreateAccountPage> {
                           const Padding(
                             padding: EdgeInsets.only(
                                 top: 50, left: 25, right: 25, bottom: 10),
-                            child: Text('Account Name',
+                            child: Text('Account Name:',
                                 style: TextStyle(
                                     color: Colors.deepPurple,
                                     fontSize: 20,
@@ -87,7 +86,7 @@ class CreateAccount extends State<CreateAccountPage> {
                           const Padding(
                             padding: EdgeInsets.only(
                                 top: 50, left: 25, right: 25, bottom: 10),
-                            child: Text('Email',
+                            child: Text('Email:',
                                 style: TextStyle(
                                     color: Colors.deepPurple,
                                     fontSize: 20,

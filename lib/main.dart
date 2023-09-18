@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:tms/general_screens/Admin/Utilities/admin_navbar.dart';
 import 'package:tms/general_screens/Admin/admin_accounts.dart';
 import 'package:tms/general_screens/Tutor/tutor_profile.dart';
+import 'package:tms/general_screens/Tutor/tutor_seerequests.dart';
+import 'package:tms/general_screens/lesson_request.dart';
 import 'package:tms/general_screens/profile%20page/subjects_page_tutor.dart';
 import 'general_screens/Admin/admin_profile.dart';
 import 'general_screens/profile page/subjects_page_student.dart';
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return   const MaterialApp(
       debugShowCheckedModeBanner: false, //dont show banner in corner
-      home: CreateAccountPage(),
+      home: LessonPage(),
     );
   }
 }
