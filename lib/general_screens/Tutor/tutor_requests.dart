@@ -79,7 +79,7 @@ class SeeRequestsPageNew extends StatelessWidget {
                     buttonheight: 60,
                     buttonwidth: 340,   // Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));
                     usingIcon: false,
-                    text: 'Make Lesson Offer:', textsize: 18, circle: false, voidcallback: (){}, onPressed:  (){Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));}
+                    text: 'Make Lesson Offer:', textsize: 18, circle: false, voidcallback: (){Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));}, onPressed:  (){Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));}
                   ),
                 ),
               LessonRequest(studentName: 'Name', subject: 'Subject', time: '13:30')
