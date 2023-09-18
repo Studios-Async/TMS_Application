@@ -29,7 +29,8 @@ class SubjectsPage extends StatelessWidget {
                   mainAxisSpacing: 8.0, // Space between rows
                   crossAxisSpacing: 8.0, // Space between columns
                 ),
-                itemCount: 12, // Change this to the number of subjects you want to display
+                itemCount:
+                    12, // Change this to the number of subjects you want to display
                 itemBuilder: (context, index) {
                   return NewButton(
                     voidcallback: () {
@@ -39,7 +40,6 @@ class SubjectsPage extends StatelessWidget {
                     buttonwidth: double.infinity,
                     usingIcon: false,
                     text: 'Subject ${index + 1}',
-                    onPressed: () {}, // Add onPressed handler
                     textsize: 16,
                     circle: true, // Make the button circular
                   );
@@ -56,7 +56,6 @@ class SubjectsPage extends StatelessWidget {
                 buttonwidth: double.infinity, // Fill the width of the screen
                 usingIcon: false,
                 text: "Save",
-                onPressed: () {}, // Add onPressed handler
                 textsize: 16, circle: false, // Adjust text size as needed
               ),
             ),

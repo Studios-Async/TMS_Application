@@ -5,10 +5,8 @@ class CreateAccountPage extends StatefulWidget {
   const CreateAccountPage({super.key});
 
   @override
-  State<CreateAccountPage> createState() =>  CreateAccount();
+  State<CreateAccountPage> createState() => CreateAccount();
 }
-
-
 
 class CreateAccount extends State<CreateAccountPage> {
   @override
@@ -65,7 +63,10 @@ class CreateAccount extends State<CreateAccountPage> {
                                 buttonheight: 60,
                                 buttonwidth: 200,
                                 usingIcon: false,
-                                text: 'Student/Tutor', onPressed: () {  }, textsize: 10, circle: false, voidcallback: () {  },
+                                text: 'Student/Tutor',
+                                textsize: 10,
+                                circle: false,
+                                voidcallback: () {},
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -82,7 +83,10 @@ class CreateAccount extends State<CreateAccountPage> {
                                 buttonheight: 60,
                                 buttonwidth: 200,
                                 usingIcon: false,
-                                text: 'Firstname Surname', onPressed: () {  }, textsize: 10, circle: false, voidcallback: () {  },
+                                text: 'Firstname Surname',
+                                textsize: 10,
+                                circle: false,
+                                voidcallback: () {},
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -99,7 +103,10 @@ class CreateAccount extends State<CreateAccountPage> {
                                 buttonheight: 60,
                                 buttonwidth: 200,
                                 usingIcon: false,
-                                text: 'Email Address', onPressed: () {  }, textsize: 10, circle: false, voidcallback: () {  },
+                                text: 'Email Address',
+                                textsize: 10,
+                                circle: false,
+                                voidcallback: () {},
                               )),
                         ],
                       ),
@@ -108,10 +115,14 @@ class CreateAccount extends State<CreateAccountPage> {
                   Padding(
                     padding: const EdgeInsets.only(top: 40),
                     child: NewButton(
-                        buttonheight: 60,
-                        buttonwidth: 340,
-                        usingIcon: false,
-                        text: 'Confirm', onPressed: () {  }, textsize: 10, circle: false, voidcallback: () {  },),
+                      buttonheight: 60,
+                      buttonwidth: 340,
+                      usingIcon: false,
+                      text: 'Confirm',
+                      textsize: 10,
+                      circle: false,
+                      voidcallback: () {},
+                    ),
                   )
                 ]))));
   }

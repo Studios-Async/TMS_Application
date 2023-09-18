@@ -18,7 +18,6 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
         child: Center(
           child: Column(
             children: [
-              
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
@@ -31,12 +30,12 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                   child: const Center(
                     child: Text(
                       'Profile Pic',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
               ),
-             
               const Text(
                 'Student Name',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
@@ -52,7 +51,9 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         buttonwidth: screenWidth * 0.95,
                         circle: false,
                         usingIcon: false,
-                        text: "Change Email", onPressed: () {  }, textsize: 10, voidcallback: () {  },
+                        text: "Change Email",
+                        textsize: 10,
+                        voidcallback: () {},
                       ),
                     ),
                     Padding(
@@ -62,7 +63,9 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         buttonwidth: screenWidth * 0.95,
                         circle: false,
                         usingIcon: false,
-                        text: "Change Password", onPressed: () {  }, textsize: 10, voidcallback: () {  },
+                        text: "Change Password",
+                        textsize: 10,
+                        voidcallback: () {},
                       ),
                     ),
                     Padding(
@@ -72,7 +75,9 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         buttonheight: screenWidth * 0.25,
                         buttonwidth: screenWidth * 0.95,
                         usingIcon: false,
-                        text: "Log Out", onPressed: () {  }, textsize: 10, voidcallback: () {  },
+                        text: "Log Out",
+                        textsize: 10,
+                        voidcallback: () {},
                       ),
                     ),
                   ],

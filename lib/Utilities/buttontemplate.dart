@@ -19,7 +19,7 @@ class NewButton extends StatelessWidget {
     this.icon,
     this.text,
     required this.circle, // Add a parameter to specify if the button should be circular
-    required this.textsize, required Null Function() onPressed,
+    required this.textsize,
   }) : super(key: key);
 
   @override

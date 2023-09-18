@@ -70,8 +70,9 @@ class _AdminAccountsState extends State<AdminAccounts> {
                   buttonheight: screenWidth * 0.2,
                   buttonwidth: screenWidth * 0.65,
                   usingIcon: false,
-                  text: "Create New Account",  textsize: 100, voidcallback: () {  }, onPressed: () {  }, 
-
+                  text: "Create New Account",
+                  textsize: 100,
+                  voidcallback: () {},
                 ),
               )
             ],

@@ -9,17 +9,19 @@ class LessonHistoryWidget extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Padding(padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15), child:     Container(
-      color: Colors.deepPurple,
-      child: Row(
-        children: [
-          const Padding(
-              padding: EdgeInsetsDirectional.symmetric(horizontal: 15)),
-          Text(subject + '          '+  cost.toString(),
-              style: const TextStyle(color: Colors.white, fontSize: 30))
-        ],
-      ),
-    ));
+    return Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+        child: Container(
+          color: Colors.deepPurple,
+          child: Row(
+            children: [
+              const Padding(
+                  padding: EdgeInsetsDirectional.symmetric(horizontal: 15)),
+              Text(subject + '          ' + cost.toString(),
+                  style: const TextStyle(color: Colors.white, fontSize: 30))
+            ],
+          ),
+        ));
   }
 }
 
@@ -71,11 +73,12 @@ class _StudentBalance extends State<StudentBalance> {
           Padding(
             padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
             child: NewButton(
-              voidcallback: null,
+              voidcallback: () {},
               buttonheight: 60,
               buttonwidth: 100,
               usingIcon: false,
               text: 'Pay',
+              textsize: 18,
             ),
           )
         ]),
