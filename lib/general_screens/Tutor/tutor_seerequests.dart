@@ -17,8 +17,8 @@ class LessonRequest extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 340,
-      
-      color: Colors.deepPurple,
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.deepPurple),
+
       child: Row(
         children: [
           Padding(padding: EdgeInsets.all(10)),
