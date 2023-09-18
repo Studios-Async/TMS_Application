@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tms/general_screens/Tutor/tutor_earnings.dart';
 import 'package:tms/general_screens/Tutor/tutor_profile.dart';
+import 'package:tms/general_screens/Tutor/tutor_requests.dart';
 import 'package:tms/general_screens/Tutor/tutor_seerequests.dart';
 import 'package:tms/general_screens/lesson_request.dart';
 import 'package:tms/general_screens/Tutor/tutor_home.dart';
@@ -20,7 +21,7 @@ class _TutorNavBarState extends State<TutorNavBar> {
   late ScrollController _scrollController; // Controller for scrolling
   List<Widget> pages = [
     TutorHome(),
-    SeeRequestsPage(),
+    SeeRequestsPageNew(),
     TutorProfilePage()
   ]; // List of pages
 

@@ -71,11 +71,16 @@ class _StudentBalance extends State<StudentBalance> {
           Padding(
             padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
             child: NewButton(
-              voidcallback: null,
+              voidcallback: (){},
               buttonheight: 60,
               buttonwidth: 100,
               usingIcon: false,
               text: 'Pay',
+              onPressed: () {
+                
+              },
+              textsize: 30,
+
             ),
           )
         ]),
