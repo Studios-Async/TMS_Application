@@ -55,6 +55,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                       buttonwidth: screenWidth * 0.95,
                       usingIcon: false,
                       text: "Subjects you Study",
+                      //SubjectsPage
                       textsize: screenWidth * 0.06,
                       voidcallback: () {},
                     ),
@@ -69,6 +70,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                       usingIcon: false,
                       circle: false,
                       text: "This months learning",
+                      //ThisMonthsLearningPage
                       textsize: screenWidth * 0.06,
                       voidcallback: () {},
                     ),
@@ -83,6 +85,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                       buttonwidth: screenWidth * 0.95,
                       usingIcon: false,
                       text: "Current balance",
+                      //StudentBalance
                       textsize: screenWidth * 0.06,
                       voidcallback: () {},
                     ),
