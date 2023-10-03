@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:tms/main.dart';
 
 import '../../Utilities/buttontemplate.dart';
 
-class SubjectsPage extends StatelessWidget {
-  const SubjectsPage({Key? key}) : super(key: key);
+class SubjectsPage extends StatefulWidget {
+  const SubjectsPage({super.key});
 
+  @override
+  State<SubjectsPage> createState() => _SubjectsPageState();
+}
+
+class _SubjectsPageState extends State<SubjectsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,49 +20,59 @@ class SubjectsPage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(16.0),
               alignment: Alignment.center,
-              child: const Text(
+              child: Text(
                 'Subjects You Study',
                 style: TextStyle(
-                  fontSize: 38, // Adjust the font size as needed
+                  fontSize:
+                      logicalWidth * 0.08, // Adjust the font size as needed
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
             Expanded(
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3, // 3 columns
-                  mainAxisSpacing: 8.0, // Space between rows
-                  crossAxisSpacing: 8.0, // Space between columns
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3, // 3 columns
+                    mainAxisSpacing: 8.0, // Space between rows
+                    crossAxisSpacing: 8.0, // Space between columns
+                  ),
+                  itemCount:
+                      12, // Change this to the number of subjects you want to display
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 1, vertical: 1),
+                      child: NewButton(
+                        voidcallback: () {
+                          // Add functionality for each subject button here
+                        },
+                        buttonheight: logicalHeight * 0.02,
+                        buttonwidth: logicalWidth * 0.01,
+                        usingIcon: false,
+                        text: 'Subject ${index + 1}',
+                        textsize: logicalWidth * 0.04,
+                        circle: true, // Make the button circular
+                      ),
+                    );
+                  },
                 ),
-                itemCount:
-                    12, // Change this to the number of subjects you want to display
-                itemBuilder: (context, index) {
-                  return NewButton(
-                    voidcallback: () {
-                      // Add functionality for each subject button here
-                    },
-                    buttonheight: double.infinity,
-                    buttonwidth: double.infinity,
-                    usingIcon: false,
-                    text: 'Subject ${index + 1}',
-                    textsize: 16,
-                    circle: true, // Make the button circular
-                  );
-                },
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.symmetric(
+                  horizontal: 15, vertical: 55), // Increase vertical padding
               child: NewButton(
                 voidcallback: () {
                   // Add save functionality here
                 },
-                buttonheight: 60, // Adjust the height as needed
-                buttonwidth: double.infinity, // Fill the width of the screen
+                buttonheight: logicalHeight * 0.09,
+                buttonwidth: double.infinity,
                 usingIcon: false,
                 text: "Save",
-                textsize: 16, circle: false, // Adjust text size as needed
+                textsize: logicalHeight * 0.03,
+                circle: false,
               ),
             ),
           ],

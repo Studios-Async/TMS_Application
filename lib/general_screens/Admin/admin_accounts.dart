@@ -3,6 +3,7 @@ import 'package:tms/buttontemplate.dart';
 import 'package:tms/general_screens/Admin/Utilities/account_widget.dart';
 import 'package:tms/general_screens/Admin/Utilities/students_accounts.dart';
 import 'package:tms/general_screens/Admin/Utilities/tutor_accounts.dart';
+import 'package:tms/main.dart';
 
 class AdminAccounts extends StatefulWidget {
   const AdminAccounts({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class _AdminAccountsState extends State<AdminAccounts> {
                       child: Text(
                         "Tutors \u2192",
                         style: TextStyle(
-                          fontSize: screenWidth * 0.12,
+                          fontSize: logicalWidth * 0.075,
                           fontWeight: FontWeight.bold,
                           color: Colors.black,
                         ),
@@ -42,6 +43,9 @@ class _AdminAccountsState extends State<AdminAccounts> {
                     horizontal: screenWidth * 0.01),
                 child: const TutorAccountsList(),
               ),
+              SizedBox(
+                height: logicalHeight * 0.02,
+              ),
               Padding(
                 padding: EdgeInsets.only(top: screenWidth * 0.05),
                 child: Align(
@@ -51,7 +55,7 @@ class _AdminAccountsState extends State<AdminAccounts> {
                       child: Text(
                         "Students \u2192",
                         style: TextStyle(
-                          fontSize: screenWidth * 0.12,
+                          fontSize: logicalWidth * 0.075,
                           fontWeight: FontWeight.bold,
                           color: Colors.black,
                         ),
@@ -64,14 +68,17 @@ class _AdminAccountsState extends State<AdminAccounts> {
                     horizontal: screenWidth * 0.01),
                 child: const StudentAccountsList(),
               ),
+              SizedBox(
+                height: logicalHeight * 0.02,
+              ),
               Padding(
                 padding: EdgeInsets.all(screenWidth * 0.05),
                 child: NewButton(
-                  buttonheight: screenWidth * 0.2,
-                  buttonwidth: screenWidth * 0.65,
+                  buttonheight: logicalHeight * 0.1,
+                  buttonwidth: logicalWidth * 0.9,
                   usingIcon: false,
                   text: "Create New Account",
-                  textsize: 150,
+                  textsize: logicalHeight * 0.9,
                   voidcallback: () {},
                 ),
               )

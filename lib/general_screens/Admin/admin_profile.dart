@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
+import 'package:tms/main.dart';
 
 class AdminProfilePage extends StatefulWidget {
   const AdminProfilePage({super.key});
@@ -37,46 +38,50 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                 ),
               ),
               const Text(
-                'Student Name',
+                'Admin Name',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8.0, vertical: 24),
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8.0, vertical: 12),
                       child: NewButton(
                         buttonheight: screenWidth * 0.25,
                         buttonwidth: screenWidth * 0.95,
                         circle: false,
                         usingIcon: false,
                         text: "Change Email",
-                        textsize: 10,
+                        textsize: logicalWidth * 0.06,
                         voidcallback: () {},
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8.0, vertical: 12),
                       child: NewButton(
                         buttonheight: screenWidth * 0.25,
                         buttonwidth: screenWidth * 0.95,
                         circle: false,
                         usingIcon: false,
                         text: "Change Password",
-                        textsize: 10,
+                        textsize: logicalWidth * 0.06,
                         voidcallback: () {},
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8.0, vertical: 12),
                       child: NewButton(
                         circle: false,
                         buttonheight: screenWidth * 0.25,
                         buttonwidth: screenWidth * 0.95,
                         usingIcon: false,
                         text: "Log Out",
-                        textsize: 10,
+                        textsize: logicalWidth * 0.06,
                         voidcallback: () {},
                       ),
                     ),
