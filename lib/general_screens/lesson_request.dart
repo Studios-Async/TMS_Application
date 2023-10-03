@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
 
@@ -60,11 +61,13 @@ class _LessonPageState extends State<LessonPage> {
                           Padding(
                               padding: const EdgeInsets.all(5),
                               child: NewButton(
-                                voidcallback: null,
                                 buttonheight: 60,
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Select Time',
+                                textsize: 10,
+                                circle: false,
+                                voidcallback: () {},
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -78,11 +81,13 @@ class _LessonPageState extends State<LessonPage> {
                           Padding(
                               padding: const EdgeInsets.all(5),
                               child: NewButton(
-                                voidcallback: null,
                                 buttonheight: 60,
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Lesson Link',
+                                textsize: 10,
+                                circle: false,
+                                voidcallback: () {},
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -96,11 +101,13 @@ class _LessonPageState extends State<LessonPage> {
                           Padding(
                               padding: const EdgeInsets.all(5),
                               child: NewButton(
-                                voidcallback: null,
                                 buttonheight: 60,
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Select Subject',
+                                textsize: 10,
+                                circle: false,
+                                voidcallback: () {},
                               )),
                         ],
                       ),
@@ -109,11 +116,14 @@ class _LessonPageState extends State<LessonPage> {
                   Padding(
                     padding: const EdgeInsets.only(top: 40),
                     child: NewButton(
-                        voidcallback: null,
-                        buttonheight: 60,
-                        buttonwidth: 340,
-                        usingIcon: false,
-                        text: 'Confirm'),
+                      buttonheight: 60,
+                      buttonwidth: 340,
+                      usingIcon: false,
+                      text: 'Confirm',
+                      textsize: 10,
+                      circle: false,
+                      voidcallback: () {},
+                    ),
                   )
                 ]))));
   }

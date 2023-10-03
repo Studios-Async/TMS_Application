@@ -67,11 +67,12 @@ class _AdminAccountsState extends State<AdminAccounts> {
               Padding(
                 padding: EdgeInsets.all(screenWidth * 0.05),
                 child: NewButton(
-                  voidcallback: null,
                   buttonheight: screenWidth * 0.2,
                   buttonwidth: screenWidth * 0.65,
                   usingIcon: false,
                   text: "Create New Account",
+                  textsize: 150,
+                  voidcallback: () {},
                 ),
               )
             ],

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:tms/general_screens/Student/student_balance.dart';
+import 'package:tms/general_screens/Tutor/tutor_seerequests.dart';
 import 'package:tms/general_screens/lesson_request.dart';
 import 'package:tms/general_screens/Student/student_home.dart';
 import 'package:tms/general_screens/Student/welldone_page.dart';
@@ -17,7 +19,7 @@ class _StudentNavBarState extends State<StudentNavBar> {
   late ScrollController _scrollController; // Controller for scrolling
   List<Widget> pages = [
     StudentHome(),
-    LessonPage(),
+    MakeRequestsPage(),
     StudentProfilePage()
   ]; // List of pages
 

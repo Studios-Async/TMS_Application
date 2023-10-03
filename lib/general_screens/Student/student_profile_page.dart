@@ -50,11 +50,14 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                         horizontal: screenWidth * 0.01,
                         vertical: screenWidth * 0.05),
                     child: NewButton(
-                      voidcallback: null,
+                      circle: false,
                       buttonheight: screenWidth * 0.25,
                       buttonwidth: screenWidth * 0.95,
                       usingIcon: false,
                       text: "Subjects you Study",
+                      //SubjectsPage
+                      textsize: screenWidth * 0.06,
+                      voidcallback: () {},
                     ),
                   ),
                   Padding(
@@ -62,11 +65,14 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                         horizontal: screenWidth * 0.01,
                         vertical: screenWidth * 0.05),
                     child: NewButton(
-                      voidcallback: null,
                       buttonheight: screenWidth * 0.25,
                       buttonwidth: screenWidth * 0.95,
                       usingIcon: false,
+                      circle: false,
                       text: "This months learning",
+                      //ThisMonthsLearningPage
+                      textsize: screenWidth * 0.06,
+                      voidcallback: () {},
                     ),
                   ),
                   Padding(
@@ -74,11 +80,14 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                         horizontal: screenWidth * 0.01,
                         vertical: screenWidth * 0.05),
                     child: NewButton(
-                      voidcallback: null,
+                      circle: false,
                       buttonheight: screenWidth * 0.25,
                       buttonwidth: screenWidth * 0.95,
                       usingIcon: false,
                       text: "Current balance",
+                      //StudentBalance
+                      textsize: screenWidth * 0.06,
+                      voidcallback: () {},
                     ),
                   ),
                 ],

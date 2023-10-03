@@ -3,44 +3,61 @@ import 'package:flutter/material.dart';
 class NewButton extends StatelessWidget {
   String? text;
   IconData? icon;
-  bool?
-      usingIcon; //bool value for if button will have icon or text, set to true or false then add text/icon as argument
+  bool? usingIcon;
   double buttonheight;
   double buttonwidth;
-  final voidcallback;
-  NewButton(
-      {super.key,
-      required this.voidcallback,
-      required this.buttonheight,
-      required this.buttonwidth,
-      required this.usingIcon,
-      this.icon,
-      this.text});
+  final void Function() voidcallback;
+  double textsize;
+
+  NewButton({
+    Key? key,
+    required this.buttonheight,
+    required this.voidcallback,
+    required this.buttonwidth,
+    required this.usingIcon,
+    this.icon,
+    this.text,
+    required this.textsize,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        width: buttonwidth,
-        height: buttonheight,
-        child: FloatingActionButton(
-          shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(15))),
-          onPressed: () {
-            voidcallback;
-          },
-          backgroundColor: Colors.deepPurple,
-          child: Center(
-              child: usingIcon ==
-                      false //if the button doesnt need an icon, there will be a text child
-                  ? Text(
-                      text!,
-                      style: const TextStyle(color: Colors.white),
-                    )
-                  : Icon(
-                      //if the button us using an icon, there will be an icon child
-                      icon,
-                      color: Colors.white,
-                    )),
-        ));
+    return SizedBox(
+      width: buttonwidth,
+      height: buttonheight,
+      child: ElevatedButton(
+        onPressed: voidcallback,
+        style: ElevatedButton.styleFrom(
+          primary: Colors.deepPurple,
+          shape: RoundedRectangleBorder(
+            borderRadius:
+                BorderRadius.circular(15.0), // Adjust the radius as needed
+          ),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (usingIcon == true) // Only show the icon if usingIcon is true
+              Icon(
+                icon,
+                color: Colors.white,
+                size: textsize,
+              ),
+            if (usingIcon == true &&
+                text !=
+                    null) // Add some spacing if both icon and text are present
+              SizedBox(width: 8.0),
+            if (text != null)
+              Flexible(
+                // Use Flexible to allow text to wrap
+                child: Text(
+                  text!,
+                  style: const TextStyle(color: Colors.white),
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
   }
 }

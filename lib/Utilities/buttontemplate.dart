@@ -3,44 +3,50 @@ import 'package:flutter/material.dart';
 class NewButton extends StatelessWidget {
   String? text;
   IconData? icon;
-  bool?
-      usingIcon; //bool value for if button will have icon or text, set to true or false then add text/icon as argument
+  bool? usingIcon; // bool value for if the button will have icon or text
   double buttonheight;
   double buttonwidth;
-  final voidcallback;
-  NewButton(
-      {super.key,
-      required this.voidcallback,
-      required this.buttonheight,
-      required this.buttonwidth,
-      required this.usingIcon,
-      this.icon,
-      this.text});
+  final void Function() voidcallback; // Corrected the callback type
+  bool circle; // New parameter to determine if the button should be circular
+  double textsize;
+
+  NewButton({
+    Key? key,
+    required this.voidcallback, // Corrected the callback type
+    required this.buttonheight,
+    required this.buttonwidth,
+    required this.usingIcon,
+    this.icon,
+    this.text,
+    required this.circle, // Add a parameter to specify if the button should be circular
+    required this.textsize,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: buttonwidth,
-        height: buttonheight,
-        child: FloatingActionButton(
-          shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(15))),
-          onPressed: () {
-            voidcallback;
-          },
-          backgroundColor: Colors.deepPurple,
-          child: Center(
-              child: usingIcon ==
-                      false //if the button doesnt need an icon, there will be a text child
-                  ? Text(
-                      text!,
-                      style: const TextStyle(color: Colors.white),
-                    )
-                  : Icon(
-                      //if the button us using an icon, there will be an icon child
-                      icon,
-                      color: Colors.white,
-                    )),
-        ));
+      width: buttonwidth,
+      height: buttonheight,
+      child: FloatingActionButton(
+        shape: circle // Use a circular shape if circle is true
+            ? const CircleBorder(side: BorderSide.none) // Add CircleBorder
+            : const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+              ),
+        onPressed: voidcallback, // Invoke the callback function here
+        backgroundColor: Colors.deepPurple,
+        child: Center(
+          child: usingIcon == false
+              ? Text(
+                  text!,
+                  style: TextStyle(color: Colors.white, fontSize: textsize),
+                )
+              : Icon(
+                  icon,
+                  color: Colors.white,
+                ),
+        ),
+      ),
+    );
   }
 }
