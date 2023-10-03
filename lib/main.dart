@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
 
     return const MaterialApp(
       debugShowCheckedModeBanner: false, //dont show banner in corner
-      home: CreateAccountPage(),
+      home: SubjectsPage(),
     );
   }
 }
