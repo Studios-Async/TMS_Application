@@ -1,4 +1,3 @@
-import 'dart:html';
 import 'dart:ui';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -30,17 +29,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get the device pixel ratio
-    var pixelRatio = MediaQuery.of(context).devicePixelRatio;
-
-// Get the logical screen size
-    var logicalScreenSize = MediaQuery.of(context).size;
-    double logicalWidth = logicalScreenSize.width;
-    double logicalHeight = logicalScreenSize.height;
-
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false, //dont show banner in corner
-      home: CreateAccountPage(),
+      home: StudentNavBar(),
     );
   }
 }
+
+var pixelRatio = window.devicePixelRatio;
+
+//Size in logical pixels
+var logicalScreenSize = window.physicalSize / pixelRatio;
+double logicalWidth = logicalScreenSize.width;
+double logicalHeight = logicalScreenSize.height;
