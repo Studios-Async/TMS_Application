@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class NewButton extends StatelessWidget {
   String? text;
   IconData? icon;
@@ -16,7 +17,7 @@ class NewButton extends StatelessWidget {
     required this.usingIcon,
     this.icon,
     this.text,
-    required this.textsize,  required Null Function() onPressed,
+    required this.textsize,
   }) : super(key: key);
 
   @override
@@ -29,7 +30,8 @@ class NewButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           primary: Colors.deepPurple,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15.0), // Adjust the radius as needed
+            borderRadius:
+                BorderRadius.circular(15.0), // Adjust the radius as needed
           ),
         ),
         child: Row(
@@ -41,10 +43,13 @@ class NewButton extends StatelessWidget {
                 color: Colors.white,
                 size: textsize,
               ),
-            if (usingIcon == true && text != null) // Add some spacing if both icon and text are present
+            if (usingIcon == true &&
+                text !=
+                    null) // Add some spacing if both icon and text are present
               SizedBox(width: 8.0),
             if (text != null)
-              Flexible( // Use Flexible to allow text to wrap
+              Flexible(
+                // Use Flexible to allow text to wrap
                 child: Text(
                   text!,
                   style: const TextStyle(color: Colors.white),

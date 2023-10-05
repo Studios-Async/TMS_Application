@@ -1,14 +1,19 @@
+import 'dart:ui';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:tms/general_screens/Admin/Utilities/admin_navbar.dart';
 import 'package:tms/general_screens/Admin/admin_accounts.dart';
+import 'package:tms/general_screens/Student/Utilities/student_navbar.dart';
+import 'package:tms/general_screens/Student/student_balance.dart';
+import 'package:tms/general_screens/Student/this_months_learning.dart';
+import 'package:tms/general_screens/Student/welldone_page.dart';
 import 'package:tms/general_screens/Tutor/Utilities/tutor_navbar.dart';
 import 'package:tms/general_screens/Tutor/tutor_profile.dart';
+import 'package:tms/general_screens/Tutor/tutor_seerequests.dart';
 import 'package:tms/general_screens/profile%20page/subjects_page_tutor.dart';
 import 'general_screens/Admin/admin_profile.dart';
 import 'general_screens/profile page/subjects_page_student.dart';
 import 'general_screens/Admin/Utilities/create_new_acc.dart';
-
 
 Future main() async {
   //add both to connect to Firebase for authentication services
@@ -24,9 +29,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false, //dont show banner in corner
-      home: TutorNavBar(),
+      home: StudentNavBar(),
     );
   }
 }
+
+var pixelRatio = window.devicePixelRatio;
+
+//Size in logical pixels
+var logicalScreenSize = window.physicalSize / pixelRatio;
+double logicalWidth = logicalScreenSize.width;
+double logicalHeight = logicalScreenSize.height;

@@ -8,18 +8,18 @@ class LessonHistoryWidget extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-
-    return Padding(padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15), child:  Container(
-      color: Colors.deepPurple,
-      child: Row(
-        children: [
-          Padding(padding: EdgeInsetsDirectional.symmetric(horizontal: 15)),
-          Text(subject + '          ' + pay.toString(),
-              style: TextStyle(color: Colors.white, fontSize: 30))
-        ],
-      ),
-    ));
-
+    return Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+        child: Container(
+          color: Colors.deepPurple,
+          child: Row(
+            children: [
+              Padding(padding: EdgeInsetsDirectional.symmetric(horizontal: 15)),
+              Text(subject + '          ' + pay.toString(),
+                  style: TextStyle(color: Colors.white, fontSize: 30))
+            ],
+          ),
+        ));
   }
 }
 
@@ -40,7 +40,7 @@ class _TutorEarnings extends State<TutorEarnings> {
         padding: const EdgeInsets.only(top: 25, bottom: 40),
         child: Column(children: [
           Padding(
-            padding: EdgeInsets.only(left: 25, right: 25, top: 40, bottom: 15), 
+            padding: EdgeInsets.only(left: 25, right: 25, top: 40, bottom: 15),
             child: Text('NAME, your earnings this month are: £---',
                 style: TextStyle(
                     color: Colors.deepPurple,

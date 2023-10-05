@@ -19,7 +19,7 @@ class NewButton extends StatelessWidget {
     this.icon,
     this.text,
     required this.circle, // Add a parameter to specify if the button should be circular
-    required this.textsize, required Null Function() onPressed,
+    required this.textsize,
   }) : super(key: key);
 
   @override
@@ -39,7 +39,7 @@ class NewButton extends StatelessWidget {
           child: usingIcon == false
               ? Text(
                   text!,
-                  style: const TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: textsize),
                 )
               : Icon(
                   icon,

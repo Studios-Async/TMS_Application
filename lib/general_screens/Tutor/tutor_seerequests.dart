@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
 import 'package:tms/general_screens/Tutor/tutor_home.dart';
+import 'package:tms/main.dart';
 
 class LessonRequest extends StatelessWidget {
   String? studentName;
@@ -84,7 +85,10 @@ class _SeeRequestsState extends State<SeeRequestsPage> {
                   buttonheight: 60,
                   buttonwidth: 340,
                   usingIcon: false,
-                  text: 'Make Lesson Offer:', textsize: 18, onPressed: () {  }, circle: false, voidcallback: () {  },
+                  text: 'Make Lesson Offer:',
+                  textsize: 18,
+                  circle: false,
+                  voidcallback: () {},
                 ),
               ),
             LessonRequest(studentName: 'Name', subject: 'Subject', time: '13:30')
@@ -107,7 +111,8 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
     return Scaffold(
         body: SafeArea(
             child: Container(
-                padding: const EdgeInsets.only(top: 25, bottom: 40),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                 child: Column(children: [
                   Row(
                     children: [
@@ -115,36 +120,48 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                         buttonheight: 60,
                         buttonwidth: 50,
                         usingIcon: true,
-                        icon: Icons.arrow_back, textsize: 18, onPressed: () {  }, circle: false, voidcallback: () {  },
+                        icon: Icons.arrow_back,
+                        textsize: 18,
+                        circle: true,
+                        voidcallback: () {},
                       ),
-                      const Text('Make Lesson Offer',
-                          style: TextStyle(
+                      Expanded(
+                        child: Center(
+                          child: Text(
+                            'Make Lesson Offer',
+                            style: TextStyle(
                               color: Colors.deepPurple,
                               fontWeight: FontWeight.bold,
-                              fontSize: 30)),
+                              fontSize: 30,
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                   Row(
                     children: [
-                      const Column(
+                      Column(
                         children: [
                           Padding(
                             padding: EdgeInsets.all(25),
                             child: Icon(Icons.calendar_month_outlined,
-                                color: Colors.deepPurple, size: 110),
+                                color: Colors.deepPurple,
+                                size: logicalHeight * 0.125),
                           ),
                           Padding(
                             padding: EdgeInsets.all(25),
                             child: Icon(
                               Icons.person_2_outlined,
                               color: Colors.deepPurple,
-                              size: 110,
+                              size: logicalHeight * 0.125,
                             ),
                           ),
                           Padding(
                             padding: EdgeInsets.all(25),
                             child: Icon(Icons.subject_outlined,
-                                color: Colors.deepPurple, size: 110),
+                                color: Colors.deepPurple,
+                                size: logicalHeight * 0.125),
                           )
                         ],
                       ),
@@ -156,17 +173,19 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                             child: Text('Date',
                                 style: TextStyle(
                                     color: Colors.deepPurple,
-                                    fontSize: 20,
+                                    fontSize: 25,
                                     fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                               padding: const EdgeInsets.all(5),
                               child: NewButton(
-                                buttonheight: 60,
-                                buttonwidth: 200,
+                                buttonheight: logicalHeight * 0.07,
+                                buttonwidth: logicalWidth * 0.5,
                                 usingIcon: false,
                                 text: 'Select Time',
-                                textsize: 18, onPressed: () {  }, circle: false, voidcallback: () {  },
+                                textsize: 18,
+                                circle: false,
+                                voidcallback: () {},
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -174,17 +193,19 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                             child: Text('Student',
                                 style: TextStyle(
                                     color: Colors.deepPurple,
-                                    fontSize: 20,
+                                    fontSize: 25,
                                     fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                               padding: const EdgeInsets.all(5),
                               child: NewButton(
-                                buttonheight: 60,
-                                buttonwidth: 200,
+                                buttonheight: logicalHeight * 0.07,
+                                buttonwidth: logicalWidth * 0.5,
                                 usingIcon: false,
                                 text: 'Enter Student Email',
-                                textsize: 18, onPressed: () {  }, circle: false, voidcallback: () {  },
+                                textsize: 18,
+                                circle: false,
+                                voidcallback: () {},
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -192,30 +213,34 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                             child: Text('Subject',
                                 style: TextStyle(
                                     color: Colors.deepPurple,
-                                    fontSize: 20,
+                                    fontSize: 25,
                                     fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                               padding: const EdgeInsets.all(5),
                               child: NewButton(
-                                buttonheight: 60,
-                                buttonwidth: 200,
+                                buttonheight: logicalHeight * 0.07,
+                                buttonwidth: logicalWidth * 0.5,
                                 usingIcon: false,
                                 text: 'Select Subject',
-                                textsize: 18, onPressed: () {  }, circle: false, voidcallback: () {  },
+                                textsize: 18,
+                                circle: false,
+                                voidcallback: () {},
                               )),
                         ],
                       ),
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: const EdgeInsets.only(top: 50),
                     child: NewButton(
-                      buttonheight: 60,
+                      buttonheight: logicalHeight * 0.09,
                       buttonwidth: 340,
                       usingIcon: false,
                       text: 'Confirm',
-                      textsize: 18, onPressed: () {  }, circle: false, voidcallback: () {  },
+                      textsize: 18,
+                      circle: false,
+                      voidcallback: () {},
                     ),
                   )
                 ]))));
