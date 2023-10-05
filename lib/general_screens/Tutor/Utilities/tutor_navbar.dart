@@ -21,7 +21,7 @@ class _TutorNavBarState extends State<TutorNavBar> {
   late ScrollController _scrollController; // Controller for scrolling
   List<Widget> pages = [
     TutorHome(),
-    SeeRequestsPageNew(),
+    MakeRequestsPage(),
     TutorProfilePage()
   ]; // List of pages
 
