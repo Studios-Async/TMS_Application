@@ -44,7 +44,7 @@ class LessonRequest extends StatelessWidget {
             ],
           ),
           Padding(padding: EdgeInsets.all(30)),
-          Container(height: 80, width: 100, color: Colors.deepPurple, child: NewButton(voidcallback: () {}, buttonheight: 15, buttonwidth: 30, usingIcon: false,text: 'Approve', circle: true, textsize: 4, onPressed: (){} ))
+          Container(height: 80, width: 100, color: Colors.deepPurple, child: NewButton(onPressed: () {}, voidcallback: (){}, buttonheight: 15, buttonwidth: 30, usingIcon: false,text: 'Approve', circle: false, textsize: 4,  ))
 
           //approve button here
         ],
