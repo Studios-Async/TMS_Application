@@ -45,7 +45,7 @@ class LessonRequest extends StatelessWidget {
             ],
           ),
           Padding(padding: EdgeInsets.all(30)),
-          Container(height: 80, width: 100, color: Colors.deepPurple, child: NewButton(voidcallback: () {}, buttonheight: 15, buttonwidth: 30, usingIcon: false,text: 'Approve', circle: false, textsize: 18 ))
+          Container(height: 80, width: 100, color: Colors.deepPurple, child: NewButton(onPressed: () {}, buttonheight: 15, buttonwidth: 30, usingIcon: false,text: 'Approve', circle: false, textsize: 18 ))
 
           //approve button here
         ],
@@ -88,7 +88,7 @@ class _SeeRequestsState extends State<SeeRequestsPage> {
                   text: 'Make Lesson Offer:',
                   textsize: 18,
                   circle: false,
-                  voidcallback: () {},
+                  onPressed: () {},
                 ),
               ),
             LessonRequest(studentName: 'Name', subject: 'Subject', time: '13:30')
@@ -123,7 +123,7 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                         icon: Icons.arrow_back,
                         textsize: 18,
                         circle: true,
-                        voidcallback: () {},
+                        onPressed: () {},
                       ),
                       Expanded(
                         child: Center(
@@ -185,7 +185,7 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                                 text: 'Select Time',
                                 textsize: 18,
                                 circle: false,
-                                voidcallback: () {},
+                                onPressed: () {},
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -205,7 +205,7 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                                 text: 'Enter Student Email',
                                 textsize: 18,
                                 circle: false,
-                                voidcallback: () {},
+                                onPressed: () {},
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -225,7 +225,7 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                                 text: 'Select Subject',
                                 textsize: 18,
                                 circle: false,
-                                voidcallback: () {},
+                                onPressed: () {},
                               )),
                         ],
                       ),
@@ -240,7 +240,7 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                       text: 'Confirm',
                       textsize: 18,
                       circle: false,
-                      voidcallback: () {},
+                      onPressed: () {},
                     ),
                   )
                 ]))));
