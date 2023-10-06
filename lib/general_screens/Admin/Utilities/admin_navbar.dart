@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:tms/general_screens/Admin/admin_accounts.dart';
-import 'package:tms/general_screens/Admin/admin_home.dart';
-import 'package:tms/general_screens/Admin/admin_profile.dart';
-import 'package:tms/general_screens/lesson_request.dart';
-import 'package:tms/general_screens/Tutor/tutor_home.dart';
+import 'package:tms/general_screens/Admin/Screens/Accounts/admin_accounts.dart';
+import 'package:tms/general_screens/Admin/Screens/Home/admin_home.dart';
+import 'package:tms/general_screens/Admin/Screens/Profile%20Page/admin_profile.dart';
+import 'package:tms/general_screens/Tutor/Add%20Lesson/lesson_request.dart';
+import 'package:tms/general_screens/Tutor/Home/tutor_home.dart';
 import 'package:tms/general_screens/login_page.dart';
-import 'package:tms/general_screens/Student/student_profile_page.dart';
-import 'package:tms/general_screens/Student/student_home.dart';
+import 'package:tms/general_screens/Student/Screens/Profile%20Page/student_profile_page.dart';
+import 'package:tms/general_screens/Student/Screens/Home/student_home.dart';
 import 'package:tms/general_screens/Student/welldone_page.dart';
 
 class AdminNavBar extends StatefulWidget {

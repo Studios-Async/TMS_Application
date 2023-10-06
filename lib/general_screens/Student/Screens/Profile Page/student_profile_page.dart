@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
-import 'package:tms/general_screens/Student/student_balance.dart';
+import 'package:tms/general_screens/Student/Screens/Profile%20Page/Utilities/student_balance.dart';
 import 'package:tms/general_screens/Student/this_months_learning.dart';
-import 'package:tms/general_screens/profile%20page/subjects_page_student.dart';
+import 'package:tms/general_screens/Student/Screens/Profile%20Page/Utilities/subjects_study.dart';
 
 class StudentProfilePage extends StatefulWidget {
   const StudentProfilePage({super.key});

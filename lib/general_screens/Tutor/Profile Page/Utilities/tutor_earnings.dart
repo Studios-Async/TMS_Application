@@ -41,7 +41,7 @@ class _TutorEarnings extends State<TutorEarnings> {
         child: Column(children: [
           Padding(
             padding: EdgeInsets.only(left: 25, right: 25, top: 40, bottom: 15),
-            child: Text('NAME, your earnings this month are: £---',
+            child: Text('TUTORNAME, your earnings this month are: £---',
                 style: TextStyle(
                     color: Colors.deepPurple,
                     fontWeight: FontWeight.bold,

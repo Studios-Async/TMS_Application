@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tms/general_screens/Admin/Home%20Utilities/revenue.dart';
-import 'package:tms/general_screens/Admin/Home%20Utilities/top_student.dart';
-import 'package:tms/general_screens/Admin/Home%20Utilities/top_tutor.dart';
-import 'package:tms/general_screens/Admin/Home%20Utilities/total_hours.dart';
-import 'package:tms/general_screens/Admin/Home%20Utilities/total_users.dart';
+import 'package:tms/general_screens/Admin/Screens/Home/Utilities/revenue.dart';
+import 'package:tms/general_screens/Admin/Screens/Home/Utilities/top_student.dart';
+import 'package:tms/general_screens/Admin/Screens/Home/Utilities/top_tutor.dart';
+import 'package:tms/general_screens/Admin/Screens/Home/Utilities/total_hours.dart';
+import 'package:tms/general_screens/Admin/Screens/Home/Utilities/total_users.dart';
 
 class AdminHome extends StatefulWidget {
   const AdminHome({Key? key}) : super(key: key);

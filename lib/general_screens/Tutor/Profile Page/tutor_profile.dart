@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
-import 'package:tms/general_screens/Student/student_balance.dart';
-import 'package:tms/general_screens/Tutor/this_months_tutoring.dart';
-import 'package:tms/general_screens/profile%20page/subjects_page_tutor.dart';
+import 'package:tms/general_screens/Student/Screens/Profile%20Page/Utilities/student_balance.dart';
+import 'package:tms/general_screens/Tutor/Profile%20Page/Utilities/this_months_tutoring.dart';
+import 'package:tms/general_screens/Tutor/Profile%20Page/Utilities/subjects_teach.dart';
+import 'package:tms/general_screens/Tutor/Profile%20Page/Utilities/tutor_earnings.dart';
 
 class TutorProfilePage extends StatefulWidget {
   const TutorProfilePage({super.key});
@@ -104,7 +105,7 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => (StudentBalance()),
+                              builder: (context) => (TutorEarnings()),
                             ),
                           );
                         },

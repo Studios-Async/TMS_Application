@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
-import 'package:tms/buttontemplate.dart';
 
 class LessonHistoryWidget extends StatelessWidget {
   final String subject;

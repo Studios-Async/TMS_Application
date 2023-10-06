@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tms/Utilities/notifs.dart';
+import 'package:tms/general_screens/Other/notifs.dart';
 
 class NotifButton extends StatefulWidget {
   const NotifButton({Key? key}) : super(key: key);
