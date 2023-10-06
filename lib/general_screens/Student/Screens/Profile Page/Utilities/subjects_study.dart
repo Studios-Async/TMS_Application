@@ -17,15 +17,34 @@ class _SubjectsPageState extends State<SubjectsPage> {
       body: SafeArea(
         child: Column(
           children: [
-            Container(
-              padding: const EdgeInsets.all(16.0),
-              alignment: Alignment.center,
-              child: Text(
-                'Subjects You Study',
-                style: TextStyle(
-                  fontSize:
-                      logicalWidth * 0.08, // Adjust the font size as needed
-                  fontWeight: FontWeight.bold,
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
+              child: Container(
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black, width: 2),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(
+                  children: [
+                    IconButton(
+                      icon: Icon(
+                        Icons.arrow_back_ios, // iOS-style back button icon
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).pop(); // Pop the current screen
+                      },
+                    ),
+                    const Text(
+                      "Subjects you Study",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -43,7 +62,9 @@ class _SubjectsPageState extends State<SubjectsPage> {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 1, vertical: 1),
+                        horizontal: 1,
+                        vertical: 1,
+                      ),
                       child: NewButton(
                         onPressed: () {
                           // Add functionality for each subject button here
@@ -61,8 +82,10 @@ class _SubjectsPageState extends State<SubjectsPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(
-                  horizontal: 15, vertical: 55), // Increase vertical padding
+              padding: const EdgeInsets.only(
+                  bottom: 35,
+                  left: 20,
+                  right: 20), // Only add padding to the bottom
               child: NewButton(
                 onPressed: () {
                   // Add save functionality here

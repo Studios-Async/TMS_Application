@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
 import 'package:tms/general_screens/Tutor/Add%20Lesson/tutor_lesson_request.dart';
 import 'package:tms/general_screens/Tutor/Home/tutor_home.dart';
-import 'package:tms/general_screens/Tutor/Add%20Lesson/lesson_request.dart';
+import 'package:tms/general_screens/Tutor/Add%20Lesson/student_make_lessonreq.dart';
 import 'package:tms/main.dart';
 
 class LessonRequest extends StatelessWidget {

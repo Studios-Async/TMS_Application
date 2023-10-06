@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
-import 'package:tms/data.dart';
+import 'package:tms/Utilities/data.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
