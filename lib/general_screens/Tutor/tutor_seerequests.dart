@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
-import 'package:tms/general_screens/Tutor/tutor_home.dart';
+//import 'package:tms/general_screens/Tutor/tutor_home.dart';
 import 'package:tms/main.dart';
 
 class LessonRequest extends StatelessWidget {
@@ -47,7 +47,7 @@ class LessonRequest extends StatelessWidget {
           Padding(padding: EdgeInsets.all(30)),
           Container(height: 80, width: 100, color: Colors.deepPurple, child: NewButton(onPressed: () {}, buttonheight: 15, buttonwidth: 30, usingIcon: false,text: 'Approve', circle: false, textsize: 18 ))
 
-          //approve button here
+          
         ],
       ),
     );

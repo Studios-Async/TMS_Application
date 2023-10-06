@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
-import 'package:tms/general_screens/Tutor/tutor_home.dart';
+//import 'package:tms/general_screens/Tutor/tutor_home.dart';
 
 class LessonRequest extends StatelessWidget {
   String? studentName;
@@ -44,7 +44,7 @@ class LessonRequest extends StatelessWidget {
             ],
           ),
           Padding(padding: EdgeInsets.all(30)),
-          Container(height: 80, width: 100, color: Colors.deepPurple, child: NewButton( voidcallback: (){}, buttonheight: 15, buttonwidth: 30, usingIcon: false,text: 'Approve', circle: false, textsize: 4,  ))
+          Container(height: 80, width: 100, color: Colors.deepPurple, child: NewButton( onPressed: (){}, buttonheight: 15, buttonwidth: 30, usingIcon: false,text: 'Approve', circle: false, textsize: 4,  ))
 
           //approve button here
         ],
@@ -79,7 +79,7 @@ class SeeRequestsPageNew extends StatelessWidget {
                     buttonheight: 60,
                     buttonwidth: 340,   // Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));
                     usingIcon: false,
-                    text: 'Make Lesson Offer:', textsize: 18, circle: false, voidcallback: (){Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));}
+                    text: 'Make Lesson Offer:', textsize: 18, circle: false, onPressed: (){Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));}
                   ),
                 ),
               LessonRequest(studentName: 'Name', subject: 'Subject', time: '13:30')
@@ -108,7 +108,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                         buttonheight: 60,
                         buttonwidth: 50,
                         usingIcon: true,
-                        icon: Icons.arrow_back, textsize: 18, circle: false, voidcallback: () {  },
+                        icon: Icons.arrow_back, textsize: 18, circle: false, onPressed: () {  },
                       ),
                       const Text('Make Lesson Offer',
                           style: TextStyle(
@@ -159,7 +159,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Select Time',
-                                textsize: 18, circle: false, voidcallback: () {  },
+                                textsize: 18, circle: false, onPressed: () {  },
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -177,7 +177,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Enter Student Email',
-                                textsize: 18,  circle: false, voidcallback: () {  },
+                                textsize: 18,  circle: false, onPressed: () {  },
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -195,7 +195,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Select Subject',
-                                textsize: 18, circle: false, voidcallback: () {  },
+                                textsize: 18, circle: false, onPressed: () {  },
                               )),
                         ],
                       ),
@@ -208,7 +208,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                       buttonwidth: 340,
                       usingIcon: false,
                       text: 'Confirm',
-                      textsize: 18,  circle: false, voidcallback: () {  },
+                      textsize: 18,  circle: false, onPressed: () {  },
                     ),
                   )
                 ]))));
