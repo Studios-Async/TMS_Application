@@ -1,29 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
 
-class LessonHistoryWidget extends StatelessWidget {
-  final String subject;
-  final double cost;
-  const LessonHistoryWidget(
-      {Key? key, required this.subject, required this.cost})
-      : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-        child: Container(
-          color: Colors.deepPurple,
-          child: Row(
-            children: [
-              const Padding(
-                  padding: EdgeInsetsDirectional.symmetric(horizontal: 15)),
-              Text(subject + '          ' + cost.toString(),
-                  style: const TextStyle(color: Colors.white, fontSize: 30))
-            ],
-          ),
-        ));
-  }
-}
+import '../../../../Tutor/Profile Page/Utilities/lesson_historywidget.dart';
 
 class StudentBalance extends StatefulWidget {
   const StudentBalance({super.key});
@@ -98,7 +76,7 @@ class _StudentBalance extends State<StudentBalance> {
                     itemCount: 1,
                     itemBuilder: (context, index) {
                       return const LessonHistoryWidget(
-                          subject: 'Maths', cost: 45);
+                          subject: 'Maths', pay: 45);
                     },
                   ),
                 ),

@@ -1,28 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LessonHistoryWidget extends StatelessWidget {
-  final String subject;
-  final double pay;
-  const LessonHistoryWidget(
-      {Key? key, required this.subject, required this.pay})
-      : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-        child: Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
-          color: Colors.deepPurple,
-          child: Row(
-            children: [
-              Padding(padding: EdgeInsetsDirectional.symmetric(horizontal: 15)),
-              Text(subject + '          ' + pay.toString(),
-                  style: TextStyle(color: Colors.white, fontSize: 30))
-            ],
-          ),
-        ));
-  }
-}
+import '../../../Student/Screens/Profile Page/Utilities/student_balance.dart';
+import 'lesson_historywidget.dart';
 
 class TutorEarnings extends StatefulWidget {
   const TutorEarnings({super.key});
@@ -41,12 +20,34 @@ class _TutorEarnings extends State<TutorEarnings> {
         padding: const EdgeInsets.only(top: 25, bottom: 40),
         child: Column(children: [
           Padding(
-            padding: EdgeInsets.only(left: 25, right: 25, top: 40, bottom: 15),
-            child: Text('TUTORNAME, your earnings this month are: £---',
-                style: TextStyle(
-                    color: Colors.deepPurple,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 35)),
+            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
+            child: Container(
+              alignment: Alignment.centerLeft,
+              padding: const EdgeInsets.all(6),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.black, width: 2),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Row(
+                children: [
+                  IconButton(
+                    icon: Icon(
+                      Icons.arrow_back_ios, // iOS-style back button icon
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).pop(); // Pop the current screen
+                    },
+                  ),
+                  const Text(
+                    "This Months Earnings",
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
           Padding(
             padding: EdgeInsets.only(top: 40, bottom: 10),
@@ -64,7 +65,7 @@ class _TutorEarnings extends State<TutorEarnings> {
                 scrollDirection: Axis.vertical,
                 itemCount: 1,
                 itemBuilder: (context, index) {
-                  return LessonHistoryWidget(subject: 'Maths', pay: 45);
+                  return LessonHistoryWidget(subject: 'English', pay: 45);
                 },
               ),
             ),
