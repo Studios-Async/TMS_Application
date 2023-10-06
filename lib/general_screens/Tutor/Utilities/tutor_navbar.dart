@@ -3,7 +3,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tms/general_screens/Tutor/Profile%20Page/Utilities/tutor_earnings.dart';
 import 'package:tms/general_screens/Tutor/Profile%20Page/tutor_profile.dart';
 import 'package:tms/general_screens/Tutor/Add%20Lesson/tutor_seerequests.dart';
-import 'package:tms/general_screens/Tutor/Add%20Lesson/student_make_lessonreq.dart';
+import 'package:tms/general_screens/Student/Screens/Add%20Lesson/student_make_lessonreq.dart';
 import 'package:tms/general_screens/Tutor/Home/tutor_home.dart';
 import 'package:tms/general_screens/Student/Screens/Other/welldone_page.dart';
 import 'package:tms/general_screens/Student/Screens/Profile%20Page/student_profile_page.dart';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
 import 'package:tms/general_screens/Tutor/Add%20Lesson/tutor_lesson_request.dart';
 import 'package:tms/general_screens/Tutor/Home/tutor_home.dart';
-import 'package:tms/general_screens/Tutor/Add%20Lesson/student_make_lessonreq.dart';
+import 'package:tms/general_screens/Student/Screens/Add%20Lesson/student_make_lessonreq.dart';
 import 'package:tms/main.dart';
 
 class LessonRequest extends StatelessWidget {
@@ -66,19 +66,23 @@ class _TutorSeeRequestsPageState extends State<TutorSeeRequestsPage> {
           padding: const EdgeInsets.only(top: 25, bottom: 40),
           child: Column(
             children: [
-              const Text('Your Lesson Requests:',
+              Text('Your Lesson Requests:',
                   style: TextStyle(
                       color: Colors.deepPurple,
                       fontWeight: FontWeight.bold,
-                      fontSize: 30)),
+                      fontSize: logicalHeight * 0.0325)),
+              Expanded(
+                  child: Container(
+                      //Requests go here
+                      )),
               Padding(
                 padding: const EdgeInsets.only(
                   top: 25,
                   bottom: 30,
                 ),
                 child: NewButton(
-                  buttonheight: 60,
-                  buttonwidth: 340,
+                  buttonheight: logicalHeight * 0.09,
+                  buttonwidth: logicalWidth * 0.9,
                   usingIcon: false,
                   text: 'Make Lesson Offer:',
                   textsize: 18,
