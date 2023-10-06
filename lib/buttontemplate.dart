@@ -1,63 +1,52 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-class NewButton extends StatelessWidget {
-  String? text;
-  IconData? icon;
-  bool? usingIcon;
-  double buttonheight;
-  double buttonwidth;
-  final void Function() voidcallback;
-  double textsize;
+// class NewButton extends StatelessWidget {
+//   String? text;
+//   IconData? icon;
+//   bool? usingIcon; // bool value for if the button will have icon or text
+//   double buttonheight;
+//   double buttonwidth;
+//   final void Function() voidcallback; // Corrected the callback type
+//   bool circle; // New parameter to determine if the button should be circular
+//   double textsize;
 
-  NewButton({
-    Key? key,
-    required this.buttonheight,
-    required this.voidcallback,
-    required this.buttonwidth,
-    required this.usingIcon,
-    this.icon,
-    this.text,
-    required this.textsize,
-  }) : super(key: key);
+//   NewButton({
+//     Key? key,
+//     required this.voidcallback, // Corrected the callback type
+//     required this.buttonheight,
+//     required this.buttonwidth,
+//     required this.usingIcon,
+//     this.icon,
+//     this.text,
+//     required this.circle, // Add a parameter to specify if the button should be circular
+//     required this.textsize,
+//   }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: buttonwidth,
-      height: buttonheight,
-      child: ElevatedButton(
-        onPressed: voidcallback,
-        style: ElevatedButton.styleFrom(
-          primary: Colors.deepPurple,
-          shape: RoundedRectangleBorder(
-            borderRadius:
-                BorderRadius.circular(15.0), // Adjust the radius as needed
-          ),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            if (usingIcon == true) // Only show the icon if usingIcon is true
-              Icon(
-                icon,
-                color: Colors.white,
-                size: textsize,
-              ),
-            if (usingIcon == true &&
-                text !=
-                    null) // Add some spacing if both icon and text are present
-              SizedBox(width: 8.0),
-            if (text != null)
-              Flexible(
-                // Use Flexible to allow text to wrap
-                child: Text(
-                  text!,
-                  style: const TextStyle(color: Colors.white),
-                ),
-              ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       width: buttonwidth,
+//       height: buttonheight,
+//       child: FloatingActionButton(
+//         shape: circle // Use a circular shape if circle is true
+//             ? const CircleBorder(side: BorderSide.none) // Add CircleBorder
+//             : const RoundedRectangleBorder(
+//                 borderRadius: BorderRadius.all(Radius.circular(15)),
+//               ),
+//         onPressed: voidcallback, // Invoke the callback function here
+//         backgroundColor: Colors.deepPurple,
+//         child: Center(
+//           child: usingIcon == false
+//               ? Text(
+//                   text!,
+//                   style: TextStyle(color: Colors.white, fontSize: textsize),
+//                 )
+//               : Icon(
+//                   icon,
+//                   color: Colors.white,
+//                 ),
+//         ),
+//       ),
+//     );
+//   }
+// }

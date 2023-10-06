@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
+import 'package:tms/general_screens/Student/student_balance.dart';
+import 'package:tms/general_screens/Student/this_months_learning.dart';
+import 'package:tms/general_screens/profile%20page/subjects_page_student.dart';
 
 class StudentProfilePage extends StatefulWidget {
   const StudentProfilePage({super.key});
@@ -56,8 +59,15 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                       usingIcon: false,
                       text: "Subjects you Study",
                       //SubjectsPage
-                      textsize: screenWidth * 0.06,
-                      voidcallback: () {},
+                      textsize: screenWidth * 0.09,
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SubjectsPage(),
+                          ),
+                        );
+                      },
                     ),
                   ),
                   Padding(
@@ -72,7 +82,14 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                       text: "This months learning",
                       //ThisMonthsLearningPage
                       textsize: screenWidth * 0.06,
-                      voidcallback: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ThisMonthsLearningPage(),
+                          ),
+                        );
+                      },
                     ),
                   ),
                   Padding(
@@ -87,7 +104,14 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                       text: "Current balance",
                       //StudentBalance
                       textsize: screenWidth * 0.06,
-                      voidcallback: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => StudentBalance(),
+                          ),
+                        );
+                      },
                     ),
                   ),
                 ],

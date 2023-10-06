@@ -67,7 +67,7 @@ class _LessonPageState extends State<LessonPage> {
                                 text: 'Select Time',
                                 textsize: 10,
                                 circle: false,
-                                voidcallback: () {},
+                                onPressed: () {},
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -87,7 +87,7 @@ class _LessonPageState extends State<LessonPage> {
                                 text: 'Lesson Link',
                                 textsize: 10,
                                 circle: false,
-                                voidcallback: () {},
+                                onPressed: () {},
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -107,7 +107,7 @@ class _LessonPageState extends State<LessonPage> {
                                 text: 'Select Subject',
                                 textsize: 10,
                                 circle: false,
-                                voidcallback: () {},
+                                onPressed: () {},
                               )),
                         ],
                       ),
@@ -122,7 +122,7 @@ class _LessonPageState extends State<LessonPage> {
                       text: 'Confirm',
                       textsize: 10,
                       circle: false,
-                      voidcallback: () {},
+                      onPressed: () {},
                     ),
                   )
                 ]))));

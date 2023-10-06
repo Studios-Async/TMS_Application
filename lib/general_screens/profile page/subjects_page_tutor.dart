@@ -45,7 +45,7 @@ class _SubjectsPageTutorState extends State<SubjectsPageTutor> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 1, vertical: 1),
                       child: NewButton(
-                        voidcallback: () {
+                        onPressed: () {
                           // Add functionality for each subject button here
                         },
                         buttonheight: logicalHeight * 0.02,
@@ -64,7 +64,7 @@ class _SubjectsPageTutorState extends State<SubjectsPageTutor> {
               padding: const EdgeInsets.symmetric(
                   horizontal: 15, vertical: 55), // Increase vertical padding
               child: NewButton(
-                voidcallback: () {
+                onPressed: () {
                   // Add save functionality here
                 },
                 buttonheight: logicalHeight * 0.09,

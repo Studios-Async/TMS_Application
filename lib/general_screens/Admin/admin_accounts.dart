@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tms/Utilities/buttontemplate.dart';
 import 'package:tms/buttontemplate.dart';
 import 'package:tms/general_screens/Admin/Utilities/account_widget.dart';
 import 'package:tms/general_screens/Admin/Utilities/students_accounts.dart';
@@ -74,12 +75,13 @@ class _AdminAccountsState extends State<AdminAccounts> {
               Padding(
                 padding: EdgeInsets.all(screenWidth * 0.05),
                 child: NewButton(
+                  circle: false,
                   buttonheight: logicalHeight * 0.1,
                   buttonwidth: logicalWidth * 0.9,
                   usingIcon: false,
                   text: "Create New Account",
                   textsize: logicalHeight * 0.9,
-                  voidcallback: () {},
+                  onPressed: () {},
                 ),
               )
             ],

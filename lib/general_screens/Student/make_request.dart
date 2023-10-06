@@ -1,110 +1,125 @@
 import 'package:flutter/material.dart';
-import 'package:tms/Utilities/buttontemplate.dart';
+import 'package:tms/main.dart';
 
-class CreateAccountPage extends StatefulWidget {
-  const CreateAccountPage({super.key});
+import '../../Utilities/buttontemplate.dart';
+
+class MakeRequestsPage extends StatefulWidget {
+  const MakeRequestsPage({super.key});
 
   @override
-  State<CreateAccountPage> createState() => CreateAccount();
+  State<MakeRequestsPage> createState() => _MakeRequestsState();
 }
 
-class CreateAccount extends State<CreateAccountPage> {
+class _MakeRequestsState extends State<MakeRequestsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
             child: Container(
-                padding: const EdgeInsets.only(top: 25, bottom: 40),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                 child: Column(children: [
-                  const Text('Create New Account',
-                      style: TextStyle(
-                          color: Colors.deepPurple,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 30)),
                   Row(
                     children: [
-                      const Column(
+                      Expanded(
+                        child: Center(
+                          child: Text(
+                            'Make Lesson Offer',
+                            style: TextStyle(
+                              color: Colors.deepPurple,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Column(
                         children: [
                           Padding(
                             padding: EdgeInsets.all(25),
-                            child: Icon(Icons.man_4_outlined,
-                                color: Colors.deepPurple, size: 110),
+                            child: Icon(Icons.calendar_month_outlined,
+                                color: Colors.deepPurple,
+                                size: logicalHeight * 0.125),
                           ),
                           Padding(
                             padding: EdgeInsets.all(25),
                             child: Icon(
-                              Icons.perm_identity,
+                              Icons.person_2_outlined,
                               color: Colors.deepPurple,
-                              size: 110,
+                              size: logicalHeight * 0.125,
                             ),
                           ),
                           Padding(
                             padding: EdgeInsets.all(25),
-                            child: Icon(Icons.email,
-                                color: Colors.deepPurple, size: 110),
+                            child: Icon(Icons.subject_outlined,
+                                color: Colors.deepPurple,
+                                size: logicalHeight * 0.125),
                           )
                         ],
                       ),
                       Column(
-                        //mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           const Padding(
                             padding: EdgeInsets.only(
                                 top: 10, left: 25, right: 25, bottom: 10),
-                            child: Text('Account Type',
+                            child: Text('Date',
                                 style: TextStyle(
                                     color: Colors.deepPurple,
-                                    fontSize: 20,
+                                    fontSize: 25,
                                     fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                               padding: const EdgeInsets.all(5),
                               child: NewButton(
-                                buttonheight: 60,
-                                buttonwidth: 200,
+                                buttonheight: logicalHeight * 0.07,
+                                buttonwidth: logicalWidth * 0.5,
                                 usingIcon: false,
-                                text: 'Student/Tutor',
-                                textsize: 10,
+                                text: 'Select Time',
+                                textsize: 18,
                                 circle: false,
                                 onPressed: () {},
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
                                 top: 50, left: 25, right: 25, bottom: 10),
-                            child: Text('Account Name',
+                            child: Text('Student',
                                 style: TextStyle(
                                     color: Colors.deepPurple,
-                                    fontSize: 20,
+                                    fontSize: 25,
                                     fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                               padding: const EdgeInsets.all(5),
                               child: NewButton(
-                                buttonheight: 60,
-                                buttonwidth: 200,
+                                buttonheight: logicalHeight * 0.07,
+                                buttonwidth: logicalWidth * 0.5,
                                 usingIcon: false,
-                                text: 'Firstname Surname',
-                                textsize: 10,
+                                text: 'Enter Student Email',
+                                textsize: 18,
                                 circle: false,
                                 onPressed: () {},
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
                                 top: 50, left: 25, right: 25, bottom: 10),
-                            child: Text('Email',
+                            child: Text('Subject',
                                 style: TextStyle(
                                     color: Colors.deepPurple,
-                                    fontSize: 20,
+                                    fontSize: 25,
                                     fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                               padding: const EdgeInsets.all(5),
                               child: NewButton(
-                                buttonheight: 60,
-                                buttonwidth: 200,
+                                buttonheight: logicalHeight * 0.07,
+                                buttonwidth: logicalWidth * 0.5,
                                 usingIcon: false,
-                                text: 'Email Address',
-                                textsize: 10,
+                                text: 'Select Subject',
+                                textsize: 18,
                                 circle: false,
                                 onPressed: () {},
                               )),
@@ -113,13 +128,13 @@ class CreateAccount extends State<CreateAccountPage> {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: const EdgeInsets.only(top: 50),
                     child: NewButton(
-                      buttonheight: 60,
+                      buttonheight: logicalHeight * 0.09,
                       buttonwidth: 340,
                       usingIcon: false,
                       text: 'Confirm',
-                      textsize: 10,
+                      textsize: 18,
                       circle: false,
                       onPressed: () {},
                     ),
