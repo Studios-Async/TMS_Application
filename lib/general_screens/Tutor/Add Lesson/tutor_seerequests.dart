@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
-import 'package:tms/general_screens/Tutor/tutor_home.dart';
-import 'package:tms/general_screens/lesson_request.dart';
+import 'package:tms/general_screens/Tutor/Add%20Lesson/tutor_lesson_request.dart';
+import 'package:tms/general_screens/Tutor/Home/tutor_home.dart';
+import 'package:tms/general_screens/Tutor/Add%20Lesson/lesson_request.dart';
 import 'package:tms/main.dart';
 
 class LessonRequest extends StatelessWidget {
@@ -48,14 +49,14 @@ class LessonRequest extends StatelessWidget {
   }
 }
 
-class SeeRequestsPage extends StatefulWidget {
-  const SeeRequestsPage({super.key});
+class TutorSeeRequestsPage extends StatefulWidget {
+  const TutorSeeRequestsPage({super.key});
 
   @override
-  State<SeeRequestsPage> createState() => _SeeRequestsState();
+  State<TutorSeeRequestsPage> createState() => _TutorSeeRequestsPageState();
 }
 
-class _SeeRequestsState extends State<SeeRequestsPage> {
+class _TutorSeeRequestsPageState extends State<TutorSeeRequestsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,7 +87,7 @@ class _SeeRequestsState extends State<SeeRequestsPage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => LessonPage(),
+                        builder: (context) => TutorMakeRequestsPage(),
                       ),
                     );
                   },

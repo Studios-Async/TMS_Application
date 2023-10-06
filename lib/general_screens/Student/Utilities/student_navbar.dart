@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:tms/general_screens/Student/make_request.dart';
-import 'package:tms/general_screens/Student/student_balance.dart';
-import 'package:tms/general_screens/Tutor/tutor_seerequests.dart';
-import 'package:tms/general_screens/lesson_request.dart';
-import 'package:tms/general_screens/Student/student_home.dart';
+import 'package:tms/general_screens/Tutor/Add%20Lesson/tutor_lesson_request.dart';
+import 'package:tms/general_screens/Student/Screens/Profile%20Page/Utilities/student_balance.dart';
+import 'package:tms/general_screens/Tutor/Add%20Lesson/tutor_seerequests.dart';
+import 'package:tms/general_screens/Tutor/Add%20Lesson/lesson_request.dart';
+import 'package:tms/general_screens/Student/Screens/Home/student_home.dart';
 import 'package:tms/general_screens/Student/welldone_page.dart';
-import 'package:tms/general_screens/Student/student_profile_page.dart';
+import 'package:tms/general_screens/Student/Screens/Profile%20Page/student_profile_page.dart';
 
 class StudentNavBar extends StatefulWidget {
   const StudentNavBar({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class _StudentNavBarState extends State<StudentNavBar> {
   late ScrollController _scrollController; // Controller for scrolling
   List<Widget> pages = [
     StudentHome(),
-    MakeRequestsPage(),
+    LessonPage(),
     StudentProfilePage()
   ]; // List of pages
 

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:tms/main.dart';
 
-import '../../Utilities/buttontemplate.dart';
+import '../../../../../Utilities/buttontemplate.dart';
 
-class SubjectsPageTutor extends StatefulWidget {
-  const SubjectsPageTutor({super.key});
+class SubjectsPage extends StatefulWidget {
+  const SubjectsPage({super.key});
 
   @override
-  State<SubjectsPageTutor> createState() => _SubjectsPageTutorState();
+  State<SubjectsPage> createState() => _SubjectsPageState();
 }
 
-class _SubjectsPageTutorState extends State<SubjectsPageTutor> {
+class _SubjectsPageState extends State<SubjectsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _SubjectsPageTutorState extends State<SubjectsPageTutor> {
               padding: const EdgeInsets.all(16.0),
               alignment: Alignment.center,
               child: Text(
-                'Subjects You Teach',
+                'Subjects You Study',
                 style: TextStyle(
                   fontSize:
                       logicalWidth * 0.08, // Adjust the font size as needed

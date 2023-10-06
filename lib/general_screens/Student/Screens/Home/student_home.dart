@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tms/Utilities/notification_button.dart';
-import 'package:tms/Utilities/sidemenu.dart';
-import 'package:tms/Utilities/student_calendar.dart';
+import 'package:tms/general_screens/Other/Utilities/notification_button.dart';
+import 'package:tms/general_screens/Other/Utilities/sidemenu.dart';
+import 'package:tms/general_screens/Student/Screens/Home/Utilities/student_calendar.dart';
 
 class StudentHome extends StatefulWidget {
   const StudentHome({Key? key}) : super(key: key);

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
-import 'package:tms/buttontemplate.dart';
-import 'package:tms/general_screens/Admin/Utilities/account_widget.dart';
-import 'package:tms/general_screens/Admin/Utilities/students_accounts.dart';
-import 'package:tms/general_screens/Admin/Utilities/tutor_accounts.dart';
+import 'package:tms/general_screens/Admin/Screens/Accounts/Utilities/account_widget.dart';
+import 'package:tms/general_screens/Admin/Screens/Accounts/Utilities/students_accounts.dart';
+import 'package:tms/general_screens/Admin/Screens/Accounts/Utilities/tutor_accounts.dart';
 import 'package:tms/main.dart';
 
 class AdminAccounts extends StatefulWidget {

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:tms/main.dart';
 
-import '../../Utilities/buttontemplate.dart';
+import '../../../Utilities/buttontemplate.dart';
 
-class MakeRequestsPage extends StatefulWidget {
-  const MakeRequestsPage({super.key});
+class TutorMakeRequestsPage extends StatefulWidget {
+  const TutorMakeRequestsPage({super.key});
 
   @override
-  State<MakeRequestsPage> createState() => _MakeRequestsState();
+  State<TutorMakeRequestsPage> createState() => _TutorMakeRequestsPageState();
 }
 
-class _MakeRequestsState extends State<MakeRequestsPage> {
+class _TutorMakeRequestsPageState extends State<TutorMakeRequestsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
