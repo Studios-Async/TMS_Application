@@ -4,12 +4,6 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:tms/general_screens/Admin/Screens/Accounts/admin_accounts.dart';
 import 'package:tms/general_screens/Admin/Screens/Home/admin_home.dart';
 import 'package:tms/general_screens/Admin/Screens/Profile%20Page/admin_profile.dart';
-import 'package:tms/general_screens/Tutor/Add%20Lesson/student_make_lessonreq.dart';
-import 'package:tms/general_screens/Tutor/Home/tutor_home.dart';
-import 'package:tms/general_screens/Other/login_page.dart';
-import 'package:tms/general_screens/Student/Screens/Profile%20Page/student_profile_page.dart';
-import 'package:tms/general_screens/Student/Screens/Home/student_home.dart';
-import 'package:tms/general_screens/Student/Screens/Other/welldone_page.dart';
 
 class AdminNavBar extends StatefulWidget {
   const AdminNavBar({Key? key}) : super(key: key);

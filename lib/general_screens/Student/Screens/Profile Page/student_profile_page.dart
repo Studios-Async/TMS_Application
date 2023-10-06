@@ -59,7 +59,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                       usingIcon: false,
                       text: "Subjects you Study",
                       //SubjectsPage
-                      textsize: screenWidth * 0.09,
+                      textsize: screenWidth * 0.06,
                       onPressed: () {
                         Navigator.push(
                           context,
