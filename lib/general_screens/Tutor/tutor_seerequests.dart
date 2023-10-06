@@ -45,7 +45,7 @@ class LessonRequest extends StatelessWidget {
             ],
           ),
           Padding(padding: EdgeInsets.all(30)),
-          Container(height: 80, width: 100, color: Colors.deepPurple, child: NewButton(onPressed: () {}, buttonheight: 15, buttonwidth: 30, usingIcon: false,text: 'Approve', circle: false, textsize: 18 ))
+          Container(height: 80, width: 100, color: Colors.deepPurple, child: NewButton(onPressed: () {}, buttonheight: 15, buttonwidth: 30, usingIcon: true,icon: Icons.check, circle: false, textsize: 18 ))
 
           
         ],
@@ -76,6 +76,8 @@ class _SeeRequestsState extends State<SeeRequestsPage> {
                       color: Colors.deepPurple,
                       fontWeight: FontWeight.bold,
                       fontSize: 30)),
+              Padding(padding: const EdgeInsets.only(top: 40), child:LessonRequest(studentName: 'Name', subject: 'Subject', time: '13:30') ),
+              
               Padding(
                 padding: const EdgeInsets.only(
                   top: 25,
@@ -91,7 +93,7 @@ class _SeeRequestsState extends State<SeeRequestsPage> {
                   onPressed: () {},
                 ),
               ),
-            LessonRequest(studentName: 'Name', subject: 'Subject', time: '13:30')
+            
             ],
           )),
     )));

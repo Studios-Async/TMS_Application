@@ -11,6 +11,7 @@ class LessonHistoryWidget extends StatelessWidget {
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         child: Container(
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
           color: Colors.deepPurple,
           child: Row(
             children: [
