@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
+import 'package:tms/general_screens/Student/student_balance.dart';
+import 'package:tms/general_screens/Tutor/this_months_tutoring.dart';
+import 'package:tms/general_screens/profile%20page/subjects_page_tutor.dart';
 
 class TutorProfilePage extends StatefulWidget {
   const TutorProfilePage({super.key});
@@ -55,7 +58,14 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                         text: "Subjects you teach",
                         textsize: screenWidth * 0.06,
                         circle: false,
-                        voidcallback: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SubjectsPageTutor(),
+                            ),
+                          );
+                        },
                       ),
                     ),
                     Padding(
@@ -69,7 +79,14 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                         usingIcon: false,
                         text: "This Month's Teaching",
                         textsize: screenWidth * 0.06,
-                        voidcallback: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ThisMonthsTutoringPage(),
+                            ),
+                          );
+                        },
                       ),
                     ),
                     Padding(
@@ -83,7 +100,14 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                         usingIcon: false,
                         text: "Current Earnings",
                         textsize: screenWidth * 0.06,
-                        voidcallback: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => (StudentBalance()),
+                            ),
+                          );
+                        },
                       ),
                     ),
                   ],

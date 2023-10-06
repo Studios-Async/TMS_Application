@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tms/Utilities/buttontemplate.dart';
 import 'package:tms/buttontemplate.dart';
 
 class LessonHistoryWidget extends StatelessWidget {
@@ -73,7 +74,8 @@ class _StudentBalance extends State<StudentBalance> {
           Padding(
             padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
             child: NewButton(
-              voidcallback: () {},
+              circle: false,
+              onPressed: () {},
               buttonheight: 60,
               buttonwidth: 100,
               usingIcon: false,

@@ -56,7 +56,7 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         usingIcon: false,
                         text: "Change Email",
                         textsize: logicalWidth * 0.06,
-                        voidcallback: () {},
+                        onPressed: () {},
                       ),
                     ),
                     Padding(
@@ -69,7 +69,7 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         usingIcon: false,
                         text: "Change Password",
                         textsize: logicalWidth * 0.06,
-                        voidcallback: () {},
+                        onPressed: () {},
                       ),
                     ),
                     Padding(
@@ -82,7 +82,7 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         usingIcon: false,
                         text: "Log Out",
                         textsize: logicalWidth * 0.06,
-                        voidcallback: () {},
+                        onPressed: () {},
                       ),
                     ),
                   ],

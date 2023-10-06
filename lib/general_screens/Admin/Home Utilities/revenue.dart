@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tms/Utilities/buttontemplate.dart';
 import 'package:tms/buttontemplate.dart';
 
 class Revenue extends StatefulWidget {
@@ -106,12 +107,13 @@ class _RevenueState extends State<Revenue> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: NewButton(
+                  circle: false,
                   buttonheight: screenWidth * 0.1,
                   buttonwidth: screenWidth * 0.1,
                   usingIcon: true,
                   icon: Icons.arrow_right_alt_outlined,
                   textsize: 10,
-                  voidcallback: () {},
+                  onPressed: () {},
                 ),
               )
             ],
