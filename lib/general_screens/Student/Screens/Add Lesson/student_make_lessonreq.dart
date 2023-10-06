@@ -1,49 +1,30 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:tms/main.dart';
+import 'package:tms/Utilities/buttontemplate.dart';
 
-import '../../../Utilities/buttontemplate.dart';
+import '../../../../main.dart';
 
-class TutorMakeRequestsPage extends StatefulWidget {
-  const TutorMakeRequestsPage({super.key});
+class LessonPage extends StatefulWidget {
+  const LessonPage({super.key});
 
   @override
-  State<TutorMakeRequestsPage> createState() => _TutorMakeRequestsPageState();
+  State<LessonPage> createState() => _LessonPageState();
 }
 
-class _TutorMakeRequestsPageState extends State<TutorMakeRequestsPage> {
+class _LessonPageState extends State<LessonPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
             child: Column(children: [
       Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
-        child: Container(
-          alignment: Alignment.centerLeft,
-          padding: const EdgeInsets.all(6),
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black, width: 2),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Row(
-            children: [
-              IconButton(
-                icon: Icon(
-                  Icons.arrow_back_ios, // iOS-style back button icon
-                ),
-                onPressed: () {
-                  Navigator.of(context).pop(); // Pop the current screen
-                },
-              ),
-              const Text(
-                "Make Lesson Offer",
-                style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.deepPurple),
-              ),
-            ],
-          ),
+        padding: const EdgeInsets.all(8.0),
+        child: Text(
+          "Make Lesson Request",
+          style: TextStyle(
+              fontSize: logicalHeight * 0.0325,
+              fontWeight: FontWeight.bold,
+              color: Colors.deepPurple),
         ),
       ),
       Row(
