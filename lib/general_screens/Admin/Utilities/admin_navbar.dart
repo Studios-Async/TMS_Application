@@ -16,9 +16,9 @@ class _AdminNavBarState extends State<AdminNavBar> {
   int selectedIndex = 0; // Current selected index for the page
   late ScrollController _scrollController; // Controller for scrolling
   List<Widget> pages = [
-    AdminHome(),
-    AdminAccounts(),
-    AdminProfilePage()
+    const AdminHome(),
+    const AdminAccounts(),
+    const AdminProfilePage()
   ]; // List of pages
 
   @override
@@ -47,7 +47,7 @@ class _AdminNavBarState extends State<AdminNavBar> {
         controller: _scrollController,
         scrollDirection: Axis.horizontal,
         physics:
-            BouncingScrollPhysics(), // Bouncing scroll physics for the effect
+            const BouncingScrollPhysics(), // Bouncing scroll physics for the effect
         itemCount: pages.length,
         itemBuilder: (context, index) {
           return SizedBox(

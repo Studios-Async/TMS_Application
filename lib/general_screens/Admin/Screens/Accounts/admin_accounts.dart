@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
-import 'package:tms/general_screens/Admin/Screens/Accounts/Utilities/account_widget.dart';
-import 'package:tms/general_screens/Admin/Screens/Accounts/Utilities/students_accounts.dart';
-import 'package:tms/general_screens/Admin/Screens/Accounts/Utilities/tutor_accounts.dart';
 import 'package:tms/main.dart';
+
+import 'Utilities/students_accounts.dart';
+import 'Utilities/tutor_accounts.dart';
 
 class AdminAccounts extends StatefulWidget {
   const AdminAccounts({Key? key}) : super(key: key);
@@ -15,14 +15,13 @@ class AdminAccounts extends StatefulWidget {
 class _AdminAccountsState extends State<AdminAccounts> {
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
         child: Center(
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.only(top: screenWidth * 0.05),
+                padding: EdgeInsets.only(top: logicalHeight * 0.05),
                 child: Align(
                     alignment: Alignment.centerLeft,
                     child: TextButton(
@@ -39,15 +38,15 @@ class _AdminAccountsState extends State<AdminAccounts> {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(
-                    vertical: screenWidth * 0.02,
-                    horizontal: screenWidth * 0.01),
-                child: const TutorAccountsList(),
+                    vertical: logicalWidth * 0.02,
+                    horizontal: logicalWidth * 0.01),
+                child: TutorAccountsList(),
               ),
               SizedBox(
                 height: logicalHeight * 0.02,
               ),
               Padding(
-                padding: EdgeInsets.only(top: screenWidth * 0.05),
+                padding: EdgeInsets.only(top: logicalWidth * 0.05),
                 child: Align(
                     alignment: Alignment.centerLeft,
                     child: TextButton(
@@ -64,15 +63,15 @@ class _AdminAccountsState extends State<AdminAccounts> {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(
-                    vertical: screenWidth * 0.02,
-                    horizontal: screenWidth * 0.01),
-                child: const StudentAccountsList(),
+                    vertical: logicalWidth * 0.02,
+                    horizontal: logicalWidth * 0.01),
+                child: StudentAccountsList(),
               ),
               SizedBox(
                 height: logicalHeight * 0.02,
               ),
               Padding(
-                padding: EdgeInsets.all(screenWidth * 0.05),
+                padding: EdgeInsets.all(logicalWidth * 0.05),
                 child: NewButton(
                   circle: false,
                   buttonheight: logicalHeight * 0.1,
