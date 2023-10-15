@@ -46,7 +46,7 @@ class NewButton extends StatelessWidget {
                 color: Colors.white,
                 size: textsize,
               ),
-            if (usingIcon == true && text != null) SizedBox(width: 8.0),
+            if (usingIcon == true && text != null) const SizedBox(width: 8.0),
             if (text != null)
               Flexible(
                 child: Text(

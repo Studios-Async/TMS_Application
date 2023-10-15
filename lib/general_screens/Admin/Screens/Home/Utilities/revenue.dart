@@ -17,7 +17,7 @@ class _RevenueState extends State<Revenue> {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Container(
         height: screenWidth * 0.3, //Dimensions
-        width: screenWidth * 0.95,
+        width: screenWidth * 0.9,
         decoration: BoxDecoration(
           color: Colors.deepPurple,
           borderRadius: BorderRadius.circular(12), // Curved corner radius.
@@ -103,15 +103,15 @@ class _RevenueState extends State<Revenue> {
                     color: Colors.white,
                     width: 3,
                   ),
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(8),
                 ),
                 child: NewButton(
                   circle: false,
-                  buttonheight: screenWidth * 0.1,
-                  buttonwidth: screenWidth * 0.1,
+                  buttonheight: screenWidth * 0.08,
+                  buttonwidth: screenWidth * 0.08,
                   usingIcon: true,
                   icon: Icons.arrow_right_alt_outlined,
-                  textsize: 10,
+                  textsize: 1,
                   onPressed: () {},
                 ),
               )

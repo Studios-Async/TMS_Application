@@ -23,8 +23,8 @@ class CreateAccount extends State<CreateAccountPage> {
                           fontSize: 30)),
                   Row(
                     children: [
-                      const Column(
-                        children: [
+                      Column(
+                        children: const [
                           Padding(
                             padding: EdgeInsets.all(25),
                             child: Icon(Icons.man_4_outlined,

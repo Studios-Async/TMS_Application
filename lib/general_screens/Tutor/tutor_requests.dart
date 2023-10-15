@@ -17,8 +17,8 @@ class LessonRequest extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 340,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.deepPurple),
-
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15), color: Colors.deepPurple),
       child: Row(
         children: [
           Padding(padding: EdgeInsets.all(10)),
@@ -44,7 +44,19 @@ class LessonRequest extends StatelessWidget {
             ],
           ),
           Padding(padding: EdgeInsets.all(30)),
-          Container(height: 80, width: 100, color: Colors.deepPurple, child: NewButton( onPressed: (){}, buttonheight: 15, buttonwidth: 30, usingIcon: false,text: 'Approve', circle: false, textsize: 4,  ))
+          Container(
+              height: 80,
+              width: 100,
+              color: Colors.deepPurple,
+              child: NewButton(
+                onPressed: () {},
+                buttonheight: 15,
+                buttonwidth: 30,
+                usingIcon: false,
+                text: 'Approve',
+                circle: false,
+                textsize: 4,
+              ))
 
           //approve button here
         ],
@@ -59,38 +71,44 @@ class SeeRequestsPageNew extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Container(
-            padding: const EdgeInsets.only(top: 25, bottom: 40),
-            child: Column(
-              children: [
-                const Text('Your Lesson Requests:',
+        body: SafeArea(
+            child: Center(
+      child: Container(
+          padding: const EdgeInsets.only(top: 25, bottom: 40),
+          child: Column(
+            children: [
+              const Text('Your Lesson Requests:',
                   style: TextStyle(
-                    color: Colors.deepPurple,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30)),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 25,
-                    bottom: 30,
+                      color: Colors.deepPurple,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30)),
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 25,
+                  bottom: 30,
                 ),
-                  child: NewButton(
+                child: NewButton(
                     buttonheight: 60,
-                    buttonwidth: 340,   // Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));
+                    buttonwidth:
+                        340, // Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));
                     usingIcon: false,
-                    text: 'Make Lesson Offer:', textsize: 18, circle: false, onPressed: (){Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));}
-                  ),
-                ),
-              LessonRequest(studentName: 'Name', subject: 'Subject', time: '13:30')
+                    text: 'Make Lesson Offer:',
+                    textsize: 18,
+                    circle: false,
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MakeNewRequestsPage()));
+                    }),
+              ),
+              LessonRequest(
+                  studentName: 'Name', subject: 'Subject', time: '13:30')
             ],
           )),
     )));
   }
 }
-
-
-
 
 class MakeNewRequestsPage extends StatelessWidget {
   const MakeNewRequestsPage({super.key});
@@ -108,7 +126,10 @@ class MakeNewRequestsPage extends StatelessWidget {
                         buttonheight: 60,
                         buttonwidth: 50,
                         usingIcon: true,
-                        icon: Icons.arrow_back, textsize: 18, circle: false, onPressed: () {  },
+                        icon: Icons.arrow_back,
+                        textsize: 18,
+                        circle: false,
+                        onPressed: () {},
                       ),
                       const Text('Make Lesson Offer',
                           style: TextStyle(
@@ -119,8 +140,8 @@ class MakeNewRequestsPage extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      const Column(
-                        children: [
+                      Column(
+                        children: const [
                           Padding(
                             padding: EdgeInsets.all(25),
                             child: Icon(Icons.calendar_month_outlined,
@@ -159,7 +180,9 @@ class MakeNewRequestsPage extends StatelessWidget {
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Select Time',
-                                textsize: 18, circle: false, onPressed: () {  },
+                                textsize: 18,
+                                circle: false,
+                                onPressed: () {},
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -177,7 +200,9 @@ class MakeNewRequestsPage extends StatelessWidget {
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Enter Student Email',
-                                textsize: 18,  circle: false, onPressed: () {  },
+                                textsize: 18,
+                                circle: false,
+                                onPressed: () {},
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -195,7 +220,9 @@ class MakeNewRequestsPage extends StatelessWidget {
                                 buttonwidth: 200,
                                 usingIcon: false,
                                 text: 'Select Subject',
-                                textsize: 18, circle: false, onPressed: () {  },
+                                textsize: 18,
+                                circle: false,
+                                onPressed: () {},
                               )),
                         ],
                       ),
@@ -208,15 +235,11 @@ class MakeNewRequestsPage extends StatelessWidget {
                       buttonwidth: 340,
                       usingIcon: false,
                       text: 'Confirm',
-                      textsize: 18,  circle: false, onPressed: () {  },
+                      textsize: 18,
+                      circle: false,
+                      onPressed: () {},
                     ),
                   )
                 ]))));
   }
 }
-
-
-
- 
-
-  

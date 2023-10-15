@@ -34,6 +34,7 @@ class _AdminHomeState extends State<AdminHome> {
                   ),
                   child: const Text(
                     "Dashboard",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
