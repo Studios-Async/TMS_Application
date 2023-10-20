@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
-//import 'package:tms/general_screens/Tutor/tutor_home.dart';
+import 'package:tms/general_screens/Tutor/tutor_home.dart';
 import 'package:tms/main.dart';
 
 class LessonRequest extends StatelessWidget {
@@ -18,36 +18,64 @@ class LessonRequest extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 340,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.deepPurple),
-
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15), color: Colors.deepPurple),
       child: Row(
         children: [
           Padding(padding: EdgeInsets.all(10)),
           Column(
             children: [
-              Padding(padding: EdgeInsets.all(10)),
-              Text(studentName!,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 35)),
-              Text(subject!,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 35)),
-              Text(time! as String,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 35)),
-              Padding(padding: EdgeInsets.all(10))
+              //Padding(padding: EdgeInsets.only(top: 13, bottom: 13, left: 20)),
+              //Text(studentName!,
+              //    style: const TextStyle(
+              //        color: Colors.white,
+              //        fontWeight: FontWeight.bold,
+              //        fontSize: 35)),
+              //Text(subject!,
+              //    style: const TextStyle(
+              //        color: Colors.white,
+              //        fontWeight: FontWeight.bold,
+              //        fontSize: 35)),
+              //Text(time! as String,
+              //    style: const TextStyle(
+              //        color: Colors.white,
+              //        fontWeight: FontWeight.bold,
+              //        fontSize: 35)),
+              //Padding(padding: EdgeInsets.all(10))
+              GridView.count(
+                crossAxisCount: 2,
+                mainAxisSpacing: 5,
+                padding: EdgeInsets.all(5),
+                children: [
+                  Text(subject!,
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 10)),
+                  Text(studentName!,
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 10)),
+                ],
+              )
             ],
           ),
           Padding(padding: EdgeInsets.all(30)),
-          Container(height: 80, width: 100, color: Colors.deepPurple, child: NewButton(onPressed: () {}, buttonheight: 15, buttonwidth: 30, usingIcon: true,icon: Icons.check, circle: false, textsize: 18 ))
+          Container(
+              height: 80,
+              width: 100,
+              color: Colors.deepPurple,
+              child: NewButton(
+                  onPressed: () {},
+                  buttonheight: 15,
+                  buttonwidth: 25,
+                  usingIcon: true,
+                  icon: Icons.check,
+                  circle: false,
+                  textsize: 18))
 
-          
+          //approve button here
         ],
       ),
     );
@@ -76,8 +104,6 @@ class _SeeRequestsState extends State<SeeRequestsPage> {
                       color: Colors.deepPurple,
                       fontWeight: FontWeight.bold,
                       fontSize: 30)),
-              Padding(padding: const EdgeInsets.only(top: 40), child:LessonRequest(studentName: 'Name', subject: 'Subject', time: '13:30') ),
-              
               Padding(
                 padding: const EdgeInsets.only(
                   top: 25,
@@ -93,7 +119,8 @@ class _SeeRequestsState extends State<SeeRequestsPage> {
                   onPressed: () {},
                 ),
               ),
-            
+              LessonRequest(
+                  studentName: 'Name', subject: 'Subject', time: '13:30')
             ],
           )),
     )));

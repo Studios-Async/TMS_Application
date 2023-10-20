@@ -9,12 +9,15 @@ class LessonRequest extends StatelessWidget {
   String? studentName;
   String? subject;
   String? time;
+  String? year;
+  double? textsize = 30;
 
   LessonRequest(
       {super.key,
       required this.studentName,
       required this.subject,
-      required this.time});
+      required this.time,
+      required this.year});
 
   @override
   Widget build(BuildContext context) {
@@ -24,41 +27,84 @@ class LessonRequest extends StatelessWidget {
           borderRadius: BorderRadius.circular(15), color: Colors.deepPurple),
       child: Row(
         children: [
-          Padding(padding: EdgeInsets.all(10)),
+          Padding(padding: EdgeInsets.all(30)),
           Column(
             children: [
               Padding(padding: EdgeInsets.all(10)),
-              Text(studentName!,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 35)),
-              Text(subject!,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 35)),
-              Text(time! as String,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 35)),
-              Padding(padding: EdgeInsets.all(10))
+              Column(
+                children: [
+                  Row(
+                    children: [
+                      Text(subject!,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: textsize)),
+                      Padding(padding: EdgeInsets.all(10)),
+                      Text(studentName!,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: textsize)),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                    width: 15,
+                  ),
+                  Row(
+                    children: [
+                      Text(time! as String,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: textsize)),
+                      Padding(padding: EdgeInsets.all(10)),
+                      Text('Year ' + year! as String,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: textsize)),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                    width: 15,
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                          height: 30,
+                          width: 90,
+                          color: Colors.deepPurple,
+                          child: NewButton(
+                              onPressed: () {},
+                              buttonheight: 15,
+                              buttonwidth: 50,
+                              usingIcon: true,
+                              icon: Icons.check,
+                              circle: false,
+                              textsize: 15)),
+                      Padding(padding: EdgeInsets.all(10)),
+                      Container(
+                          height: 30,
+                          width: 90,
+                          color: Colors.deepPurple,
+                          child: NewButton(
+                              onPressed: () {},
+                              buttonheight: 15,
+                              buttonwidth: 50,
+                              usingIcon: true,
+                              icon: Icons.close,
+                              circle: false,
+                              textsize: 15))
+                    ],
+                  ),
+                  Padding(padding: EdgeInsets.all(10))
+                ],
+              )
             ],
           ),
-          Padding(padding: EdgeInsets.all(30)),
-          Container(
-              height: 80,
-              width: 100,
-              color: Colors.deepPurple,
-              child: NewButton(
-                  onPressed: () {},
-                  buttonheight: 15,
-                  buttonwidth: 30,
-                  usingIcon: true,
-                  icon: Icons.check,
-                  circle: false,
-                  textsize: 18))
         ],
       ),
     );
@@ -91,7 +137,13 @@ class _TutorSeeRequestsPageState extends State<TutorSeeRequestsPage> {
                   child: Container(
                 child: Column(
                   children: [
-                    //HERE
+                    Padding(padding: EdgeInsets.only(bottom: 20)),
+                    LessonRequest(
+                      studentName: 'Name',
+                      subject: 'Subject',
+                      time: '13:30',
+                      year: '10',
+                    )
                   ],
                 ),
               )),
