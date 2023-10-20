@@ -52,7 +52,7 @@ class LessonRequest extends StatelessWidget {
                 onPressed: () {},
                 buttonheight: 15,
                 buttonwidth: 30,
-                usingIcon: false,
+                icon: null,
                 text: 'Approve',
                 circle: false,
                 textsize: 4,
@@ -91,7 +91,7 @@ class SeeRequestsPageNew extends StatelessWidget {
                     buttonheight: 60,
                     buttonwidth:
                         340, // Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));
-                    usingIcon: false,
+                    icon: null,
                     text: 'Make Lesson Offer:',
                     textsize: 18,
                     circle: false,
@@ -125,7 +125,6 @@ class MakeNewRequestsPage extends StatelessWidget {
                       NewButton(
                         buttonheight: 60,
                         buttonwidth: 50,
-                        usingIcon: true,
                         icon: Icons.arrow_back,
                         textsize: 18,
                         circle: false,
@@ -178,7 +177,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                               child: NewButton(
                                 buttonheight: 60,
                                 buttonwidth: 200,
-                                usingIcon: false,
+                                icon: null,
                                 text: 'Select Time',
                                 textsize: 18,
                                 circle: false,
@@ -198,7 +197,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                               child: NewButton(
                                 buttonheight: 60,
                                 buttonwidth: 200,
-                                usingIcon: false,
+                                icon: null,
                                 text: 'Enter Student Email',
                                 textsize: 18,
                                 circle: false,
@@ -218,7 +217,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                               child: NewButton(
                                 buttonheight: 60,
                                 buttonwidth: 200,
-                                usingIcon: false,
+                                icon: null,
                                 text: 'Select Subject',
                                 textsize: 18,
                                 circle: false,
@@ -233,7 +232,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                     child: NewButton(
                       buttonheight: 60,
                       buttonwidth: 340,
-                      usingIcon: false,
+                      icon: null,
                       text: 'Confirm',
                       textsize: 18,
                       circle: false,

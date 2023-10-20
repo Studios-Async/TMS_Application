@@ -18,8 +18,8 @@ class LessonRequest extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 340,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.deepPurple),
-
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15), color: Colors.deepPurple),
       child: Row(
         children: [
           Padding(padding: EdgeInsets.all(10)),
@@ -45,9 +45,20 @@ class LessonRequest extends StatelessWidget {
             ],
           ),
           Padding(padding: EdgeInsets.all(30)),
-          Container(height: 80, width: 100, color: Colors.deepPurple, child: NewButton(onPressed: () {}, buttonheight: 15, buttonwidth: 30, usingIcon: true,icon: Icons.check, circle: false, textsize: 18 ))
-
-          
+          Container(
+            height: 80,
+            width: 100,
+            color: Colors.deepPurple,
+            child: NewButton(
+              onPressed: () {},
+              buttonheight: 30,
+              buttonwidth: 60,
+              icon: null, // Provide a null value for the icon to omit it
+              text: "Confirm",
+              textsize: 18,
+              circle: false,
+            ),
+          )
         ],
       ),
     );
@@ -76,8 +87,10 @@ class _SeeRequestsState extends State<SeeRequestsPage> {
                       color: Colors.deepPurple,
                       fontWeight: FontWeight.bold,
                       fontSize: 30)),
-              Padding(padding: const EdgeInsets.only(top: 40), child:LessonRequest(studentName: 'Name', subject: 'Subject', time: '13:30') ),
-              
+              Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: LessonRequest(
+                      studentName: 'Name', subject: 'Subject', time: '13:30')),
               Padding(
                 padding: const EdgeInsets.only(
                   top: 25,
@@ -86,14 +99,13 @@ class _SeeRequestsState extends State<SeeRequestsPage> {
                 child: NewButton(
                   buttonheight: 60,
                   buttonwidth: 340,
-                  usingIcon: false,
+                  icon: null,
                   text: 'Make Lesson Offer:',
                   textsize: 18,
                   circle: false,
                   onPressed: () {},
                 ),
               ),
-            
             ],
           )),
     )));
@@ -121,7 +133,6 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                       NewButton(
                         buttonheight: 60,
                         buttonwidth: 50,
-                        usingIcon: true,
                         icon: Icons.arrow_back,
                         textsize: 18,
                         circle: true,
@@ -183,7 +194,6 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                               child: NewButton(
                                 buttonheight: logicalHeight * 0.07,
                                 buttonwidth: logicalWidth * 0.5,
-                                usingIcon: false,
                                 text: 'Select Time',
                                 textsize: 18,
                                 circle: false,
@@ -203,7 +213,6 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                               child: NewButton(
                                 buttonheight: logicalHeight * 0.07,
                                 buttonwidth: logicalWidth * 0.5,
-                                usingIcon: false,
                                 text: 'Enter Student Email',
                                 textsize: 18,
                                 circle: false,
@@ -223,7 +232,6 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                               child: NewButton(
                                 buttonheight: logicalHeight * 0.07,
                                 buttonwidth: logicalWidth * 0.5,
-                                usingIcon: false,
                                 text: 'Select Subject',
                                 textsize: 18,
                                 circle: false,
@@ -238,7 +246,7 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                     child: NewButton(
                       buttonheight: logicalHeight * 0.09,
                       buttonwidth: 340,
-                      usingIcon: false,
+                      icon: null,
                       text: 'Confirm',
                       textsize: 18,
                       circle: false,
