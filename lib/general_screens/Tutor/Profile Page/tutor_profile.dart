@@ -6,6 +6,8 @@ import 'package:tms/general_screens/Tutor/Profile%20Page/Utilities/subjects_teac
 import 'package:tms/general_screens/Tutor/Profile%20Page/Utilities/tutor_earnings.dart';
 import 'package:tms/main.dart';
 
+import '../../../Utilities/profilebutton.dart';
+
 class TutorProfilePage extends StatefulWidget {
   const TutorProfilePage({super.key});
 
@@ -17,7 +19,7 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade400,
+      backgroundColor: Colors.black,
       body: SafeArea(
         child: Center(
           child: Column(
@@ -93,6 +95,48 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                           );
                         },
                       ),
+                      ProfileButton(
+                        logicalHeight: logicalHeight,
+                        logicalWidth: logicalWidth,
+                        buttonText: "This months Teaching",
+                        theicon: Icons.add,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SubjectsPageTutor(),
+                            ),
+                          );
+                        },
+                      ),
+                      ProfileButton(
+                        logicalHeight: logicalHeight,
+                        logicalWidth: logicalWidth,
+                        buttonText: "Balance",
+                        theicon: Icons.add,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SubjectsPageTutor(),
+                            ),
+                          );
+                        },
+                      ),
+                      ProfileButton(
+                        logicalHeight: logicalHeight,
+                        logicalWidth: logicalWidth,
+                        buttonText: "Settings",
+                        theicon: Icons.add,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SubjectsPageTutor(),
+                            ),
+                          );
+                        },
+                      ),
                     ],
                   ),
                 ),
@@ -104,42 +148,6 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
     );
   }
 }
-
-class ProfileButton extends StatelessWidget {
-  final IconData? theicon;
-  final double logicalHeight;
-  final double logicalWidth;
-  final String buttonText;
-  final void Function() onPressed;
-
-  ProfileButton({
-    required this.logicalHeight,
-    required this.logicalWidth,
-    required this.buttonText,
-    required this.onPressed,
-    required this.theicon,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: logicalHeight * 0.01,
-        vertical: logicalWidth * 0.05,
-      ),
-      child: NewButton(
-        buttonheight: logicalHeight * 0.1,
-        buttonwidth: logicalWidth * 0.9,
-        text: buttonText,
-        textsize: logicalHeight * 0.02,
-        circle: false,
-        onPressed: onPressed,
-        icon: theicon,
-      ),
-    );
-  }
-}
-
 
 
 

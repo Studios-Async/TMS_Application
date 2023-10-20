@@ -56,6 +56,7 @@ class LessonRequest extends StatelessWidget {
                 text: 'Approve',
                 circle: false,
                 textsize: 4,
+                usingIcon: null,
               ))
 
           //approve button here
@@ -88,19 +89,21 @@ class SeeRequestsPageNew extends StatelessWidget {
                   bottom: 30,
                 ),
                 child: NewButton(
-                    buttonheight: 60,
-                    buttonwidth:
-                        340, // Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));
-                    icon: null,
-                    text: 'Make Lesson Offer:',
-                    textsize: 18,
-                    circle: false,
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => MakeNewRequestsPage()));
-                    }),
+                  buttonheight: 60,
+                  buttonwidth:
+                      340, // Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));
+                  icon: null,
+                  text: 'Make Lesson Offer:',
+                  textsize: 18,
+                  circle: false,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => MakeNewRequestsPage()));
+                  },
+                  usingIcon: null,
+                ),
               ),
               LessonRequest(
                   studentName: 'Name', subject: 'Subject', time: '13:30')
@@ -129,6 +132,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                         textsize: 18,
                         circle: false,
                         onPressed: () {},
+                        usingIcon: null,
                       ),
                       const Text('Make Lesson Offer',
                           style: TextStyle(
@@ -182,6 +186,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                                 textsize: 18,
                                 circle: false,
                                 onPressed: () {},
+                                usingIcon: null,
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -202,6 +207,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                                 textsize: 18,
                                 circle: false,
                                 onPressed: () {},
+                                usingIcon: null,
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -222,6 +228,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                                 textsize: 18,
                                 circle: false,
                                 onPressed: () {},
+                                usingIcon: null,
                               )),
                         ],
                       ),
@@ -237,6 +244,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                       textsize: 18,
                       circle: false,
                       onPressed: () {},
+                      usingIcon: null,
                     ),
                   )
                 ]))));

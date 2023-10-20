@@ -56,7 +56,7 @@ class LessonRequest extends StatelessWidget {
               icon: null, // Provide a null value for the icon to omit it
               text: "Confirm",
               textsize: 18,
-              circle: false,
+              circle: false, usingIcon: null,
             ),
           )
         ],
@@ -104,6 +104,7 @@ class _SeeRequestsState extends State<SeeRequestsPage> {
                   textsize: 18,
                   circle: false,
                   onPressed: () {},
+                  usingIcon: null,
                 ),
               ),
             ],
@@ -137,6 +138,7 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                         textsize: 18,
                         circle: true,
                         onPressed: () {},
+                        usingIcon: null,
                       ),
                       Expanded(
                         child: Center(
@@ -198,6 +200,7 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                                 textsize: 18,
                                 circle: false,
                                 onPressed: () {},
+                                usingIcon: null,
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -217,6 +220,7 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                                 textsize: 18,
                                 circle: false,
                                 onPressed: () {},
+                                usingIcon: null,
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -236,6 +240,7 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                                 textsize: 18,
                                 circle: false,
                                 onPressed: () {},
+                                usingIcon: null,
                               )),
                         ],
                       ),
@@ -251,6 +256,7 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                       textsize: 18,
                       circle: false,
                       onPressed: () {},
+                      usingIcon: null,
                     ),
                   )
                 ]))));
