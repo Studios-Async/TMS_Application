@@ -18,14 +18,14 @@ class LessonRequest extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 340,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.deepPurple),
-
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15), color: Colors.deepPurple),
       child: Row(
         children: [
           Padding(padding: EdgeInsets.all(10)),
           Column(
             children: [
-              Padding(padding: EdgeInsets.all(10)),
+              Padding(padding: EdgeInsets.only(top: 13, bottom: 13, left: 20)),
               Text(studentName!,
                   style: const TextStyle(
                       color: Colors.white,
@@ -45,7 +45,18 @@ class LessonRequest extends StatelessWidget {
             ],
           ),
           Padding(padding: EdgeInsets.all(30)),
-          Container(height: 80, width: 100, color: Colors.deepPurple, child: NewButton(voidcallback: () {}, buttonheight: 15, buttonwidth: 30, usingIcon: false,text: 'Approve', circle: false, textsize: 18 ))
+          Container(
+              height: 80,
+              width: 100,
+              color: Colors.deepPurple,
+              child: NewButton(
+                  voidcallback: () {},
+                  buttonheight: 15,
+                  buttonwidth: 25,
+                  usingIcon: true,
+                  icon: Icons.check,
+                  circle: false,
+                  textsize: 18))
 
           //approve button here
         ],
@@ -91,7 +102,8 @@ class _SeeRequestsState extends State<SeeRequestsPage> {
                   voidcallback: () {},
                 ),
               ),
-            LessonRequest(studentName: 'Name', subject: 'Subject', time: '13:30')
+              LessonRequest(
+                  studentName: 'Name', subject: 'Subject', time: '13:30')
             ],
           )),
     )));
