@@ -52,10 +52,11 @@ class LessonRequest extends StatelessWidget {
                 onPressed: () {},
                 buttonheight: 15,
                 buttonwidth: 30,
-                usingIcon: false,
+                icon: null,
                 text: 'Approve',
                 circle: false,
                 textsize: 4,
+                usingIcon: null,
               ))
 
           //approve button here
@@ -88,19 +89,21 @@ class SeeRequestsPageNew extends StatelessWidget {
                   bottom: 30,
                 ),
                 child: NewButton(
-                    buttonheight: 60,
-                    buttonwidth:
-                        340, // Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));
-                    usingIcon: false,
-                    text: 'Make Lesson Offer:',
-                    textsize: 18,
-                    circle: false,
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => MakeNewRequestsPage()));
-                    }),
+                  buttonheight: 60,
+                  buttonwidth:
+                      340, // Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));
+                  icon: null,
+                  text: 'Make Lesson Offer:',
+                  textsize: 18,
+                  circle: false,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => MakeNewRequestsPage()));
+                  },
+                  usingIcon: null,
+                ),
               ),
               LessonRequest(
                   studentName: 'Name', subject: 'Subject', time: '13:30')
@@ -125,11 +128,11 @@ class MakeNewRequestsPage extends StatelessWidget {
                       NewButton(
                         buttonheight: 60,
                         buttonwidth: 50,
-                        usingIcon: true,
                         icon: Icons.arrow_back,
                         textsize: 18,
                         circle: false,
                         onPressed: () {},
+                        usingIcon: null,
                       ),
                       const Text('Make Lesson Offer',
                           style: TextStyle(
@@ -178,11 +181,12 @@ class MakeNewRequestsPage extends StatelessWidget {
                               child: NewButton(
                                 buttonheight: 60,
                                 buttonwidth: 200,
-                                usingIcon: false,
+                                icon: null,
                                 text: 'Select Time',
                                 textsize: 18,
                                 circle: false,
                                 onPressed: () {},
+                                usingIcon: null,
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -198,11 +202,12 @@ class MakeNewRequestsPage extends StatelessWidget {
                               child: NewButton(
                                 buttonheight: 60,
                                 buttonwidth: 200,
-                                usingIcon: false,
+                                icon: null,
                                 text: 'Enter Student Email',
                                 textsize: 18,
                                 circle: false,
                                 onPressed: () {},
+                                usingIcon: null,
                               )),
                           const Padding(
                             padding: EdgeInsets.only(
@@ -218,11 +223,12 @@ class MakeNewRequestsPage extends StatelessWidget {
                               child: NewButton(
                                 buttonheight: 60,
                                 buttonwidth: 200,
-                                usingIcon: false,
+                                icon: null,
                                 text: 'Select Subject',
                                 textsize: 18,
                                 circle: false,
                                 onPressed: () {},
+                                usingIcon: null,
                               )),
                         ],
                       ),
@@ -233,11 +239,12 @@ class MakeNewRequestsPage extends StatelessWidget {
                     child: NewButton(
                       buttonheight: 60,
                       buttonwidth: 340,
-                      usingIcon: false,
+                      icon: null,
                       text: 'Confirm',
                       textsize: 18,
                       circle: false,
                       onPressed: () {},
+                      usingIcon: null,
                     ),
                   )
                 ]))));
