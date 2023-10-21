@@ -19,7 +19,7 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.grey.shade600,
       body: SafeArea(
         child: Center(
           child: Column(
@@ -30,11 +30,11 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                 child: Row(
                   children: [
                     Container(
-                      width: logicalWidth * 0.45,
-                      height: logicalWidth * 0.45,
+                      width: logicalWidth * 0.4,
+                      height: logicalWidth * 0.4,
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.grey,
+                        color: Colors.deepPurple,
                       ),
                       child: const Center(
                         child: Text(
@@ -68,12 +68,12 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                   ],
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
               Expanded(
                 child: Container(
                   width: logicalWidth * 0.97,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.grey.shade300,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(40.0),
                       topRight: Radius.circular(40.0),
@@ -81,9 +81,12 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                   ),
                   child: Column(
                     children: [
+                      SizedBox(
+                        height: logicalHeight * 0.015,
+                      ),
                       ProfileButton(
-                        text: "Subjects you teach",
-                        icon: Icons.add,
+                        text: "Subjects you Teach",
+                        icon: Icons.my_library_books,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -94,37 +97,37 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                         },
                       ),
                       ProfileButton(
-                        text: "This months Teaching",
-                        icon: Icons.add,
+                        text: "This months Tutoring",
+                        icon: Icons.calendar_month,
                         onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SubjectsPageTutor(),
+                              builder: (context) => ThisMonthsTutoringPage(),
                             ),
                           );
                         },
                       ),
                       ProfileButton(
                         text: "Balance",
-                        icon: Icons.add,
+                        icon: Icons.account_balance_wallet,
                         onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SubjectsPageTutor(),
+                              builder: (context) => TutorEarnings(),
                             ),
                           );
                         },
                       ),
                       ProfileButton(
                         text: "Settings",
-                        icon: Icons.add,
+                        icon: Icons.settings,
                         onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SubjectsPageTutor(),
+                              builder: (context) => Placeholder(),
                             ),
                           );
                         },
@@ -140,105 +143,3 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
     );
   }
 }
-
-
-
-
-
-// child: Column(
-//             children: [
-//               Padding(
-//                 padding: const EdgeInsets.all(8.0),
-//                 child: Container(
-//                   width: screenWidth * 0.5,
-//                   height: screenWidth * 0.5,
-//                   decoration: const BoxDecoration(
-//                     shape: BoxShape.circle,
-//                     color: Colors.grey,
-//                   ),
-//                   child: const Center(
-//                     child: Text(
-//                       'Profile Pic',
-//                       style:
-//                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-//                     ),
-//                   ),
-//                 ),
-//               ),
-//               const Text(
-//                 'Tutor Name',
-//                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-//               ),
-//               Padding(
-//                 padding: const EdgeInsets.all(8.0),
-//                 child: Column(
-//                   children: [
-//                     Padding(
-//                       padding: EdgeInsets.symmetric(
-//                           horizontal: screenWidth * 0.01,
-//                           vertical: screenWidth * 0.05),
-//                       child: NewButton(
-//                         buttonheight: screenWidth * 0.25,
-//                         buttonwidth: screenWidth * 0.95,
-//                         usingIcon: false,
-//                         text: "Subjects you teach",
-//                         textsize: screenWidth * 0.06,
-//                         circle: false,
-//                         onPressed: () {
-//                           Navigator.push(
-//                             context,
-//                             MaterialPageRoute(
-//                               builder: (context) => SubjectsPageTutor(),
-//                             ),
-//                           );
-//                         },
-//                       ),
-//                     ),
-//                     Padding(
-//                       padding: EdgeInsets.symmetric(
-//                           horizontal: screenWidth * 0.01,
-//                           vertical: screenWidth * 0.05),
-//                       child: NewButton(
-//                         circle: false,
-//                         buttonheight: screenWidth * 0.25,
-//                         buttonwidth: screenWidth * 0.95,
-//                         usingIcon: false,
-//                         text: "This Month's Teaching",
-//                         textsize: screenWidth * 0.06,
-//                         onPressed: () {
-//                           Navigator.push(
-//                             context,
-//                             MaterialPageRoute(
-//                               builder: (context) => ThisMonthsTutoringPage(),
-//                             ),
-//                           );
-//                         },
-//                       ),
-//                     ),
-//                     Padding(
-//                       padding: EdgeInsets.symmetric(
-//                           horizontal: screenWidth * 0.01,
-//                           vertical: screenWidth * 0.05),
-//                       child: NewButton(
-//                         circle: false,
-//                         buttonheight: screenWidth * 0.25,
-//                         buttonwidth: screenWidth * 0.95,
-//                         usingIcon: false,
-//                         text: "Current Earnings",
-//                         textsize: screenWidth * 0.06,
-//                         onPressed: () {
-//                           Navigator.push(
-//                             context,
-//                             MaterialPageRoute(
-//                               builder: (context) => (TutorEarnings()),
-//                             ),
-//                           );
-//                         },
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//             ],
-//           ),
-
