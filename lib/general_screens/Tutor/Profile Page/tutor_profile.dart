@@ -82,10 +82,8 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                   child: Column(
                     children: [
                       ProfileButton(
-                        logicalHeight: logicalHeight,
-                        logicalWidth: logicalWidth,
-                        buttonText: "Subjects you teach",
-                        theicon: Icons.add,
+                        text: "Subjects you teach",
+                        icon: Icons.add,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -96,10 +94,8 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                         },
                       ),
                       ProfileButton(
-                        logicalHeight: logicalHeight,
-                        logicalWidth: logicalWidth,
-                        buttonText: "This months Teaching",
-                        theicon: Icons.add,
+                        text: "This months Teaching",
+                        icon: Icons.add,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -110,10 +106,8 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                         },
                       ),
                       ProfileButton(
-                        logicalHeight: logicalHeight,
-                        logicalWidth: logicalWidth,
-                        buttonText: "Balance",
-                        theicon: Icons.add,
+                        text: "Balance",
+                        icon: Icons.add,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -124,10 +118,8 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                         },
                       ),
                       ProfileButton(
-                        logicalHeight: logicalHeight,
-                        logicalWidth: logicalWidth,
-                        buttonText: "Settings",
-                        theicon: Icons.add,
+                        text: "Settings",
+                        icon: Icons.add,
                         onPressed: () {
                           Navigator.push(
                             context,

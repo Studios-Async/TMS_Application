@@ -84,10 +84,8 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                   child: Column(
                     children: [
                       ProfileButton(
-                        logicalHeight: logicalHeight,
-                        logicalWidth: logicalWidth,
-                        buttonText: "Subjects you study",
-                        theicon: Icons.add,
+                        text: "Subjects you study",
+                        icon: Icons.add,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -98,10 +96,8 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                         },
                       ),
                       ProfileButton(
-                        logicalHeight: logicalHeight,
-                        logicalWidth: logicalWidth,
-                        buttonText: "This months Learning",
-                        theicon: Icons.add,
+                        text: "This months Learning",
+                        icon: Icons.add,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -112,10 +108,8 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                         },
                       ),
                       ProfileButton(
-                        logicalHeight: logicalHeight,
-                        logicalWidth: logicalWidth,
-                        buttonText: "Balance",
-                        theicon: Icons.add,
+                        text: "Balance",
+                        icon: Icons.add,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -126,10 +120,8 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                         },
                       ),
                       ProfileButton(
-                        logicalHeight: logicalHeight,
-                        logicalWidth: logicalWidth,
-                        buttonText: "Settings",
-                        theicon: Icons.add,
+                        text: "Settings",
+                        icon: Icons.add,
                         onPressed: () {
                           Navigator.push(
                             context,

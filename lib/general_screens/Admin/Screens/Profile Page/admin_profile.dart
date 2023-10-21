@@ -51,7 +51,7 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         child: Column(
                           children: [
                             Text(
-                              "Tutor Name",
+                              "Admin Name",
                               style: TextStyle(
                                   fontSize: logicalHeight * 0.03,
                                   color: Colors.white),
@@ -83,10 +83,8 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                   child: Column(
                     children: [
                       ProfileButton(
-                        logicalHeight: logicalHeight,
-                        logicalWidth: logicalWidth,
-                        buttonText: "Subjects you study",
-                        theicon: Icons.add,
+                        text: "Subjects you study",
+                        icon: Icons.add,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -97,10 +95,8 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         },
                       ),
                       ProfileButton(
-                        logicalHeight: logicalHeight,
-                        logicalWidth: logicalWidth,
-                        buttonText: "This months Learning",
-                        theicon: Icons.add,
+                        text: "This months Learning",
+                        icon: Icons.add,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -111,10 +107,8 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         },
                       ),
                       ProfileButton(
-                        logicalHeight: logicalHeight,
-                        logicalWidth: logicalWidth,
-                        buttonText: "Balance",
-                        theicon: Icons.add,
+                        text: "Balance",
+                        icon: Icons.add,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -125,10 +119,8 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                         },
                       ),
                       ProfileButton(
-                        logicalHeight: logicalHeight,
-                        logicalWidth: logicalWidth,
-                        buttonText: "Settings",
-                        theicon: Icons.add,
+                        text: "Settings",
+                        icon: Icons.add,
                         onPressed: () {
                           Navigator.push(
                             context,
