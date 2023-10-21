@@ -18,8 +18,6 @@ class StudentProfilePage extends StatefulWidget {
 class _StudentProfilePageState extends State<StudentProfilePage> {
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
@@ -52,7 +50,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                         child: Column(
                           children: [
                             Text(
-                              "Tutor Name",
+                              "Student Name",
                               style: TextStyle(
                                   fontSize: logicalHeight * 0.03,
                                   color: Colors.white),
@@ -85,7 +83,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                     children: [
                       ProfileButton(
                         text: "Subjects you study",
-                        icon: Icons.add,
+                        icon: Icons.my_library_books,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -97,7 +95,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                       ),
                       ProfileButton(
                         text: "This months Learning",
-                        icon: Icons.add,
+                        icon: Icons.calendar_month,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -109,7 +107,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                       ),
                       ProfileButton(
                         text: "Balance",
-                        icon: Icons.add,
+                        icon: Icons.account_balance_wallet,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -121,7 +119,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                       ),
                       ProfileButton(
                         text: "Settings",
-                        icon: Icons.add,
+                        icon: Icons.settings,
                         onPressed: () {
                           Navigator.push(
                             context,
