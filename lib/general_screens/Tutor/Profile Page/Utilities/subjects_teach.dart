@@ -19,31 +19,35 @@ class _SubjectsPageTutorState extends State<SubjectsPageTutor> {
       body: SafeArea(
         child: Column(
           children: [
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
-              child: Container(
-                alignment: Alignment.centerLeft,
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black, width: 2),
-                  borderRadius: BorderRadius.circular(10),
+            Container(
+              height: logicalHeight * 0.1,
+              width: logicalWidth * 0.975,
+              decoration: BoxDecoration(
+                color: Colors.deepPurple.shade300,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(25.0),
+                  bottomRight: Radius.circular(25.0),
                 ),
+              ),
+              child: Center(
                 child: Row(
                   children: [
                     IconButton(
                       icon: Icon(
                         Icons.arrow_back_ios,
+                        color: Colors.white,
                       ),
                       onPressed: () {
                         Navigator.of(context).pop();
                       },
                     ),
-                    const Text(
-                      "Subjects you Study",
+                    const SizedBox(width: 10),
+                    Text(
+                      "Subjects you Teach",
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: logicalWidth * 0.075,
                         fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                     ),
                   ],
