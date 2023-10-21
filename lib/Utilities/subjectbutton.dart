@@ -16,8 +16,8 @@ class _SubjectButtonState extends State<SubjectButton> {
 
   @override
   Widget build(BuildContext context) {
-    // Calculate the size of the square container
-    double containerSize = logicalWidth * 0.275; // Adjust the size as desired
+    double buttonSize =
+        logicalWidth * 0.275; // Adjust the button size as desired
 
     return InkWell(
       onTap: () {
@@ -28,10 +28,11 @@ class _SubjectButtonState extends State<SubjectButton> {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          width: containerSize,
-          height: containerSize, // Set the height to match the width
+          width: buttonSize,
+          height: buttonSize, // Set the height to match the width
           decoration: BoxDecoration(
-            shape: BoxShape.circle,
+            shape: BoxShape.rectangle, // Use a rectangle shape
+            borderRadius: BorderRadius.circular(30.0), // Rounded corners
             color: isButtonClicked ? Colors.red : Colors.deepPurple,
           ),
           child: Center(
