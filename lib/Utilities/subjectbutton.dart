@@ -17,7 +17,7 @@ class _SubjectButtonState extends State<SubjectButton> {
   @override
   Widget build(BuildContext context) {
     double buttonSize =
-        logicalWidth * 0.275; // Adjust the button size as desired
+        logicalWidth * 0.27; // Adjust the button size as desired
 
     return InkWell(
       onTap: () {

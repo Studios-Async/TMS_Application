@@ -26,7 +26,7 @@ class ProfileButton extends StatelessWidget {
           child: Container(
             width: logicalWidth * 0.85,
             height: logicalHeight * 0.1,
-            decoration: BoxDecoration(color: Colors.deepPurple),
+            decoration: BoxDecoration(color: Color.fromARGB(255, 130, 82, 213)),
             child: ElevatedButton(
               onPressed: onPressed,
               style: ElevatedButton.styleFrom(

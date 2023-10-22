@@ -21,7 +21,7 @@ class _TutorEarnings extends State<TutorEarnings> {
         padding: const EdgeInsets.only(top: 25, bottom: 40),
         child: Column(children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
             child: Container(
               alignment: Alignment.centerLeft,
               padding: const EdgeInsets.all(6),
@@ -50,46 +50,55 @@ class _TutorEarnings extends State<TutorEarnings> {
               ),
             ),
           ),
-          Container(
-            width: logicalWidth * 0.9,
-            height: logicalHeight * 0.7,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    stops: [
-                      0.03,
-                      0.4,
-                      1
-                    ],
-                    colors: [
-                      Color.fromARGB(255, 182, 176, 246),
-                      Color.fromARGB(255, 166, 137, 230),
-                      Color.fromARGB(255, 134, 99, 239)
-                    ])),
-            child: Column(
-              children: [
-                Padding(padding: EdgeInsets.all(10)),
-                Text('History ',
-                    style: TextStyle(
-                        color: Colors.deepPurple,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30)),
-                Padding(
-                  padding: EdgeInsets.only(bottom: 30),
-                  child: Container(
-                    height: 300,
-                    child: ListView.builder(
-                      scrollDirection: Axis.vertical,
-                      itemCount: 1,
-                      itemBuilder: (context, index) {
-                        return LessonHistoryWidget(subject: 'English', pay: 45);
-                      },
-                    ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10.0),
+            child: Container(
+              width: logicalWidth * 0.9,
+              height: logicalHeight * 0.7,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      stops: [
+                        0.03,
+                        0.4,
+                        1
+                      ],
+                      colors: [
+                        Color.fromARGB(255, 182, 176, 246),
+                        Color.fromARGB(255, 166, 137, 230),
+                        Color.fromARGB(255, 134, 99, 239)
+                      ])),
+              child: Column(
+                children: [
+                  Padding(padding: EdgeInsets.all(10)),
+                  Text('History ',
+                      style: TextStyle(
+                          color: Colors.deepPurple,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30)),
+                  Divider(
+                    height: 10,
+                    thickness: 2,
+                    indent: 2,
                   ),
-                )
-              ],
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 30),
+                    child: Container(
+                      height: logicalHeight * 0.55,
+                      child: ListView.builder(
+                        scrollDirection: Axis.vertical,
+                        itemCount: 5,
+                        itemBuilder: (context, index) {
+                          return LessonHistoryWidget(
+                              subject: 'English', pay: 45);
+                        },
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ]),

@@ -34,7 +34,7 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                       height: logicalWidth * 0.4,
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.deepPurple,
+                        color: Color.fromARGB(255, 130, 82, 213),
                       ),
                       child: const Center(
                         child: Text(
@@ -59,7 +59,7 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                               "@Email",
                               style: TextStyle(
                                   fontSize: logicalHeight * 0.02,
-                                  color: Colors.grey.shade700),
+                                  color: Colors.grey.shade900),
                             )
                           ],
                         ),

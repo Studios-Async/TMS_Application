@@ -8,6 +8,7 @@ import 'package:tms/general_screens/Student/Utilities/student_navbar.dart';
 import 'package:tms/general_screens/Student/Screens/Profile%20Page/Utilities/student_balance.dart';
 import 'package:tms/general_screens/Student/Screens/Profile%20Page/Utilities/this_months_learning.dart';
 import 'package:tms/general_screens/Student/Screens/Other/welldone_page.dart';
+import 'package:tms/general_screens/Tutor/Profile%20Page/Utilities/tutor_earnings.dart';
 import 'package:tms/general_screens/Tutor/Utilities/tutor_navbar.dart';
 import 'package:tms/general_screens/Tutor/Profile%20Page/tutor_profile.dart';
 import 'package:tms/general_screens/Tutor/Add%20Lesson/tutor_seerequests.dart';
