@@ -18,111 +18,193 @@ class _LessonPageState extends State<LessonPage> {
         body: SafeArea(
             child: Column(children: [
       Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Text(
-          "Make Lesson Request",
-          style: TextStyle(
-              fontSize: logicalHeight * 0.0325,
-              fontWeight: FontWeight.bold,
-              color: Colors.deepPurple),
+        padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
+        child: Container(
+          alignment: Alignment.centerLeft,
+          padding: const EdgeInsets.all(6),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.black, width: 2),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Row(
+            children: [
+              IconButton(
+                icon: Icon(
+                  Icons.arrow_back_ios, // iOS-style back button icon
+                ),
+                onPressed: () {
+                  Navigator.of(context).pop(); // Pop the current screen
+                },
+              ),
+              const Text(
+                "Make Lesson Request",
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.deepPurple),
+              ),
+            ],
+          ),
         ),
       ),
-      Row(
-        children: [
-          Column(
-            children: [
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 12.0, vertical: 15),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10.0),
-                      child: Icon(Icons.calendar_month_outlined,
-                          color: Colors.deepPurple, size: logicalHeight * 0.15),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 15.0),
-                      child: Icon(
-                        Icons.person_2_outlined,
-                        color: Colors.deepPurple,
-                        size: logicalHeight * 0.15,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10.0),
-                      child: Icon(Icons.subject_outlined,
-                          color: Colors.deepPurple, size: logicalHeight * 0.15),
-                    )
+      Padding(padding: EdgeInsets.all(10)),
+      Container(
+        height: logicalHeight * 0.15,
+        width: logicalWidth * 0.9,
+        child: Stack(
+          children: [
+            Positioned(
+                left: 80,
+                top: logicalHeight * 0.02,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.deepPurple,
+                  ),
+                  width: logicalWidth * 0.7,
+                  height: logicalHeight * 0.1,
+                  child: Column(
+                    children: [
+                      Padding(padding: EdgeInsets.all(6)),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          NewButton(
+                              buttonheight: logicalHeight * 0.072,
+                              buttonwidth: logicalWidth * 0.67,
+                              usingIcon: false,
+                              text: 'Select Time',
+                              textsize: 20,
+                              circle: false,
+                              onPressed: () {}),
+                        ],
+                      )
+                    ],
+                  ),
+                )),
+            Container(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: (LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 179, 160, 219),
+                    Color.fromARGB(255, 196, 193, 233)
                   ],
-                ),
+                  stops: [0.2, 1],
+                )),
               ),
-            ],
-          ),
-          Column(
-            children: [
-              SizedBox(
-                height: logicalHeight * 0.025,
+              child: Icon(Icons.calendar_month_outlined,
+                  color: Colors.deepPurple, size: logicalHeight * 0.11),
+            ),
+          ],
+        ),
+      ),
+      Padding(padding: EdgeInsets.all(10)),
+      Container(
+        height: logicalHeight * 0.15,
+        width: logicalWidth * 0.9,
+        child: Stack(
+          children: [
+            Positioned(
+                left: 80,
+                top: logicalHeight * 0.02,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.deepPurple,
+                  ),
+                  width: logicalWidth * 0.7,
+                  height: logicalHeight * 0.1,
+                  child: Column(
+                    children: [
+                      Padding(padding: EdgeInsets.all(6)),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          NewButton(
+                              buttonheight: logicalHeight * 0.072,
+                              buttonwidth: logicalWidth * 0.67,
+                              usingIcon: false,
+                              text: 'Select Location',
+                              textsize: 20,
+                              circle: false,
+                              onPressed: () {}),
+                        ],
+                      )
+                    ],
+                  ),
+                )),
+            Container(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: (LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 179, 160, 219),
+                    Color.fromARGB(255, 196, 193, 233)
+                  ],
+                  stops: [0.2, 1],
+                )),
               ),
-              Text('Date',
-                  style: TextStyle(
-                      color: Colors.deepPurple,
-                      fontSize: logicalHeight * 0.03,
-                      fontWeight: FontWeight.bold)),
-              Padding(
-                  padding: const EdgeInsets.all(5),
-                  child: NewButton(
-                    buttonheight: logicalHeight * 0.08,
-                    buttonwidth: logicalWidth * 0.55,
-                    usingIcon: false,
-                    text: 'Select Time',
-                    textsize: 20,
-                    circle: false,
-                    onPressed: () {},
-                  )),
-              Padding(
-                padding:
-                    EdgeInsets.only(top: 40, left: 25, right: 25, bottom: 10),
-                child: Text('Student',
-                    style: TextStyle(
-                        color: Colors.deepPurple,
-                        fontSize: logicalHeight * 0.03,
-                        fontWeight: FontWeight.bold)),
+              child: Icon(Icons.location_city_outlined,
+                  color: Colors.deepPurple, size: logicalHeight * 0.11),
+            ),
+          ],
+        ),
+      ),
+      Padding(padding: EdgeInsets.all(10)),
+      Container(
+        height: logicalHeight * 0.15,
+        width: logicalWidth * 0.9,
+        child: Stack(
+          children: [
+            Positioned(
+                left: 80,
+                top: logicalHeight * 0.02,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.deepPurple,
+                  ),
+                  width: logicalWidth * 0.7,
+                  height: logicalHeight * 0.1,
+                  child: Column(
+                    children: [
+                      Padding(padding: EdgeInsets.all(6)),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          NewButton(
+                              buttonheight: logicalHeight * 0.072,
+                              buttonwidth: logicalWidth * 0.67,
+                              usingIcon: false,
+                              text: 'Select Subject',
+                              textsize: 20,
+                              circle: false,
+                              onPressed: () {}),
+                        ],
+                      )
+                    ],
+                  ),
+                )),
+            Container(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: (LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 179, 160, 219),
+                    Color.fromARGB(255, 196, 193, 233)
+                  ],
+                  stops: [0.2, 1],
+                )),
               ),
-              Padding(
-                  padding: const EdgeInsets.all(5),
-                  child: NewButton(
-                    buttonheight: logicalHeight * 0.08,
-                    buttonwidth: logicalWidth * 0.55,
-                    usingIcon: false,
-                    text: 'Enter Student Email',
-                    textsize: 18,
-                    circle: false,
-                    onPressed: () {},
-                  )),
-              Padding(
-                padding:
-                    EdgeInsets.only(top: 40, left: 25, right: 25, bottom: 10),
-                child: Text('Subject',
-                    style: TextStyle(
-                        color: Colors.deepPurple,
-                        fontSize: logicalHeight * 0.03,
-                        fontWeight: FontWeight.bold)),
-              ),
-              Padding(
-                  padding: const EdgeInsets.all(5),
-                  child: NewButton(
-                    buttonheight: logicalHeight * 0.08,
-                    buttonwidth: logicalWidth * 0.55,
-                    usingIcon: false,
-                    text: 'Select Subject',
-                    textsize: 18,
-                    circle: false,
-                    onPressed: () {},
-                  )),
-            ],
-          ),
-        ],
+              child: Icon(Icons.subject_outlined,
+                  color: Colors.deepPurple, size: logicalHeight * 0.11),
+            ),
+          ],
+        ),
       ),
       Padding(
         padding: const EdgeInsets.only(top: 50),

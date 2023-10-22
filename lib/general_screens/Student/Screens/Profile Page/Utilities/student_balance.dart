@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
+import 'package:tms/main.dart';
 
 import '../../../../Tutor/Profile Page/Utilities/lesson_historywidget.dart';
 
@@ -19,7 +20,7 @@ class _StudentBalance extends State<StudentBalance> {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 15),
             child: Container(
               alignment: Alignment.centerLeft,
               padding: const EdgeInsets.all(12),
@@ -49,38 +50,63 @@ class _StudentBalance extends State<StudentBalance> {
             ),
           ),
           Container(
-            padding: const EdgeInsets.only(top: 25, bottom: 40),
+            padding: const EdgeInsets.only(top: 15, bottom: 50),
             child: Column(children: [
-              const Padding(
-                padding: EdgeInsetsDirectional.symmetric(horizontal: 25),
+              Container(
+                width: logicalWidth * 0.9,
+                padding: EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: const Color.fromARGB(46, 104, 58, 183)),
                 child: Text('NAME, your balance this month is: £---',
                     style: TextStyle(
                         color: Colors.deepPurple,
                         fontWeight: FontWeight.bold,
                         fontSize: 35)),
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 40, bottom: 10),
-                child: Text('Transactions: ',
-                    style: TextStyle(
-                        color: Colors.deepPurple,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30)),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 30),
-                child: Container(
-                  height: 300,
-                  child: ListView.builder(
-                    scrollDirection: Axis.vertical,
-                    itemCount: 1,
-                    itemBuilder: (context, index) {
-                      return const LessonHistoryWidget(
-                          subject: 'Maths', pay: 45);
-                    },
-                  ),
-                ),
-              ),
+              Padding(padding: EdgeInsets.all(10)),
+              Container(
+                  width: logicalWidth * 0.9,
+                  height: logicalHeight * 0.5,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          stops: [
+                            0.03,
+                            0.4,
+                            1
+                          ],
+                          colors: [
+                            Color.fromARGB(255, 182, 176, 246),
+                            Color.fromARGB(255, 166, 137, 230),
+                            Color.fromARGB(255, 134, 99, 239)
+                          ])),
+                  child: Column(
+                    children: [
+                      Padding(padding: EdgeInsets.all(10)),
+                      Text('History ',
+                          style: TextStyle(
+                              color: Colors.deepPurple,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30)),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 30),
+                        child: Container(
+                          height: 300,
+                          child: ListView.builder(
+                            scrollDirection: Axis.vertical,
+                            itemCount: 1,
+                            itemBuilder: (context, index) {
+                              return const LessonHistoryWidget(
+                                  subject: 'Maths', pay: 45);
+                            },
+                          ),
+                        ),
+                      ),
+                    ],
+                  )),
               Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
                 child: NewButton(
