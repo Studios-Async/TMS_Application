@@ -19,7 +19,7 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade600,
+      backgroundColor: Colors.black,
       body: SafeArea(
         child: Center(
           child: Column(
