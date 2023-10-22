@@ -30,7 +30,7 @@ class NewButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed, // Use the provided onPressed callback
         style: ElevatedButton.styleFrom(
-          primary: Colors.deepPurple,
+          primary: Color.fromARGB(255, 130, 82, 213),
           shape: circle // Use a circular shape if circle is true
               ? const CircleBorder(side: BorderSide.none) // Add CircleBorder
               : RoundedRectangleBorder(

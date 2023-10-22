@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tms/main.dart';
 
 import '../../../Student/Screens/Profile Page/Utilities/student_balance.dart';
 import 'lesson_historywidget.dart';
@@ -41,35 +42,56 @@ class _TutorEarnings extends State<TutorEarnings> {
                   const Text(
                     "This Months Earnings",
                     style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                    ),
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.deepPurple),
                   ),
                 ],
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 40, bottom: 10),
-            child: Text('History: ',
-                style: TextStyle(
-                    color: Colors.deepPurple,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30)),
-          ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 30),
-            child: Container(
-              height: 300,
-              child: ListView.builder(
-                scrollDirection: Axis.vertical,
-                itemCount: 1,
-                itemBuilder: (context, index) {
-                  return LessonHistoryWidget(subject: 'English', pay: 45);
-                },
-              ),
+          Container(
+            width: logicalWidth * 0.9,
+            height: logicalHeight * 0.7,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    stops: [
+                      0.03,
+                      0.4,
+                      1
+                    ],
+                    colors: [
+                      Color.fromARGB(255, 182, 176, 246),
+                      Color.fromARGB(255, 166, 137, 230),
+                      Color.fromARGB(255, 134, 99, 239)
+                    ])),
+            child: Column(
+              children: [
+                Padding(padding: EdgeInsets.all(10)),
+                Text('History ',
+                    style: TextStyle(
+                        color: Colors.deepPurple,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30)),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 30),
+                  child: Container(
+                    height: 300,
+                    child: ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      itemCount: 1,
+                      itemBuilder: (context, index) {
+                        return LessonHistoryWidget(subject: 'English', pay: 45);
+                      },
+                    ),
+                  ),
+                )
+              ],
             ),
-          )
+          ),
         ]),
       ),
     )));
