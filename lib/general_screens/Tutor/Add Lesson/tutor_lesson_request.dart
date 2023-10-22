@@ -65,7 +65,7 @@ class _TutorMakeRequestsPageState extends State<TutorMakeRequestsPage> {
                   child: Column(
                     children: [
                       Padding(padding: EdgeInsets.all(6)),
-                      Row(
+                      Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           NewButton(
