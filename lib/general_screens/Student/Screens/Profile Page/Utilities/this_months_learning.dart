@@ -1,47 +1,70 @@
 import 'package:flutter/material.dart';
+import 'package:tms/Utilities/header.dart';
+import 'package:tms/Utilities/rowitem.dart';
 
-import '../../../Utilities/rowitem.dart';
+import '../../../../../main.dart';
+import 'More Utilities/summarywidget.dart';
 
 class ThisMonthsLearningPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Monthly Summary',
-          style: TextStyle(color: Colors.black),
+      body: Center(
+        child: Container(
+          child: Column(
+            children: [
+              HeaderContainer(headerText: "Monthly Summary"),
+              SizedBox(
+                height: logicalHeight * 0.01,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: logicalWidth * 0.01,
+                    vertical: logicalWidth * 0.06),
+                child: SummaryContainer(
+                  iconData: Icons.timer,
+                  iconColor: Colors.black,
+                  iconSize: logicalWidth * 0.175,
+                  containerColor: Colors.grey.shade500,
+                  topTextColor: Colors.white,
+                  bottomTextColor: Colors.black,
+                  topText: 'Total Hours:',
+                  bottomText: '547h 30min',
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: logicalWidth * 0.01,
+                    vertical: logicalWidth * 0.06),
+                child: SummaryContainer(
+                  iconData: Icons.thumb_up,
+                  iconColor: Colors.black,
+                  iconSize: logicalWidth * 0.175,
+                  containerColor: Colors.grey.shade500,
+                  topTextColor: Colors.white,
+                  bottomTextColor: Colors.black,
+                  topText: 'Top Tutor:',
+                  bottomText: 'Arham Khan',
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: logicalWidth * 0.01,
+                    vertical: logicalWidth * 0.06),
+                child: SummaryContainer(
+                  iconData: Icons.star_rounded,
+                  iconColor: Colors.black,
+                  iconSize: logicalWidth * 0.2,
+                  containerColor: Colors.grey.shade500,
+                  topTextColor: Colors.white,
+                  bottomTextColor: Colors.black,
+                  topText: 'Overall Feedback:',
+                  bottomText: 'Positive',
+                ),
+              )
+            ],
+          ),
         ),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-      ),
-      body: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(18.0),
-            child: const Text(
-              'This month, you have done:',
-              style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
-            ),
-          ),
-          const RowItem(icon: Icons.access_time, text: 'Total hours: _______'),
-          const SizedBox(
-            height: 100,
-          ),
-          const RowItem(
-              icon: Icons.thumb_up, text: 'Your top tutor was: _______'),
-          const SizedBox(
-            height: 100,
-          ),
-          const RowItem(
-              icon: Icons.star_rounded, text: 'Overall feedback: _______'),
-          const SizedBox(height: 50.0),
-          TextButton(
-            onPressed: () {
-              //Navigator.pushNamed(context, '/feedback');
-            },
-            child: const Text('Go to Feedback Page'),
-          ),
-        ],
       ),
     );
   }
