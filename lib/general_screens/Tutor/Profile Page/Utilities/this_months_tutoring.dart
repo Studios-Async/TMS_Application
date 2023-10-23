@@ -41,13 +41,13 @@ class ThisMonthsTutoringPage extends StatelessWidget {
                           ),
                           child: Container(
                             height: logicalHeight * 0.1,
-                            color: Colors.purple,
+                            color: Colors.deepPurple,
                             child: const Padding(
                               padding: EdgeInsets.only(left: 15, bottom: 20, right: 15, top: 20),
                               child: Text(
                                 "Monthly Summary",
                                 style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 31,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
@@ -62,12 +62,12 @@ class ThisMonthsTutoringPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(0),
+              padding: const EdgeInsets.all(3),
               child: Container(
                 height: logicalHeight * 0.15,
                 decoration: BoxDecoration(
-                  color: Colors.purple[100],
-                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.purple[300],
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 child: const RowItems(
                   icon: Icons.access_time,
@@ -79,12 +79,12 @@ class ThisMonthsTutoringPage extends StatelessWidget {
               height: logicalWidth * 0.2,
             ),
             Padding(
-              padding: const EdgeInsets.all(0.0),
+              padding: const EdgeInsets.all(3),
               child: Container(
                 height: logicalHeight * 0.15,
                 decoration: BoxDecoration(
-                  color: Colors.purple[100],
-                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.purple[300],
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 child: const RowItems(
                   icon: Icons.thumb_up,
@@ -96,12 +96,12 @@ class ThisMonthsTutoringPage extends StatelessWidget {
               height: logicalWidth * 0.2,
             ),
             Padding(
-              padding: const EdgeInsets.all(0.0),
+              padding: const EdgeInsets.all(3.0),
               child: Container(
                 height: logicalHeight * 0.15,
                 decoration: BoxDecoration(
-                  color: Colors.purple[100],
-                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.purple[300],
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 child: const RowItems(
                   icon: Icons.star_rounded,
