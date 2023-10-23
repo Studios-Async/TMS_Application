@@ -10,7 +10,7 @@ class LessonRequest extends StatelessWidget {
   String? subject;
   String? time;
   String? year;
-  double? textsize = 30;
+  double? textsize = logicalWidth * 0.07;
 
   LessonRequest(
       {super.key,
