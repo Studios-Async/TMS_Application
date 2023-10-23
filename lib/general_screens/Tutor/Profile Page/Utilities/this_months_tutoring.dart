@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:tms/general_screens/Tutor/Utilities/rowitem.dart';
+import 'package:tms/main.dart';
 
 class ThisMonthsTutoringPage extends StatelessWidget {
+  const ThisMonthsTutoringPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+    double logicalHeight = MediaQuery.of(context).size.height;
+    double logicalWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
               child: Container(
                 alignment: Alignment.center,
-                padding: const EdgeInsets.all(12),
                 child: Row(
                   children: [
                     IconButton(
@@ -23,21 +28,30 @@ class ThisMonthsTutoringPage extends StatelessWidget {
                       },
                       icon: const Icon(Icons.arrow_back_ios),
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black, width: 2),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
+                    Padding(
+                      padding: EdgeInsets.all(screenWidth * 0.02),
                       child: Padding(
-                        padding: EdgeInsets.all(screenWidth * 0.01),
-                        child: Padding(
-                          padding: EdgeInsets.all(screenWidth * 0.02),
-                          child: const Text(
-                            "Monthly Summary",
-                            style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
+                        padding: EdgeInsets.all(screenWidth * 0.02),
+                        child: ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                            bottomRight: Radius.circular(15),
+                            bottomLeft: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                            topRight: Radius.circular(15),
+                          ),
+                          child: Container(
+                            height: logicalHeight * 0.1,
+                            color: Colors.purple,
+                            child: const Padding(
+                              padding: EdgeInsets.only(left: 15, bottom: 20, right: 15, top: 20),
+                              child: Text(
+                                "Monthly Summary",
+                                style: TextStyle(
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -47,33 +61,53 @@ class ThisMonthsTutoringPage extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              padding: const EdgeInsets.all(18.0),
-              child: const Text(
-                'This month, you have done:',
-                style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
+            Padding(
+              padding: const EdgeInsets.all(0),
+              child: Container(
+                height: logicalHeight * 0.15,
+                decoration: BoxDecoration(
+                  color: Colors.purple[100],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const RowItems(
+                  icon: Icons.access_time,
+                  text: 'Total hours: ',
+                ),
               ),
             ),
-            const RowItems(
-                icon: Icons.access_time, text: 'Total hours: _______'),
-            //Hidden thing here that opens and shows stats for each subject?
-
             SizedBox(
-              height: screenWidth * 0.2,
+              height: logicalWidth * 0.2,
             ),
-            const RowItems(
-                icon: Icons.thumb_up, text: 'Your top Student was: ____'),
+            Padding(
+              padding: const EdgeInsets.all(0.0),
+              child: Container(
+                height: logicalHeight * 0.15,
+                decoration: BoxDecoration(
+                  color: Colors.purple[100],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const RowItems(
+                  icon: Icons.thumb_up,
+                  text: "Your Top student was:",
+                ),
+              ),
+            ),
             SizedBox(
-              height: screenWidth * 0.2,
+              height: logicalWidth * 0.2,
             ),
-            const RowItems(
-                icon: Icons.star_rounded, text: 'Overall feedback: _______'),
-            const SizedBox(height: 50.0),
-            TextButton(
-              onPressed: () {
-                //Navigator.pushNamed(context, '/feedback');
-              },
-              child: const Text('Go to Feedback Page'),
+            Padding(
+              padding: const EdgeInsets.all(0.0),
+              child: Container(
+                height: logicalHeight * 0.15,
+                decoration: BoxDecoration(
+                  color: Colors.purple[100],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const RowItems(
+                  icon: Icons.star_rounded,
+                  text: 'Overall feedback: ',
+                ),
+              ),
             ),
           ],
         ),
@@ -81,9 +115,3 @@ class ThisMonthsTutoringPage extends StatelessWidget {
     );
   }
 }
-// IconButton(
-//                       onPressed: () {
-//                         Navigator.of(context).pop();
-//                       },
-//                       icon: Icon(Icons.arrow_back_ios),
-//                     ),
