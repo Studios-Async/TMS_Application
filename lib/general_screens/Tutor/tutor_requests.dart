@@ -21,10 +21,10 @@ class LessonRequest extends StatelessWidget {
           borderRadius: BorderRadius.circular(15), color: Colors.deepPurple),
       child: Row(
         children: [
-          Padding(padding: EdgeInsets.all(10)),
+          const Padding(padding: EdgeInsets.all(10)),
           Column(
             children: [
-              Padding(padding: EdgeInsets.all(10)),
+              const Padding(padding: EdgeInsets.all(10)),
               Text(studentName!,
                   style: const TextStyle(
                       color: Colors.white,
@@ -40,10 +40,10 @@ class LessonRequest extends StatelessWidget {
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 35)),
-              Padding(padding: EdgeInsets.all(10))
+              const Padding(padding: EdgeInsets.all(10))
             ],
           ),
-          Padding(padding: EdgeInsets.all(30)),
+          const Padding(padding: EdgeInsets.all(30)),
           Container(
               height: 80,
               width: 100,
@@ -100,7 +100,7 @@ class SeeRequestsPageNew extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => MakeNewRequestsPage()));
+                            builder: (context) => const MakeNewRequestsPage()));
                   },
                   usingIcon: null,
                 ),
@@ -143,8 +143,8 @@ class MakeNewRequestsPage extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Column(
-                        children: const [
+                      const Column(
+                        children: [
                           Padding(
                             padding: EdgeInsets.all(25),
                             child: Icon(Icons.calendar_month_outlined,
