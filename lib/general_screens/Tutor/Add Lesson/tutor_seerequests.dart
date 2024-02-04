@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
+import 'package:tms/Utilities/notch.dart';
 import 'package:tms/general_screens/Tutor/Add%20Lesson/tutor_lesson_request.dart';
 import 'package:tms/general_screens/Tutor/Home/tutor_home.dart';
 import 'package:tms/general_screens/Student/Screens/Add%20Lesson/student_make_lessonreq.dart';
@@ -145,35 +146,15 @@ class _TutorSeeRequestsPageState extends State<TutorSeeRequestsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-            child: Center(
+        body: Center(
       child: Container(
           padding: const EdgeInsets.only(top: 0, bottom: 40),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
-                child: Container(
-                  alignment: Alignment.centerLeft,
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black, width: 2),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Row(
-                    children: [
-                      const Text(
-                        "Your Lesson Requests",
-                        style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.deepPurple),
-                      ),
-                    ],
-                  ),
-                ),
+              Notch(
+                title: "Lesson requests",
+                showBackButton: false,
               ),
               Expanded(
                   child: Container(
@@ -213,6 +194,6 @@ class _TutorSeeRequestsPageState extends State<TutorSeeRequestsPage> {
               )
             ],
           )),
-    )));
+    ));
   }
 }
