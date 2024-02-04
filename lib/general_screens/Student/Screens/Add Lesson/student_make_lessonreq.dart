@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
+import 'package:tms/Utilities/notch.dart';
 
 import '../../../../main.dart';
 
@@ -15,37 +16,10 @@ class _LessonPageState extends State<LessonPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-            child: Column(children: [
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
-        child: Container(
-          alignment: Alignment.centerLeft,
-          padding: const EdgeInsets.all(6),
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black, width: 2),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Row(
-            children: [
-              IconButton(
-                icon: Icon(
-                  Icons.arrow_back_ios, // iOS-style back button icon
-                ),
-                onPressed: () {
-                  Navigator.of(context).pop(); // Pop the current screen
-                },
-              ),
-              const Text(
-                "Make Lesson Request",
-                style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.deepPurple),
-              ),
-            ],
-          ),
-        ),
+        body: Column(children: [
+      Notch(
+        title: "Lesson Requests",
+        showBackButton: false,
       ),
       Padding(padding: EdgeInsets.all(10)),
       Container(
@@ -218,6 +192,6 @@ class _LessonPageState extends State<LessonPage> {
           onPressed: () {},
         ),
       )
-    ])));
+    ]));
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tms/Utilities/notch.dart';
 
 import '../../../../Utilities/buttontemplate.dart';
 import '../../../../Utilities/subjectbutton.dart';
@@ -18,43 +19,7 @@ class _SubjectsPageTutorState extends State<SubjectsPageTutor> {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            height: logicalHeight * 0.15,
-            width: logicalWidth * 0.999,
-            decoration: BoxDecoration(
-              color: Colors.deepPurple.shade300,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(40.0),
-                bottomRight: Radius.circular(40.0),
-              ),
-            ),
-            child: Center(
-              child: SafeArea(
-                child: Row(
-                  children: [
-                    IconButton(
-                      icon: Icon(
-                        Icons.arrow_back_ios,
-                        color: Colors.white,
-                      ),
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                    ),
-                    const SizedBox(width: 10),
-                    Text(
-                      "Subjects you Teach",
-                      style: TextStyle(
-                        fontSize: logicalWidth * 0.075,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
+          Notch(title: "Subjects you teach"),
           ChooseSubject(),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 5),

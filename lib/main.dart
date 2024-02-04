@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false, //dont show banner in corner
-      home: TutorNavBar(),
+      home: AdminNavBar(),
     );
   }
 }
