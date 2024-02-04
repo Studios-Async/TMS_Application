@@ -34,7 +34,7 @@ class _AdminNavBarState extends State<AdminNavBar> {
       _scrollController.animateTo(
         index *
             MediaQuery.of(context).size.width, // Scroll to the selected page
-        duration: const Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 400),
         curve: Curves.easeInOut,
       );
     });
@@ -58,14 +58,16 @@ class _AdminNavBarState extends State<AdminNavBar> {
           );
         },
       ),
-      bottomNavigationBar: Container(
-        color: Colors.grey.shade800,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-          child: GNav(
+      bottomNavigationBar: ClipRRect(
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(20.0)),
+        child: Container(
+          color: Colors.grey.shade800,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 7),
+            child: GNav(
             haptic: true,
-            gap: 6,
-            iconSize: 25,
+            gap: 2,
+            iconSize: 20,
             backgroundColor: Colors.grey.shade800,
             color: Colors.white,
             activeColor: Colors.white,
@@ -73,23 +75,26 @@ class _AdminNavBarState extends State<AdminNavBar> {
             padding: const EdgeInsets.all(20),
             onTabChange:
                 navigatePages, // Call navigatePages when a navbar button is pressed
-            tabs: const [
+            tabs: [
               GButton(
                 icon: Icons.home,
                 text: "Home",
+                iconColor: selectedIndex == 0 ? Colors.white : Colors.grey.withOpacity(0.4)  , // Set inactive color
               ),
               GButton(
                 icon: FeatherIcons.userCheck,
                 text: "Accounts",
+                iconColor: selectedIndex == 1 ? Colors.white : Colors.grey.withOpacity(0.4), // Set inactive color
               ),
               GButton(
                 icon: Icons.account_circle,
                 text: "Profile",
+                iconColor: selectedIndex == 2 ? Colors.white : Colors.grey.withOpacity(0.4), // Set inactive color
               ),
             ],
           ),
         ),
       ),
-    );
+    ));
   }
 }
