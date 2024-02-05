@@ -107,8 +107,8 @@ class _RevenueState extends State<Revenue> {
                 ),
                 child: NewButton(
                   circle: false,
-                  buttonheight: screenWidth * 0.08,
-                  buttonwidth: screenWidth * 0.08,
+                  buttonheight: screenWidth * 0.05,
+                  buttonwidth: screenWidth * 0.05,
                   usingIcon: true,
                   icon: Icons.arrow_right_alt_outlined,
                   textsize: 1,

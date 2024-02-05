@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
+import 'package:tms/main.dart';
 //import 'package:tms/general_screens/Tutor/tutor_home.dart';
 
 class LessonRequest extends StatelessWidget {
@@ -16,7 +17,7 @@ class LessonRequest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 340,
+      width: logicalWidth * 0.7,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15), color: Colors.deepPurple),
       child: Row(
@@ -45,7 +46,7 @@ class LessonRequest extends StatelessWidget {
           ),
           const Padding(padding: EdgeInsets.all(30)),
           Container(
-              height: 80,
+              height: logicalWidth,
               width: 100,
               color: Colors.deepPurple,
               child: NewButton(
@@ -89,7 +90,7 @@ class SeeRequestsPageNew extends StatelessWidget {
                   bottom: 30,
                 ),
                 child: NewButton(
-                  buttonheight: 60,
+                  buttonheight: logicalHeight * 0.1,
                   buttonwidth:
                       340, // Navigator.push(context, MaterialPageRoute(builder:  (context)=> MakeNewRequestsPage()));
                   icon: null,
@@ -126,7 +127,7 @@ class MakeNewRequestsPage extends StatelessWidget {
                   Row(
                     children: [
                       NewButton(
-                        buttonheight: 60,
+                        buttonheight: logicalHeight * 0.4,
                         buttonwidth: 50,
                         icon: Icons.arrow_back,
                         textsize: 18,

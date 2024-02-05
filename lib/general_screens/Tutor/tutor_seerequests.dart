@@ -113,7 +113,7 @@ class _SeeRequestsState extends State<SeeRequestsPage> {
                   buttonheight: 60,
                   buttonwidth: 340,
                   icon: null,
-                  text: 'Make Lesson Offer:',
+                  text: 'Make  Offer:',
                   textsize: 18,
                   circle: false,
                   onPressed: () {},
@@ -158,7 +158,7 @@ class _MakeRequestsState extends State<MakeRequestsPage> {
                       Expanded(
                         child: Center(
                           child: Text(
-                            'Make Lesson Offer',
+                            'Make Offer',
                             style: TextStyle(
                               color: Colors.deepPurple,
                               fontWeight: FontWeight.bold,
