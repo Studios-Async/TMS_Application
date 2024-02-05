@@ -64,11 +64,11 @@ class _StudentNavBarState extends State<StudentNavBar> {
         },
       ),
       bottomNavigationBar: ClipRRect(
-        borderRadius: const BorderRadius.vertical(top: Radius.circular(20.0)),
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(15.0)),
         child: Container(
           color: Colors.grey.shade800,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 20,),
             child: GNav(
               haptic: true,
               gap: 6,
@@ -76,7 +76,6 @@ class _StudentNavBarState extends State<StudentNavBar> {
               backgroundColor: Colors.grey.shade800,
               color: Colors.white,
               activeColor: Colors.white,
-              tabBackgroundColor: Colors.deepPurple,
               padding: const EdgeInsets.all(20),
               onTabChange:
                   navigatePages, // Call navigatePages when a navbar button is pressed

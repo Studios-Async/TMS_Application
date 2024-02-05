@@ -59,11 +59,11 @@ class _AdminNavBarState extends State<AdminNavBar> {
         },
       ),
       bottomNavigationBar: ClipRRect(
-        borderRadius: const BorderRadius.vertical(top: Radius.circular(20.0)),
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(15.0)),
         child: Container(
           color: Colors.grey.shade800,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 7),
+            padding: const EdgeInsets.symmetric(horizontal: 20,),
             child: GNav(
             haptic: true,
             gap: 2,
@@ -71,7 +71,6 @@ class _AdminNavBarState extends State<AdminNavBar> {
             backgroundColor: Colors.grey.shade800,
             color: Colors.white,
             activeColor: Colors.white,
-            tabBackgroundColor: Colors.deepPurple,
             padding: const EdgeInsets.all(20),
             onTabChange:
                 navigatePages, // Call navigatePages when a navbar button is pressed
