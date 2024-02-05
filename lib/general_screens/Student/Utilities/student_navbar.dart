@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:tms/general_screens/Tutor/Add%20Lesson/tutor_lesson_request.dart';
-import 'package:tms/general_screens/Student/Screens/Profile%20Page/Utilities/student_balance.dart';
+import 'package:tms/general_screens/Tutor/Profile%20Page/Utilities/tutor_earnings.dart';
+import 'package:tms/general_screens/Tutor/Profile%20Page/tutor_profile.dart';
 import 'package:tms/general_screens/Tutor/Add%20Lesson/tutor_seerequests.dart';
 import 'package:tms/general_screens/Student/Screens/Add%20Lesson/student_make_lessonreq.dart';
-import 'package:tms/general_screens/Student/Screens/Home/student_home.dart';
+import 'package:tms/general_screens/Tutor/Home/tutor_home.dart';
 import 'package:tms/general_screens/Student/Screens/Other/welldone_page.dart';
 import 'package:tms/general_screens/Student/Screens/Profile%20Page/student_profile_page.dart';
+
+import '../Screens/Home/student_home.dart';
 
 class StudentNavBar extends StatefulWidget {
   const StudentNavBar({Key? key}) : super(key: key);
@@ -50,7 +52,7 @@ class _StudentNavBarState extends State<StudentNavBar> {
         controller: _scrollController,
         scrollDirection: Axis.horizontal,
         physics:
-            BouncingScrollPhysics(), // Bouncing scroll physics for the effect
+            const BouncingScrollPhysics(), // Bouncing scroll physics for the effect
         itemCount: pages.length,
         itemBuilder: (context, index) {
           return SizedBox(
@@ -61,35 +63,46 @@ class _StudentNavBarState extends State<StudentNavBar> {
           );
         },
       ),
-      bottomNavigationBar: Container(
-        color: Colors.grey.shade800,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-          child: GNav(
-            haptic: true,
-            gap: 6,
-            iconSize: 25,
-            backgroundColor: Colors.grey.shade800,
-            color: Colors.white,
-            activeColor: Colors.white,
-            tabBackgroundColor: Colors.deepPurple,
-            padding: const EdgeInsets.all(20),
-            onTabChange:
-                navigatePages, // Call navigatePages when a navbar button is pressed
-            tabs: const [
-              GButton(
-                icon: Icons.home,
-                text: "Home",
-              ),
-              GButton(
-                icon: Icons.add_circle,
-                text: "Add Lesson",
-              ),
-              GButton(
-                icon: Icons.account_circle,
-                text: "Profile",
-              ),
-            ],
+      bottomNavigationBar: ClipRRect(
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(15.0)),
+        child: Container(
+          color: Colors.grey.shade800,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20,),
+            child: GNav(
+              haptic: true,
+              gap: 6,
+              iconSize: 25,
+              backgroundColor: Colors.grey.shade800,
+              color: Colors.white,
+              activeColor: Colors.white,
+              padding: const EdgeInsets.all(20),
+              onTabChange:
+                  navigatePages, // Call navigatePages when a navbar button is pressed
+              tabs: [
+                GButton(
+                  icon: Icons.home,
+                  text: "Home",
+                  iconColor: selectedIndex == 0
+                      ? Colors.white
+                      : Colors.white.withOpacity(0.4),
+                ),
+                GButton(
+                  icon: Icons.add_circle,
+                  text: "Add Lesson",
+                  iconColor: selectedIndex == 1
+                      ? Colors.white
+                      : Colors.white.withOpacity(0.4),
+                ),
+                GButton(
+                  icon: Icons.account_circle,
+                  text: "Profile",
+                  iconColor: selectedIndex == 2
+                      ? Colors.white
+                      : Colors.white.withOpacity(0.4),
+                ),
+              ],
+            ),
           ),
         ),
       ),
