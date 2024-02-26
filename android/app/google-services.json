@@ -1,43 +1,26 @@
 {
   "project_info": {
-    "project_number": "739036532813",
-    "project_id": "tms-application-5f2a0",
-    "storage_bucket": "tms-application-5f2a0.appspot.com"
+    "project_number": "419525976305",
+    "project_id": "async-test-497e8",
+    "storage_bucket": "async-test-497e8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:739036532813:android:a1c23c5b6d3407b2b6cc04",
+        "mobilesdk_app_id": "1:419525976305:android:56669c151f622fe0ccc950",
         "android_client_info": {
           "package_name": "com.example.tms"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "739036532813-vfaoi6lluct5u3uajd8n4ggoged736s6.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDdPGt0urlBJJ6GOTHkgSYCCAKNQtTYOnM"
+          "current_key": "AIzaSyDU3WPA-W62zxgBTblxseDOBaHV8W3fDK4"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "739036532813-vfaoi6lluct5u3uajd8n4ggoged736s6.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "739036532813-9lbli4kb2vtcddk4illh8b41svon4jvs.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.tms"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
