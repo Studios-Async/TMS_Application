@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
 import 'package:tms/general_screens/Student/Screens/Profile%20Page/Utilities/student_balance.dart';
@@ -13,6 +14,21 @@ class TutorProfilePage extends StatefulWidget {
 
   @override
   State<TutorProfilePage> createState() => _TutorProfilePageState();
+}
+
+void fetchTutorData() async {
+  // Get current user (assuming the user is already authenticated)
+  User? user = FirebaseAuth.instance.currentUser;
+  if (user != null) {
+    DocumentSnapshot tutorSnapshot =
+        await firestore.collection('users').doc(user.uid).get();
+    if (tutorSnapshot.exists) {
+      setState(() {
+        var tutorName = tutorSnapshot['name'];
+        var tutorEmail = tutorSnapshot['email'];
+      });
+    }
+  }
 }
 
 class _TutorProfilePageState extends State<TutorProfilePage> {
