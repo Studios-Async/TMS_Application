@@ -16,21 +16,6 @@ class TutorProfilePage extends StatefulWidget {
   State<TutorProfilePage> createState() => _TutorProfilePageState();
 }
 
-void fetchTutorData() async {
-  // Get current user (assuming the user is already authenticated)
-  User? user = FirebaseAuth.instance.currentUser;
-  if (user != null) {
-    DocumentSnapshot tutorSnapshot =
-        await firestore.collection('users').doc(user.uid).get();
-    if (tutorSnapshot.exists) {
-      setState(() {
-        var tutorName = tutorSnapshot['name'];
-        var tutorEmail = tutorSnapshot['email'];
-      });
-    }
-  }
-}
-
 class _TutorProfilePageState extends State<TutorProfilePage> {
   @override
   Widget build(BuildContext context) {
