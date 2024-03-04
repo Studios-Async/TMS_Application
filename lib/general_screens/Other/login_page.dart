@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
 import 'package:tms/Utilities/data.dart';
+import 'package:tms/general_screens/Other/Utilities/sign_up_page.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -23,7 +24,6 @@ class _LoginPageState extends State<LoginPage> {
                 //Top icon
                 SizedBox(
                   height: 175,
-                  //child: Image.asset("assets/icons/white-board.png"),
                   child: Image.asset("assets/icons/mortarboard.png"),
                 ),
                 const SizedBox(
@@ -46,14 +46,17 @@ class _LoginPageState extends State<LoginPage> {
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.grey[100],
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(18)),
+                      color: Colors.grey[100],
+                      border: Border.all(color: Colors.white),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
                     child: const Padding(
                       padding: EdgeInsets.only(left: 20),
                       child: TextField(
                         decoration: InputDecoration(
-                            border: InputBorder.none, hintText: "Email"),
+                          border: InputBorder.none,
+                          hintText: "Email",
+                        ),
                       ),
                     ),
                   ),
@@ -66,9 +69,10 @@ class _LoginPageState extends State<LoginPage> {
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.grey[100],
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(18)),
+                      color: Colors.grey[100],
+                      border: Border.all(color: Colors.white),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
                     child: const Padding(
                       padding: EdgeInsets.only(left: 20),
                       child: TextField(
@@ -85,17 +89,40 @@ class _LoginPageState extends State<LoginPage> {
                   height: 30,
                 ),
                 //sign in button
-
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25),
-                  child: Center(
-                      child: Text(
-                    "Sign In",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
-                  )),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  child: NewButton(
+                    buttonheight: 50,
+                    buttonwidth: double.infinity,
+                    usingIcon: false,
+                    text: "Sign In",
+                    textsize: 20,
+                    circle: false,
+                    onPressed: () {
+                      // Implement sign-in functionality
+                    },
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                //create account button
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  child: NewButton(
+                    buttonheight: 50,
+                    buttonwidth: double.infinity,
+                    usingIcon: false,
+                    text: "Create Account",
+                    textsize: 20,
+                    circle: false,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignUpPage()),
+                      );
+                    },
+                  ),
                 ),
               ],
             ),
