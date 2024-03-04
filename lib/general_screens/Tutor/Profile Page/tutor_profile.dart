@@ -1,5 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
 import 'package:tms/general_screens/Student/Screens/Profile%20Page/Utilities/student_balance.dart';
 import 'package:tms/general_screens/Tutor/Profile%20Page/Utilities/this_months_tutoring.dart';
@@ -17,6 +18,31 @@ class TutorProfilePage extends StatefulWidget {
 }
 
 class _TutorProfilePageState extends State<TutorProfilePage> {
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+
+  String tutorName = ""; // Variable to store tutor's name
+
+  @override
+  void initState() {
+    super.initState();
+    // Call getUser function when the widget initializes
+    getUser(FirebaseAuth.instance.currentUser!.uid);
+  }
+
+  // Function to get user data from Firestore
+  void getUser(String userId) {
+    _firestore.collection('users').doc(userId).get().then((documentSnapshot) {
+      if (documentSnapshot.exists) {
+        // Update tutorName variable with the retrieved name
+        setState(() {
+          tutorName = documentSnapshot.data()?['name'];
+        });
+      } else {
+        print('Document does not exist on the database');
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +77,7 @@ class _TutorProfilePageState extends State<TutorProfilePage> {
                         child: Column(
                           children: [
                             Text(
-                              "Tutor Name",
+                              tutorName, // Display tutor's name
                               style: TextStyle(
                                   fontSize: logicalHeight * 0.03,
                                   color: Colors.white),
