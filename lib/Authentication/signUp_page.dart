@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:tms/Authentication/signUp_page.dart';
-import 'package:tms/Utilities/buttontemplate.dart';
-import 'package:tms/Utilities/data.dart';
 import 'package:tms/main.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class SignupPage extends StatefulWidget {
+  const SignupPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignupPage> createState() => _SignupPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(
                   height: 175,
                   //child: Image.asset("assets/icons/white-board.png"),
-                  child: Image.asset("assets/icons/mortarboard.png"),
+                  child: Image.asset("assets/icons/white-board.png"),
                 ),
                 const SizedBox(
                   height: 10,
@@ -37,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 52),
                 ),
                 const Text(
-                  "Welcome back to TMS",
+                  "Welcome to TMS",
                   style: TextStyle(fontSize: 32),
                 ),
                 const SizedBox(
@@ -117,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(
-                        "Not a member?",
+                        "Already a member?",
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 20,
@@ -129,14 +126,10 @@ class _LoginPageState extends State<LoginPage> {
                       GestureDetector(
                         onTap: () {
                           // Navigate to the signup page here
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const SignupPage()),
-                          );
+                          Navigator.of(context).pop();
                         },
                         child: const Text(
-                          "Register now",
+                          "Log in",
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 20,
