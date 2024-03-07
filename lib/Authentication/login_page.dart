@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:tms/Authentication/signUp_page.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
@@ -56,7 +58,8 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 //email textfield
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.grey[100],
@@ -77,7 +80,8 @@ class _LoginPageState extends State<LoginPage> {
                   height: 15,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.grey[100],
@@ -101,31 +105,34 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 //sign in button
 
-                Container(
-                  // REPLACE THIS WITH THE BUTTON WHEN FIXED !!
-                  width: logicalWidth * 0.9,
-                  height: logicalHeight * 0.075,
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurple,
-                    borderRadius: BorderRadius.circular(15), // Rounded edges
-                  ),
-                  child: TextButton(
-                    onPressed: () {
-                      // Add your sign in functionality here
-                    },
-                    child: const Text(
-                      "Sign In",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10.0),
+                  child: Container(
+                    // REPLACE THIS WITH THE BUTTON WHEN FIXED !!
+                    width: logicalWidth * 0.9,
+                    height: logicalHeight * 0.075,
+                    decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      borderRadius: BorderRadius.circular(15), // Rounded edges
+                    ),
+                    child: TextButton(
+                      onPressed: () {
+                        // Add sign in functionality here
+                      },
+                      child: const Text(
+                        "Sign In",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
                 ),
                 //Sign up button
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 3.0),
+                  padding: const EdgeInsets.symmetric(vertical: 10.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
