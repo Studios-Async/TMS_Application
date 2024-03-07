@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tms/main.dart';
@@ -30,6 +31,22 @@ class _SignupPageState extends State<SignupPage> {
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: _emailController.text.trim(),
           password: _passwordController.text.trim());
+
+      final db = FirebaseFirestore.instance;
+
+      // final db = FirebaseFirestore.instance;
+
+      //       db.collection("users").doc("uid/${value.user.uid}").set({
+      //         'fullName': _userNameTextController.text,
+      //         'email': _emailTextController.text,
+      //         'accountCreated': Timestamp.now(),
+      //       }).onError((e, _) => print("Error writing document: $e"));
+      //       print("Created New Account");
+      //       Navigator.pushReplacement(context,
+      //           MaterialPageRoute(builder: (context) => const Home()));
+      //     }).onError((error, stackTrace) {
+      //       print("Error ${error.toString()}");
+      //     });
     }
   }
 
