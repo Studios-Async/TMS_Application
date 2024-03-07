@@ -12,10 +12,21 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+//field controllers
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.grey[300],
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -51,9 +62,10 @@ class _LoginPageState extends State<LoginPage> {
                         color: Colors.grey[100],
                         border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(18)),
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.only(left: 20),
                       child: TextField(
+                        controller: _emailController,
                         decoration: InputDecoration(
                             border: InputBorder.none, hintText: "Email"),
                       ),
@@ -71,9 +83,10 @@ class _LoginPageState extends State<LoginPage> {
                         color: Colors.grey[100],
                         border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(18)),
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.only(left: 20),
                       child: TextField(
+                        controller: _passwordController,
                         obscureText: true,
                         decoration: InputDecoration(
                           border: InputBorder.none,

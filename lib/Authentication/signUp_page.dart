@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tms/main.dart';
 
@@ -9,10 +10,43 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
+  //field controllers
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _confirmPasswordController = TextEditingController();
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    _confirmPasswordController.dispose();
+    super.dispose();
+  }
+
+  //SignUp Method
+
+  Future signUp() async {
+    if (passwordConfirmed()) {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: _emailController.text.trim(),
+          password: _passwordController.text.trim());
+    }
+  }
+
+  //confirmed password function
+  bool passwordConfirmed() {
+    if (_passwordController.text.trim() ==
+        _confirmPasswordController.text.trim()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.grey[300],
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -34,7 +68,7 @@ class _SignupPageState extends State<SignupPage> {
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 52),
                 ),
                 const Text(
-                  "Welcome to TMS",
+                  "Welcome to TMS!",
                   style: TextStyle(fontSize: 32),
                 ),
                 const SizedBox(
@@ -48,9 +82,10 @@ class _SignupPageState extends State<SignupPage> {
                         color: Colors.grey[100],
                         border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(18)),
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.only(left: 20),
                       child: TextField(
+                        controller: _emailController,
                         decoration: InputDecoration(
                             border: InputBorder.none, hintText: "Email"),
                       ),
@@ -68,13 +103,35 @@ class _SignupPageState extends State<SignupPage> {
                         color: Colors.grey[100],
                         border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(18)),
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.only(left: 20),
                       child: TextField(
+                        controller: _passwordController,
                         obscureText: true,
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "Password",
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                //confirm password textfield
+                Padding(
+                  padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.grey[100],
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(18)),
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 20),
+                      child: TextField(
+                        controller: _confirmPasswordController,
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Confirm Password",
                         ),
                       ),
                     ),
@@ -95,10 +152,10 @@ class _SignupPageState extends State<SignupPage> {
                   ),
                   child: TextButton(
                     onPressed: () {
-                      // Add your sign in functionality here
+                      signUp();
                     },
                     child: const Text(
-                      "Sign In",
+                      "Register",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
@@ -125,7 +182,7 @@ class _SignupPageState extends State<SignupPage> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          // Navigate to the signup page here
+                          // Navigate to the login page here
                           Navigator.of(context).pop();
                         },
                         child: const Text(
