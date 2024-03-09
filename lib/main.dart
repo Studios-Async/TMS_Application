@@ -14,6 +14,7 @@ import 'package:tms/general_screens/Tutor/Profile%20Page/tutor_profile.dart';
 import 'package:tms/general_screens/Tutor/Add%20Lesson/tutor_seerequests.dart';
 import 'package:tms/general_screens/Tutor/Profile%20Page/Utilities/subjects_teach.dart';
 import 'package:tms/general_screens/Student/Screens/Add%20Lesson/student_make_lessonreq.dart';
+import 'Authentication/login_page.dart';
 import 'general_screens/Admin/Screens/Profile Page/admin_profile.dart';
 import 'general_screens/Student/Screens/Profile Page/Utilities/subjects_study.dart';
 import 'general_screens/Admin/Screens/Accounts/Utilities/create_new_acc.dart';
@@ -32,9 +33,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false, //dont show banner in corner
-      home: TutorNavBar(),
+      home: LoginPage(),
     );
   }
 }
