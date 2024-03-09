@@ -77,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 //password textfield
                 const SizedBox(
-                  height: 15,
+                  height: 10,
                 ),
                 Padding(
                   padding:
@@ -101,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 //sign in button
 

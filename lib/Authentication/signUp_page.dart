@@ -104,7 +104,9 @@ class _SignupPageState extends State<SignupPage> {
                       child: TextField(
                         controller: _emailController,
                         decoration: InputDecoration(
-                            border: InputBorder.none, hintText: "Email"),
+                            // focusColor: Colors.black,
+                            border: InputBorder.none,
+                            hintText: "Email"),
                       ),
                     ),
                   ),
