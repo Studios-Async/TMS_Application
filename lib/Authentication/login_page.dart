@@ -124,7 +124,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     child: TextButton(
                       onPressed: () {
-                        signIn;
+                        signIn();
                         // Add sign in functionality here
                       },
                       child: const Text(
