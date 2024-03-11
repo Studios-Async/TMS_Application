@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tms/Authentication/signUp_page.dart';
 import 'package:tms/Utilities/buttontemplate.dart';
@@ -17,6 +18,12 @@ class _LoginPageState extends State<LoginPage> {
 //field controllers
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+
+  Future signIn() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: _emailController.text.trim(),
+        password: _passwordController.text.trim());
+  }
 
   @override
   void dispose() {
@@ -117,6 +124,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     child: TextButton(
                       onPressed: () {
+                        signIn;
                         // Add sign in functionality here
                       },
                       child: const Text(

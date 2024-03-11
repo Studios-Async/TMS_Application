@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:tms/Authentication/login.dart';
 import 'package:tms/general_screens/Admin/Utilities/admin_navbar.dart';
 import 'package:tms/general_screens/Admin/Screens/Accounts/admin_accounts.dart';
 import 'package:tms/general_screens/Tutor/Add%20Lesson/tutor_lesson_request.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, //dont show banner in corner
-      home: LoginPage(),
+      home: Login(),
     );
   }
 }
